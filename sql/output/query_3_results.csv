@@ -1,0 +1,46 @@
+review_segment,revenue_rank,slowest_turn_rank,SKU_ID,Product_Category,ABC_Class,warehouse_count,units_sold_ytd,annual_revenue_sgd,annual_cogs_sgd,static_avg_inventory_sgd,ai_avg_inventory_sgd,turnover_static,turnover_ai,turnover_uplift,days_on_hand_ai,category_avg_turnover,variance_vs_category,rank_in_category,turnover_quartile,stockout_events_ytd,avg_forecast_mape_pct,turnover_assessment
+SLOWEST TURNING,227,14,SKU-0152,FMCG Household,C,4,4618,83446.12,35514.89,16777.68,13211.6,2.12,2.69,0.57,135.8,5.67,-2.99,42,4,1,11.4,"CRITICAL - capital trapped, review order policy"
+SLOWEST TURNING,231,12,SKU-0003,FMCG Household,C,4,1951,74054.1,33261.34,16062.97,12669.32,2.07,2.63,0.55,139.0,5.67,-3.05,43,4,7,10.8,"CRITICAL - capital trapped, review order policy"
+SLOWEST TURNING,234,11,SKU-0100,Apparel & Textiles,C,4,375,70746.91,36561.96,15978.89,14044.58,2.29,2.6,0.32,140.2,5.61,-3.01,20,4,11,7.8,"CRITICAL - capital trapped, review order policy"
+SLOWEST TURNING,238,9,SKU-0105,FMCG Household,C,4,886,61803.42,28945.4,15242.62,11947.49,1.9,2.42,0.52,150.7,5.67,-3.25,44,4,1,10.0,"CRITICAL - capital trapped, review order policy"
+SLOWEST TURNING,240,13,SKU-0169,Industrial Components,C,4,666,50878.84,34262.69,14527.14,13005.07,2.36,2.63,0.28,138.5,8.01,-5.37,42,4,5,8.3,"CRITICAL - capital trapped, review order policy"
+SLOWEST TURNING,241,4,SKU-0023,Apparel & Textiles,C,4,1603,50539.69,21501.64,11291.36,10432.56,1.9,2.06,0.16,177.1,5.61,-3.55,22,4,21,16.3,"CRITICAL - capital trapped, review order policy"
+SLOWEST TURNING,242,15,SKU-0159,FMCG Household,C,4,3838,49693.41,37010.64,16849.03,13552.36,2.2,2.73,0.53,133.7,5.67,-2.94,41,4,1,12.5,"CRITICAL - capital trapped, review order policy"
+SLOWEST TURNING,243,8,SKU-0168,FMCG Household,C,4,1330,47026.72,24232.55,13260.39,10628.18,1.83,2.28,0.45,160.1,5.67,-3.39,45,4,2,13.4,"CRITICAL - capital trapped, review order policy"
+SLOWEST TURNING,244,10,SKU-0232,Industrial Components,C,4,1180,46100.85,32435.43,14341.16,12609.98,2.26,2.57,0.31,141.9,8.01,-5.44,43,4,5,15.5,"CRITICAL - capital trapped, review order policy"
+SLOWEST TURNING,245,7,SKU-0229,Automotive Parts,C,4,516,42574.14,23662.63,11926.85,10944.09,1.98,2.16,0.18,168.8,7.52,-5.36,40,4,7,8.5,"CRITICAL - capital trapped, review order policy"
+SLOWEST TURNING,246,5,SKU-0170,Apparel & Textiles,C,4,554,32919.46,21277.82,11397.57,10252.8,1.87,2.08,0.21,175.9,5.61,-3.54,21,4,9,6.1,"CRITICAL - capital trapped, review order policy"
+SLOWEST TURNING,247,3,SKU-0108,Industrial Components,C,4,492,29198.38,20625.83,11145.3,10287.35,1.85,2.0,0.15,182.0,8.01,-6.0,44,4,9,12.5,"CRITICAL - capital trapped, review order policy"
+SLOWEST TURNING,248,6,SKU-0053,FMCG Household,C,4,707,27812.59,20421.39,12096.63,9779.42,1.69,2.09,0.4,174.8,5.67,-3.59,46,4,4,10.3,"CRITICAL - capital trapped, review order policy"
+SLOWEST TURNING,249,2,SKU-0223,Automotive Parts,C,4,199,20355.73,14757.16,9626.16,8720.72,1.53,1.69,0.16,215.7,7.52,-5.83,41,4,12,8.8,"CRITICAL - capital trapped, review order policy"
+SLOWEST TURNING,250,1,SKU-0171,Industrial Components,C,4,214,11292.2,7161.69,6455.85,5898.18,1.11,1.21,0.1,300.6,8.01,-6.79,45,4,12,7.6,"CRITICAL - capital trapped, review order policy"
+TOP REVENUE,1,249,SKU-0060,Consumer Electronics,A,4,13743,13191973.57,7466079.87,371868.53,295192.37,20.08,25.29,5.22,14.4,14.46,10.83,2,1,1,13.7,LEADING - at or above category benchmark
+TOP REVENUE,2,246,SKU-0109,Consumer Electronics,A,4,12734,12563511.13,6436303.35,391881.17,272255.42,16.42,23.64,7.22,15.4,14.46,9.18,4,1,9,8.2,LEADING - at or above category benchmark
+TOP REVENUE,3,250,SKU-0125,Consumer Electronics,A,4,14520,10193282.0,6504577.58,275937.61,250533.53,23.57,25.96,2.39,14.1,14.46,11.5,1,1,5,9.7,LEADING - at or above category benchmark
+TOP REVENUE,4,242,SKU-0069,Consumer Electronics,A,4,13285,8267288.3,4630719.1,191621.22,216864.71,24.17,21.35,-2.81,17.1,14.46,6.89,8,1,13,12.7,LEADING - at or above category benchmark
+TOP REVENUE,5,247,SKU-0239,Consumer Electronics,A,4,26876,7599520.8,5757873.32,226783.13,241973.22,25.39,23.8,-1.59,15.3,14.46,9.33,3,1,6,11.8,LEADING - at or above category benchmark
+TOP REVENUE,6,245,SKU-0176,Consumer Electronics,A,4,9066,7482083.99,5511064.7,268194.69,240472.74,20.55,22.92,2.37,15.9,14.46,8.45,5,1,7,10.7,LEADING - at or above category benchmark
+TOP REVENUE,7,244,SKU-0052,Consumer Electronics,A,4,9719,7282168.73,4147433.27,194455.09,188335.57,21.33,22.02,0.69,16.6,14.46,7.56,6,1,9,11.0,LEADING - at or above category benchmark
+TOP REVENUE,8,238,SKU-0084,Consumer Electronics,A,4,14281,6964458.76,3201759.06,214859.77,169535.48,14.9,18.89,3.98,19.3,14.46,4.42,11,1,6,16.9,LEADING - at or above category benchmark
+TOP REVENUE,9,239,SKU-0212,Automotive Parts,A,4,6162,6935187.73,3120367.07,138054.73,163824.95,22.6,19.05,-3.56,19.2,7.52,11.53,1,1,7,11.8,LEADING - at or above category benchmark
+TOP REVENUE,10,235,SKU-0091,Consumer Electronics,A,4,5442,6663278.86,3136848.3,212064.09,167165.34,14.79,18.76,3.97,19.5,14.46,4.3,12,1,4,8.1,LEADING - at or above category benchmark
+TOP REVENUE,11,234,SKU-0051,Consumer Electronics,A,4,5052,6490278.41,2742066.56,173256.48,146791.21,15.83,18.68,2.85,19.5,14.46,4.22,13,1,9,8.7,LEADING - at or above category benchmark
+TOP REVENUE,12,248,SKU-0008,FMCG Household,A,4,93645,5982277.68,3330833.19,373966.64,136479.92,8.91,24.41,15.5,15.0,5.67,18.73,1,1,4,11.0,LEADING - at or above category benchmark
+TOP REVENUE,13,241,SKU-0227,Consumer Electronics,A,4,13031,5746137.43,3773734.7,252213.25,182704.99,14.96,20.65,5.69,17.7,14.46,6.19,9,1,4,10.8,LEADING - at or above category benchmark
+TOP REVENUE,14,240,SKU-0199,Consumer Electronics,A,4,4899,5241590.3,3075960.13,209142.94,154383.63,14.71,19.92,5.22,18.3,14.46,5.46,10,1,3,9.9,LEADING - at or above category benchmark
+TOP REVENUE,15,243,SKU-0129,Consumer Electronics,A,4,7036,5178131.17,3406114.57,228651.86,159198.37,14.9,21.4,6.5,17.1,14.46,6.93,7,1,8,10.5,LEADING - at or above category benchmark
+TOP REVENUE,16,229,SKU-0187,Industrial Components,A,4,8937,5082955.53,2364349.55,167298.84,134073.68,14.13,17.63,3.5,20.7,8.01,9.63,1,1,3,8.4,LEADING - at or above category benchmark
+TOP REVENUE,17,231,SKU-0128,Consumer Electronics,A,4,4735,4926010.48,2628329.33,190661.93,145140.76,13.79,18.11,4.32,20.2,14.46,3.65,16,1,4,7.9,LEADING - at or above category benchmark
+TOP REVENUE,18,230,SKU-0098,Consumer Electronics,A,4,8922,4739524.28,2814687.23,211401.5,158368.92,13.31,17.77,4.46,20.5,14.46,3.31,17,1,5,13.2,LEADING - at or above category benchmark
+TOP REVENUE,19,233,SKU-0085,Consumer Electronics,A,4,6251,4543700.13,2897932.73,157215.04,156798.38,18.43,18.48,0.05,19.7,14.46,4.02,14,1,7,13.1,LEADING - at or above category benchmark
+TOP REVENUE,20,237,SKU-0067,Medical Supplies,A,4,8697,4346452.8,2022866.73,175051.73,107382.28,11.56,18.84,7.28,19.4,9.42,9.41,1,1,0,7.4,LEADING - at or above category benchmark
+TOP REVENUE,21,228,SKU-0203,Medical Supplies,A,4,8666,4296986.17,1878589.09,163380.34,106590.42,11.5,17.62,6.13,20.7,9.42,8.2,3,1,6,7.7,LEADING - at or above category benchmark
+TOP REVENUE,22,220,SKU-0099,Consumer Electronics,A,4,5726,4231928.72,2170923.36,185486.01,136404.89,11.7,15.92,4.21,22.9,14.46,1.45,23,1,4,13.4,LEADING - at or above category benchmark
+TOP REVENUE,23,225,SKU-0161,Consumer Electronics,A,4,3701,4175451.45,2329769.6,201552.95,139527.63,11.56,16.7,5.14,21.9,14.46,2.23,20,1,3,11.2,LEADING - at or above category benchmark
+TOP REVENUE,24,227,SKU-0213,Consumer Electronics,A,4,21038,3978476.27,2642732.09,183890.66,152529.41,14.37,17.33,2.95,21.1,14.46,2.86,18,1,6,13.7,LEADING - at or above category benchmark
+TOP REVENUE,25,232,SKU-0140,Consumer Electronics,A,4,4744,3952659.8,2713917.46,166649.1,148546.83,16.29,18.27,1.98,20.0,14.46,3.81,15,1,6,11.8,LEADING - at or above category benchmark
+TOP REVENUE,26,214,SKU-0153,Consumer Electronics,A,4,6335,3866066.71,1648280.97,135319.46,108343.91,12.18,15.21,3.03,24.0,14.46,0.75,26,1,1,19.1,LEADING - at or above category benchmark
+TOP REVENUE,27,222,SKU-0177,Medical Supplies,A,4,7926,3600522.49,1646861.34,134986.56,99989.07,12.2,16.47,4.27,22.2,9.42,7.05,4,1,2,7.0,LEADING - at or above category benchmark
+TOP REVENUE,28,226,SKU-0029,Consumer Electronics,A,4,3972,3534241.47,2481450.61,189073.07,144340.88,13.12,17.19,4.07,21.2,14.46,2.73,19,1,7,14.2,LEADING - at or above category benchmark
+TOP REVENUE,29,218,SKU-0028,Consumer Electronics,A,4,3575,3415926.48,1925684.05,190594.04,122099.53,10.1,15.77,5.67,23.1,14.46,1.31,25,1,7,9.8,LEADING - at or above category benchmark
+TOP REVENUE,30,216,SKU-0111,Medical Supplies,A,4,5473,3414822.04,1459760.59,151920.01,94032.19,9.61,15.52,5.92,23.5,9.42,6.1,6,1,2,10.8,LEADING - at or above category benchmark

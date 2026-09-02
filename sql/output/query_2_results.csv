@@ -1,0 +1,5 @@
+Warehouse_ID,Warehouse_Name,sku_count,static_carrying_cost_sgd,ai_carrying_cost_sgd,annual_saving_sgd,saving_pct_of_baseline,from_safety_stock_sgd,from_cycle_stock_sgd,pct_saving_from_safety_stock,working_capital_released_sgd,skus_now_better_protected,saving_rank,portfolio_saving_sgd,pct_of_portfolio_saving,portfolio_saving_pct,variance_vs_avg_warehouse
+WH-SIN-01,Singapore Central,250,1261954.4,888551.28,373403.13,29.59,294671.67,78731.46,78.9,1257289.01,19,1,776086.18,48.11,20.67,179381.58
+WH-JHR-02,Johor Bahru,250,901995.2,717811.21,184183.99,20.42,120007.48,64176.51,65.2,984910.12,32,2,776086.18,23.73,20.67,-9837.55
+WH-PEN-04,Penang,250,878326.91,728490.19,149836.73,17.06,84732.64,65104.08,56.5,756772.76,36,3,776086.18,19.31,20.67,-44184.82
+WH-BTM-03,Batam,250,713173.0,644510.66,68662.33,9.63,10838.52,57823.81,15.8,445812.55,68,4,776086.18,8.85,20.67,-125359.21
