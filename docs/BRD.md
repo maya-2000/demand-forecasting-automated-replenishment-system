@@ -15,7 +15,7 @@
 
 ## 1. Executive Summary
 
-The organisation operates a regional distribution network of four warehouses (Singapore, Johor, Batam, Penang) carrying approximately 1,000 active SKU–warehouse combinations. Replenishment is currently governed by **static reorder points** maintained manually in spreadsheets and refreshed on an ad-hoc quarterly cycle.
+The organisation operates a regional distribution network of four warehouses (Singapore, Johor, Batam, Penang) carrying approximately 1,000 active SKU-warehouse combinations. Replenishment is currently governed by **static reorder points** maintained manually in spreadsheets and refreshed on an ad-hoc quarterly cycle.
 
 This static approach fails in two directions simultaneously:
 
@@ -28,7 +28,7 @@ This project proposes an **AI demand-forecasting engine** feeding a **rules-base
 
 | Metric | Target |
 |---|---|
-| Reduction in inventory carrying cost | 15–22% |
+| Reduction in inventory carrying cost | 15-22% |
 | Reduction in stockout events | ≥ 40% |
 | Reduction in planner manual effort | ~12 hours/week |
 | Payback period on build cost | < 9 months |
@@ -51,9 +51,9 @@ This project proposes an **AI demand-forecasting engine** feeding a **rules-base
 
 ### 2.2 Quantified Pain (Current State Baseline)
 
-- **Revenue at risk from stockouts**: lost unit sales during stockout windows, priced at list — computed in Query 1.
-- **Excess carrying cost**: the delta between inventory held under static thresholds and inventory required under a forecast-driven policy — computed in Query 2.
-- **Capital efficiency**: inventory turnover below the 12.5x internal target on a material share of the portfolio, with slow-moving C-class SKUs turning fewer than 5 times a year — computed in Query 3.
+- **Revenue at risk from stockouts**: lost unit sales during stockout windows, priced at list (computed in Query 1).
+- **Excess carrying cost**: the delta between inventory held under static thresholds and inventory required under a forecast-driven policy (computed in Query 2).
+- **Capital efficiency**: inventory turnover below the 12.5x internal target on a material share of the portfolio, with slow-moving C-class SKUs turning fewer than 5 times a year (computed in Query 3).
 
 ---
 
@@ -61,8 +61,8 @@ This project proposes an **AI demand-forecasting engine** feeding a **rules-base
 
 | ID | Objective | KPI | Baseline | Target | Measurement Window |
 |---|---|---|---|---|---|
-| BO-01 | Reduce working capital tied up in inventory | Average inventory carrying cost (SGD/yr) | Static-policy baseline | −15% | 2 quarters post go-live |
-| BO-02 | Improve product availability | Stockout events per 1,000 SKU-weeks | Current YTD rate | −40% | 2 quarters post go-live |
+| BO-01 | Reduce working capital tied up in inventory | Average inventory carrying cost (SGD/yr) | Static-policy baseline | -15% | 2 quarters post go-live |
+| BO-02 | Improve product availability | Stockout events per 1,000 SKU-weeks | Current YTD rate | -40% | 2 quarters post go-live |
 | BO-03 | Automate transactional replenishment | % of POs raised without manual keying | 0% | ≥ 80% | 1 quarter post go-live |
 | BO-04 | Improve capital efficiency | Portfolio inventory turnover ratio | 10.7x (static policy) | ≥ 12.5x | 4 quarters post go-live |
 | BO-05 | Establish forecast trust | Forecast MAPE on A-class SKUs | n/a | ≤ 15% | Continuous |
@@ -112,7 +112,7 @@ This project proposes an **AI demand-forecasting engine** feeding a **rules-base
 
 | ID | Constraint |
 |---|---|
-| C-01 | Forecast refresh must complete within the 02:00–04:00 SGT batch window |
+| C-01 | Forecast refresh must complete within the 02:00-04:00 SGT batch window |
 | C-02 | No change to the ERP data model; integration is read-only plus PO write-back |
 | C-03 | Phase 1 budget covers four warehouses only |
 | C-04 | Solution must comply with Singapore PDPA for any customer-linked data |
@@ -132,8 +132,8 @@ This project proposes an **AI demand-forecasting engine** feeding a **rules-base
 
 | ID | Requirement | Priority (MoSCoW) | Acceptance Reference |
 |---|---|---|---|
-| FR-01 | The system shall generate a 30-day forward demand forecast for every in-scope SKU–warehouse pair, refreshed nightly. | Must | US-01 |
-| FR-02 | The system shall calculate a dynamic reorder point as `(Avg_Daily_Demand × Lead_Time_Days) + Safety_Stock`, where safety stock is derived from forecast error and the configured service level. | Must | US-01, US-02 |
+| FR-01 | The system shall generate a 30-day forward demand forecast for every in-scope SKU-warehouse pair, refreshed nightly. | Must | US-01 |
+| FR-02 | The system shall calculate a dynamic reorder point as `(Avg_Daily_Demand x Lead_Time_Days) + Safety_Stock`, where safety stock is derived from forecast error and the configured service level. | Must | US-01, US-02 |
 | FR-03 | The system shall set `Reorder_Flag = 1` when `Current_Stock ≤ Dynamic_Reorder_Point`. | Must | US-02 |
 | FR-04 | The system shall automatically create a draft purchase order for every flagged SKU, with suggested order quantity, supplier, and expected receipt date. | Must | US-02 |
 | FR-05 | The system shall route every draft PO to Procurement for approval before transmission; no PO shall be sent to a supplier without approval. | Must | US-02 |
@@ -156,8 +156,8 @@ This project proposes an **AI demand-forecasting engine** feeding a **rules-base
 |---|---|---|---|
 | NFR-01 | Performance | Nightly forecast batch for the full SKU portfolio | Completes in ≤ 60 minutes |
 | NFR-02 | Performance | Exception workbench page load | ≤ 3 seconds at P95 |
-| NFR-03 | Availability | Replenishment service uptime during business hours (08:00–20:00 SGT) | 99.5% monthly |
-| NFR-04 | Scalability | SKU–warehouse pairs supported without re-architecture | 10,000 (10x Phase 1) |
+| NFR-03 | Availability | Replenishment service uptime during business hours (08:00-20:00 SGT) | 99.5% monthly |
+| NFR-04 | Scalability | SKU-warehouse pairs supported without re-architecture | 10,000 (10x Phase 1) |
 | NFR-05 | Accuracy | Forecast MAPE on A-class SKUs | ≤ 15% |
 | NFR-06 | Security | Access control | Role-based; PO approval restricted to Procurement role |
 | NFR-07 | Compliance | Personal data handling | Singapore PDPA compliant; no customer PII in forecast store |
@@ -198,11 +198,11 @@ See `docs/process_flows.md` for the AS-IS and TO-BE BPMN-style flow diagrams.
 
 ## 9. Solution Approach (High Level)
 
-1. **Data layer** — nightly ERP extract landed to the analytics warehouse; the synthetic equivalent used for this portfolio build is produced by `data/generate_supply_chain_data.py`.
-2. **Forecast layer** — time-series model per SKU–warehouse producing `Demand_Forecast_AI` (30-day units) and a forecast error term used for safety stock.
-3. **Decision layer** — dynamic reorder point computation and `Reorder_Flag` assignment.
-4. **Action layer** — draft PO generation and routing to the Procurement approval queue.
-5. **Insight layer** — SQL analytics (`sql/analysis_queries.sql`) feeding the executive dashboard described in `presentation/dashboard_wireframe.md`.
+1. **Data layer:** nightly ERP extract landed to the analytics warehouse; the synthetic equivalent used for this portfolio build is produced by `data/generate_supply_chain_data.py`.
+2. **Forecast layer:** time-series model per SKU-warehouse producing `Demand_Forecast_AI` (30-day units) and a forecast error term used for safety stock.
+3. **Decision layer:** dynamic reorder point computation and `Reorder_Flag` assignment.
+4. **Action layer:** draft PO generation and routing to the Procurement approval queue.
+5. **Insight layer:** SQL analytics (`sql/analysis_queries.sql`) feeding the executive dashboard described in `presentation/dashboard_wireframe.md`.
 
 ---
 
@@ -224,7 +224,7 @@ The solution is accepted when:
 
 ---
 
-## Appendix A — Glossary
+## Appendix A: Glossary
 
 | Term | Definition |
 |---|---|
@@ -232,7 +232,7 @@ The solution is accepted when:
 | **Safety Stock** | Buffer inventory held to absorb demand and lead-time variability |
 | **Carrying / Holding Cost** | Annual cost of holding one unit in stock (capital, storage, insurance, obsolescence) |
 | **Inventory Turnover** | Cost of goods sold divided by average inventory value, per year |
-| **MAPE** | Mean Absolute Percentage Error — forecast accuracy measure |
+| **MAPE** | Mean Absolute Percentage Error, a measure of forecast accuracy |
 | **Revenue at Risk** | Value of sales lost or exposed due to stock unavailability |
 | **A/B/C Class** | Pareto classification of SKUs by revenue contribution |
 | **Stockout** | Event where on-hand stock reaches zero against open demand |

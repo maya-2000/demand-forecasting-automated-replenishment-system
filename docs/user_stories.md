@@ -19,7 +19,7 @@
 
 ---
 
-## US-01 — Nightly AI Demand Forecast
+## US-01: Nightly AI Demand Forecast
 
 > **As a** Demand Planner (Priya),
 > **I want** the system to generate a 30-day AI demand forecast for every SKU at every warehouse each night,
@@ -29,7 +29,7 @@
 
 ### Acceptance Criteria
 
-**AC-01.1 — Forecast is generated for all eligible SKUs**
+**AC-01.1: Forecast is generated for all eligible SKUs**
 ```gherkin
 Given 1,000 active SKU-warehouse pairs each have at least 6 months of sales history
 When the nightly forecast batch runs at 02:00 SGT
@@ -37,7 +37,7 @@ Then a Demand_Forecast_AI value in units for the next 30 days is stored for ever
 And the batch completes before 03:00 SGT
 ```
 
-**AC-01.2 — Dynamic reorder point is derived from the forecast**
+**AC-01.2: Dynamic reorder point is derived from the forecast**
 ```gherkin
 Given a SKU has an Avg_Daily_Demand of 20 units and a Lead_Time_Days of 10
 And the configured service level for its warehouse is 95%
@@ -47,7 +47,7 @@ And Safety_Stock is derived from the forecast error at the 95% service level
 And the computed value is stored with the run timestamp and model version
 ```
 
-**AC-01.3 — SKUs with insufficient history are excluded, not guessed**
+**AC-01.3: SKUs with insufficient history are excluded, not guessed**
 ```gherkin
 Given a SKU has only 3 months of sales history
 When the nightly forecast batch runs
@@ -55,7 +55,7 @@ Then no Demand_Forecast_AI is produced for that SKU
 And the SKU is routed to the manual review queue with reason "INSUFFICIENT_HISTORY"
 ```
 
-**AC-01.4 — Upstream data failure fails safe**
+**AC-01.4: Upstream data failure fails safe**
 ```gherkin
 Given the ERP nightly extract has not landed by 02:00 SGT
 When the forecast batch attempts to start
@@ -66,7 +66,7 @@ And an alert is raised to Data Engineering and the Demand Planner
 
 ---
 
-## US-02 — Automated Reorder Flag & Draft Purchase Order
+## US-02: Automated Reorder Flag & Draft Purchase Order
 
 > **As a** Warehouse Operations Manager (Wei Ming),
 > **I want** the system to flag SKUs that have breached their dynamic reorder point and raise a draft purchase order automatically,
@@ -76,7 +76,7 @@ And an alert is raised to Data Engineering and the Demand Planner
 
 ### Acceptance Criteria
 
-**AC-02.1 — Flag is raised at or below the reorder point**
+**AC-02.1: Flag is raised at or below the reorder point**
 ```gherkin
 Given SKU-0421 at warehouse WH-SIN-01 has a dynamic reorder point of 250 units
 And its Current_Stock is 240 units
@@ -85,7 +85,7 @@ Then Reorder_Flag is set to 1 for SKU-0421 at WH-SIN-01
 And the flag record stores the stock level and reorder point that triggered it
 ```
 
-**AC-02.2 — No flag above the reorder point**
+**AC-02.2: No flag above the reorder point**
 ```gherkin
 Given SKU-0422 has a dynamic reorder point of 250 units
 And its Current_Stock is 260 units
@@ -94,7 +94,7 @@ Then Reorder_Flag remains 0 for SKU-0422
 And no draft purchase order is created
 ```
 
-**AC-02.3 — Draft PO is created with a complete, suggested order**
+**AC-02.3: Draft PO is created with a complete, suggested order**
 ```gherkin
 Given SKU-0421 has been flagged for reorder
 When the automated replenishment step executes
@@ -103,7 +103,7 @@ And it contains the SKU, warehouse, suggested order quantity, preferred supplier
 And the draft PO status is "PENDING_APPROVAL"
 ```
 
-**AC-02.4 — No PO reaches a supplier without human approval**
+**AC-02.4: No PO reaches a supplier without human approval**
 ```gherkin
 Given a draft purchase order is in status "PENDING_APPROVAL"
 When any automated process attempts to transmit it to the supplier
@@ -111,7 +111,7 @@ Then transmission is blocked
 And the PO is transmitted only after a user holding the Procurement role approves it
 ```
 
-**AC-02.5 — Duplicate orders are prevented**
+**AC-02.5: Duplicate orders are prevented**
 ```gherkin
 Given SKU-0421 already has an open purchase order covering 400 units
 And its Current_Stock is still below the dynamic reorder point
@@ -122,7 +122,7 @@ And a second draft purchase order is not created for the same demand
 
 ---
 
-## US-03 — Planner Exception Workbench with Controlled Override
+## US-03: Planner Exception Workbench with Controlled Override
 
 > **As a** Demand Planner (Priya),
 > **I want** a single prioritised worklist of flagged SKUs where I can review and override suggested order quantities with a recorded reason,
@@ -132,7 +132,7 @@ And a second draft purchase order is not created for the same demand
 
 ### Acceptance Criteria
 
-**AC-03.1 — Worklist is prioritised by business impact**
+**AC-03.1: Worklist is prioritised by business impact**
 ```gherkin
 Given 45 SKUs are flagged for reorder today
 When Priya opens the exception workbench
@@ -141,7 +141,7 @@ And they are sorted in descending order of revenue at risk
 And the page renders within 3 seconds
 ```
 
-**AC-03.2 — Override requires a reason code**
+**AC-03.2: Override requires a reason code**
 ```gherkin
 Given Priya is reviewing a draft PO with a suggested quantity of 500 units
 When she changes the quantity to 300 units
@@ -150,7 +150,7 @@ Then the save is rejected
 And a validation message requires a reason code and justification
 ```
 
-**AC-03.3 — Override is captured in the audit trail**
+**AC-03.3: Override is captured in the audit trail**
 ```gherkin
 Given Priya changes a suggested quantity from 500 to 300 units
 And she selects reason code "PROMOTION_ENDED" with a justification note
@@ -159,7 +159,7 @@ Then the audit trail records the user, timestamp, original quantity, revised qua
 And the revised quantity flows to the draft purchase order
 ```
 
-**AC-03.4 — Manual-queue SKUs are visibly separated**
+**AC-03.4: Manual-queue SKUs are visibly separated**
 ```gherkin
 Given 12 SKUs were excluded from forecasting for insufficient history
 When Priya opens the exception workbench
@@ -169,7 +169,7 @@ And they are not counted in the automated flag statistics
 
 ---
 
-## US-04 — Executive Inventory Performance Dashboard
+## US-04: Executive Inventory Performance Dashboard
 
 > **As the** VP of Supply Chain (Sarah),
 > **I want** a daily dashboard showing carrying cost, stockout events, inventory turnover, revenue at risk, and forecast accuracy by warehouse,
@@ -179,7 +179,7 @@ And they are not counted in the automated flag statistics
 
 ### Acceptance Criteria
 
-**AC-04.1 — Executive KPIs are present and current**
+**AC-04.1: Executive KPIs are present and current**
 ```gherkin
 Given the nightly analytics refresh has completed
 When Sarah opens the executive dashboard
@@ -188,7 +188,7 @@ And each KPI displays its variance against the prior period and against target
 And the dashboard shows a "data as of" timestamp within the last 24 hours
 ```
 
-**AC-04.2 — Results are decomposable by warehouse**
+**AC-04.2: Results are decomposable by warehouse**
 ```gherkin
 Given the dashboard is displaying portfolio-level KPIs
 When Sarah filters to warehouse WH-JHR-02
@@ -196,7 +196,7 @@ Then every KPI recalculates for that warehouse only
 And the AI-versus-static carrying cost comparison is shown for that warehouse
 ```
 
-**AC-04.3 — Forecast accuracy is transparent**
+**AC-04.3: Forecast accuracy is transparent**
 ```gherkin
 Given 90 days of forecast and actual demand history exist
 When Sarah views the forecast accuracy panel
@@ -204,7 +204,7 @@ Then MAPE is displayed at portfolio, warehouse, and ABC-class level
 And A-class SKUs with MAPE above 25% are highlighted as exceptions
 ```
 
-**AC-04.4 — Sustained model degradation raises an alert**
+**AC-04.4: Sustained model degradation raises an alert**
 ```gherkin
 Given an A-class SKU has recorded MAPE above 25% for three consecutive forecast cycles
 When the third cycle completes
@@ -214,7 +214,7 @@ And the SKU is listed in the dashboard's "Model Watchlist"
 
 ---
 
-## US-05 — Auditable Savings & Benefits Reporting
+## US-05: Auditable Savings & Benefits Reporting
 
 > **As a** Finance Business Partner (Daniel),
 > **I want** the carrying cost savings of the AI policy versus the previous static thresholds to be calculated from source data with a full audit trail,
@@ -224,7 +224,7 @@ And the SKU is listed in the dashboard's "Model Watchlist"
 
 ### Acceptance Criteria
 
-**AC-05.1 — Savings are computed against a frozen baseline**
+**AC-05.1: Savings are computed against a frozen baseline**
 ```gherkin
 Given the static reorder point baseline was frozen at project kick-off
 When the monthly benefits report is generated
@@ -232,7 +232,7 @@ Then carrying cost savings are calculated as (baseline average inventory - AI av
 And the result is reported per warehouse and for the total portfolio
 ```
 
-**AC-05.2 — Every reported figure is traceable to source records**
+**AC-05.2: Every reported figure is traceable to source records**
 ```gherkin
 Given Daniel is reviewing a reported saving of SGD 184,000 for WH-SIN-01
 When he drills into the figure
@@ -240,7 +240,7 @@ Then he can view the contributing SKU-level records, their holding cost rates, a
 And each record shows the model version and run timestamp that produced it
 ```
 
-**AC-05.3 — Overrides are visible in the benefits calculation**
+**AC-05.3: Overrides are visible in the benefits calculation**
 ```gherkin
 Given planners applied 38 manual overrides during the reporting month
 When the benefits report is generated
@@ -248,7 +248,7 @@ Then the report states the number and net unit impact of overrides
 And savings attributable to overridden lines are disclosed separately from model-driven savings
 ```
 
-**AC-05.4 — Audit history is retained and immutable**
+**AC-05.4: Audit history is retained and immutable**
 ```gherkin
 Given a forecast run and its resulting POs completed 18 months ago
 When an internal auditor requests the inputs, thresholds, and approvals for that run

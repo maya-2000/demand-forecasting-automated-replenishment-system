@@ -2,7 +2,7 @@
 ## AI-Powered Inventory Forecasting & Automated Replenishment System
 
 **Prepared for:** Executive Steering Committee
-**Prepared by:** Business Analyst — MSc Management, Singapore Management University
+**Prepared by:** Business Analyst (MSc Management, Singapore Management University)
 **Date:** 2 September 2026
 **Decision requested:** Approve SGD 850,000 implementation to replace static reorder points with forecast-driven automated replenishment across four distribution centres.
 
@@ -12,17 +12,17 @@
 
 We hold too much of the wrong inventory and too little of the right inventory, at the same time.
 
-Replenishment across our four regional DCs is governed by static reorder points held in spreadsheets and refreshed roughly quarterly. Analysis of the 1,000 active SKU–warehouse positions shows what that costs us:
+Replenishment across our four regional DCs is governed by static reorder points held in spreadsheets and refreshed roughly quarterly. Analysis of the 1,000 active SKU-warehouse positions shows what that costs us:
 
 | Finding | Value |
 |---|---|
 | Revenue at risk from stockouts (annualised) | **SGD 10.1M** (3.0% of revenue) |
-| SKU–warehouse positions that stocked out YTD | **687 of 1,000** (68.7%) |
+| SKU-warehouse positions that stocked out YTD | **687 of 1,000** (68.7%) |
 | Stockout events YTD | **1,661** |
 | Annual inventory carrying cost under current policy | **SGD 3.76M** |
 | Working capital tied up in average inventory | **SGD 18.1M** |
 | Portfolio inventory turnover | **10.7x** (target 12.5x) |
-| Slowest-turning C-class SKUs | **135–300 days** of stock on hand |
+| Slowest-turning C-class SKUs | **135-300 days** of stock on hand |
 
 The two problems share one root cause: **a fixed threshold cannot respond to demand that moves.**
 
@@ -30,7 +30,7 @@ The two problems share one root cause: **a fixed threshold cannot respond to dem
 
 ## 2. What We Propose
 
-Replace the static threshold with a nightly AI demand forecast that drives a **dynamic reorder point**, and let the system raise draft purchase orders automatically — with Procurement retaining the approval gate.
+Replace the static threshold with a nightly AI demand forecast that drives a **dynamic reorder point**, and let the system raise draft purchase orders automatically, with Procurement retaining the approval gate.
 
 | | Today | Proposed |
 |---|---|---|
@@ -41,13 +41,13 @@ Replace the static threshold with a nightly AI demand forecast that drives a **d
 | Planner role | Processes every SKU | Works exceptions ranked by revenue at risk |
 | Approval | Informal | Structured Procurement gate, fully audited |
 
-Automation deliberately stops short of autonomy: **no purchase order reaches a supplier without human approval.**
+Automation stops short of full autonomy by design: **no purchase order reaches a supplier without human approval.**
 
 ---
 
 ## 3. Quantified Benefit
 
-### 3.1 Carrying cost reduction — SGD 776,086 per year (20.7%)
+### 3.1 Carrying cost reduction: SGD 776,086 per year (20.7%)
 
 The saving is decomposable, which is what makes it auditable:
 
@@ -57,9 +57,9 @@ The saving is decomposable, which is what makes it auditable:
 | Cycle stock reduction | SGD 265,836 | 34.3% | Cheaper automated ordering permits smaller, more frequent orders |
 | **Total** | **SGD 776,086** | **100%** | |
 
-**Working capital released: SGD 3.44M** — average inventory value falls from SGD 18.1M to SGD 14.7M, lifting portfolio turnover from **10.7x to 13.2x** and clearing the 12.5x internal target.
+**Working capital released: SGD 3.44M.** Average inventory value falls from SGD 18.1M to SGD 14.7M, lifting portfolio turnover from **10.7x to 13.2x** and clearing the 12.5x internal target.
 
-### 3.2 Savings are not uniform — and that is the point
+### 3.2 Savings are not uniform, and that is the point
 
 | Warehouse | Carrying cost (static) | Carrying cost (AI) | Annual saving | % of baseline | SKUs given *more* stock |
 |---|---|---|---|---|---|
@@ -69,11 +69,11 @@ The saving is decomposable, which is what makes it auditable:
 | WH-BTM-03 Batam | SGD 713,173 | SGD 644,511 | **SGD 68,662** | 9.6% | 68 |
 | **Portfolio** | **SGD 3,755,450** | **SGD 2,979,363** | **SGD 776,086** | **20.7%** | **155** |
 
-Read the last column carefully. For **155 SKU–warehouse positions the model increases inventory**, because the static threshold was under-covering long-lead-time, volatile items. Batam — our longest-lead-time DC — saves least precisely because most of its correction is protective rather than reductive. That is the system working as designed: it reallocates inventory to where it earns its keep, rather than cutting it everywhere.
+Read the last column carefully. For **155 SKU-warehouse positions the model increases inventory**, because the static threshold was under-covering long-lead-time, volatile items. Batam, our longest-lead-time DC, saves the least, because most of its correction adds protection instead of stripping stock out. That is the system working as designed: it reallocates inventory to where it earns its keep, rather than cutting it everywhere.
 
-### 3.3 Service level recovery — SGD 590,000 per year
+### 3.3 Service level recovery: SGD 590,000 per year
 
-Stockouts cost SGD 4.21M in lost gross margin annually. Applying two deliberately conservative assumptions — that only **35%** of stockout demand is genuinely lost rather than substituted or backordered, and that the system removes **40%** of stockout events (the BO-02 target) — yields **SGD 589,664** in recovered margin.
+Stockouts cost SGD 4.21M in lost gross margin annually. Two conservative assumptions apply here: only **35%** of stockout demand is genuinely lost rather than substituted or backordered, and the system removes **40%** of stockout events (the BO-02 target). Together they give **SGD 589,664** in recovered margin.
 
 ---
 
@@ -119,19 +119,19 @@ The working capital release is shown separately because it is a balance-sheet ev
 2. **Confirm** Procurement retains PO approval authority in Phase 1 (no change to control environment).
 3. **Endorse** the four-DC pilot scope, with a Phase 2 decision gate at month 9 covering raw materials and retail store replenishment.
 
-**Recommended decision: proceed.** The payback sits inside a single financial year, the control environment is strengthened rather than weakened, and the benefit is measurable from source data rather than asserted.
+**Recommended decision: proceed.** The payback sits inside a single financial year, the control environment gets stronger instead of weaker, and the benefit is measurable from source data rather than asserted.
 
 ---
 
-## Appendix — Evidence Base
+## Appendix: Evidence Base
 
 Every figure in this summary is reproducible from the artefacts in this repository:
 
 | Figure | Source |
 |---|---|
-| Revenue at risk, stockout concentration | `sql/analysis_queries.sql` — Query 1 |
-| Carrying cost savings by warehouse | `sql/analysis_queries.sql` — Query 2 |
-| Inventory turnover, slow-moving tail | `sql/analysis_queries.sql` — Query 3 |
+| Revenue at risk, stockout concentration | `sql/analysis_queries.sql`, Query 1 |
+| Carrying cost savings by warehouse | `sql/analysis_queries.sql`, Query 2 |
+| Inventory turnover, slow-moving tail | `sql/analysis_queries.sql`, Query 3 |
 | Underlying dataset (1,000 rows) | `data/inventory_data.csv`, generated by `data/generate_supply_chain_data.py` |
 | Requirements and scope | `docs/BRD.md` |
 | Process change | `docs/process_flows.md` |
