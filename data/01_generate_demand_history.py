@@ -186,7 +186,10 @@ def main() -> None:
     assert (history.Units_Demanded >= 0).all(), "negative demand generated"
     assert not out_master.isnull().any().any(), "null in master data"
 
-    history.to_csv(HISTORY_PATH, index=False, compression="gzip")
+    # mtime=0: gzip stamps the current time into its header by default, which makes
+    # the file differ between runs even when the content is identical.
+    history.to_csv(HISTORY_PATH, index=False,
+                   compression={"method": "gzip", "mtime": 0})
     out_master.to_csv(MASTER_PATH, index=False)
 
     zero_share = (demand == 0).mean()
