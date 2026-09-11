@@ -324,6 +324,30 @@ psql inventory_demo -f sql/analysis_queries.sql
 
 ---
 
+## Tooling and AI Use
+
+This project was built with Claude Code as a pair-programming partner, used for scaffolding the
+data generator, drafting documentation, and writing the SQL and charting code.
+
+The analytical judgement is mine, and I can walk through any of it. Three decisions worth asking
+me about:
+
+- **Modelling both policies side by side.** The legacy static policy and the AI policy are computed
+  from the same source rows, so the saving is calculated rather than asserted, and it decomposes
+  into safety stock and cycle stock components that Finance can audit separately.
+- **Recalibrating the ROI model.** The first pass produced a 740% first-year return and a 1.4-month
+  payback. Those numbers would not survive a finance review, so the cost base and the lost-sales
+  assumption were rebuilt to something defensible: 38% year-one ROI on an 8.7-month payback, with
+  the conservative multipliers stated openly rather than buried.
+- **Reporting two SKU segments, not one.** Ranking by revenue alone was self-fulfilling, since
+  high-revenue SKUs are high-velocity by construction and all looked healthy. Query 3 also returns
+  the slowest-turning SKUs, which is where the trapped working capital actually sits.
+
+Every figure in this repository is reproducible from `data/generate_supply_chain_data.py` and
+`sql/analysis_queries.sql`, so any claim here can be checked against the source rows.
+
+---
+
 ## Author
 
 **MSc in Management, Singapore Management University**
