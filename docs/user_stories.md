@@ -1,5 +1,5 @@
 # User Stories & Acceptance Criteria
-## AI-Powered Inventory Forecasting & Automated Replenishment System
+## Demand Forecasting & Automated Replenishment System
 
 **Related document:** `docs/BRD.md` (BRD-SCM-001 v1.0)
 **Format:** Standard user story + Gherkin (Given / When / Then) acceptance criteria
@@ -217,7 +217,7 @@ And the SKU is listed in the dashboard's "Model Watchlist"
 ## US-05: Auditable Savings & Benefits Reporting
 
 > **As a** Finance Business Partner (Daniel),
-> **I want** the carrying cost savings of the AI policy versus the previous static thresholds to be calculated from source data with a full audit trail,
+> **I want** the carrying cost savings of the forecast-driven policy versus the previous static thresholds to be calculated from source data with a full audit trail,
 > **So that** I can defend the reported working capital release in the quarterly business review and in internal audit.
 
 **Priority:** Should Have  **Points:** 5  **Traces to:** FR-10, FR-11, NFR-08, BO-01

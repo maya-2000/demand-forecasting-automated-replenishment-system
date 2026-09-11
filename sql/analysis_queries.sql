@@ -1,5 +1,5 @@
 /* =====================================================================================
-   AI-Powered Inventory Forecasting & Automated Replenishment System
+   Demand Forecasting & Automated Replenishment System
    Analytical SQL Suite
    -------------------------------------------------------------------------------------
    Source table : inventory_data      (loaded from data/inventory_data.csv, 1,000 rows)
@@ -172,7 +172,7 @@ ORDER BY risk_rank_overall;
 
        Safety stock saving = (static safety stock - AI safety stock) x holding cost
          The static policy holds a flat 30-day cover irrespective of demand volatility;
-         the AI policy sizes the buffer statistically at a 95% service level.
+         the forecast-driven policy sizes the buffer statistically at a 95% service level.
 
        Cycle stock saving  = (static order qty - AI order qty) / 2 x holding cost
          Raising a PO manually costs ~SGD 550, which pushes planners toward large,
@@ -180,7 +180,7 @@ ORDER BY risk_rank_overall;
          economic order quantity - and half of it, the average cycle stock - falls.
 
      A negative saving is a legitimate and important result: for long-lead-time, volatile
-     SKUs the static threshold was under-covering, and the AI policy correctly invests
+     SKUs the static threshold was under-covering, and the forecast-driven policy correctly invests
      MORE inventory to buy back service level. That trade is surfaced, not hidden.
    ===================================================================================== */
 WITH policy_positions AS (
@@ -272,7 +272,7 @@ ORDER BY annual_saving_sgd DESC;
      Turnover = annualised COGS / average inventory value
      COGS is annualised from 243 YTD days: Units_Sold_YTD x Unit_Cost x 365 / 243
      Average inventory value is evaluated under both policies so the turnover uplift
-     delivered by the AI policy is visible per SKU.
+     delivered by the forecast-driven policy is visible per SKU.
 
      Rows are aggregated from SKU x warehouse grain up to SKU grain, then benchmarked
      against the category average using a partitioned window - a SKU turning at 6x is

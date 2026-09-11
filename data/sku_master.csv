@@ -1,0 +1,1001 @@
+SKU_ID,Warehouse_ID,Warehouse_Name,Product_Category,ABC_Class,Supplier_ID,Unit_Cost,Unit_Price,Lead_Time_Days,Lead_Time_Variability_Days,Holding_Cost_Per_Unit
+SKU-0001,WH-BTM-03,Batam,FMCG Household,C,SUP-003,0.71,0.93,11,1.5,0.15
+SKU-0002,WH-BTM-03,Batam,Medical Supplies,C,SUP-019,9.02,12.35,17,4.5,1.39
+SKU-0003,WH-BTM-03,Batam,FMCG Household,C,SUP-025,1.74,3.87,14,3.2,0.27
+SKU-0004,WH-BTM-03,Batam,Automotive Parts,B,SUP-039,13.13,16.91,35,8.1,2.02
+SKU-0005,WH-BTM-03,Batam,Consumer Electronics,C,SUP-022,24.26,34.06,21,7.0,3.74
+SKU-0006,WH-BTM-03,Batam,Apparel & Textiles,C,SUP-014,10.71,13.93,36,9.2,1.65
+SKU-0007,WH-BTM-03,Batam,FMCG Household,C,SUP-023,0.55,0.74,11,2.0,0.15
+SKU-0008,WH-BTM-03,Batam,FMCG Household,A,SUP-008,3.56,6.39,11,2.2,0.55
+SKU-0009,WH-BTM-03,Batam,Consumer Electronics,B,SUP-004,54.11,78.08,24,3.2,8.33
+SKU-0010,WH-BTM-03,Batam,Medical Supplies,C,SUP-028,11.31,19.67,27,4.0,1.74
+SKU-0011,WH-BTM-03,Batam,Industrial Components,C,SUP-040,8.53,15.03,33,4.5,1.31
+SKU-0012,WH-BTM-03,Batam,Apparel & Textiles,A,SUP-034,8.89,18.75,27,8.2,1.37
+SKU-0013,WH-BTM-03,Batam,Automotive Parts,C,SUP-024,10.62,13.65,38,10.5,1.64
+SKU-0014,WH-BTM-03,Batam,FMCG Household,C,SUP-002,1.85,3.91,10,2.3,0.28
+SKU-0015,WH-BTM-03,Batam,Medical Supplies,A,SUP-040,25.96,46.6,20,3.9,4.0
+SKU-0016,WH-BTM-03,Batam,Industrial Components,B,SUP-018,38.84,53.84,29,7.7,5.98
+SKU-0017,WH-BTM-03,Batam,Medical Supplies,B,SUP-012,21.3,42.45,19,5.8,3.28
+SKU-0018,WH-BTM-03,Batam,Consumer Electronics,B,SUP-036,24.1,51.06,27,8.6,3.71
+SKU-0019,WH-BTM-03,Batam,FMCG Household,C,SUP-030,3.04,4.42,14,3.3,0.47
+SKU-0020,WH-BTM-03,Batam,Automotive Parts,B,SUP-030,38.15,84.92,33,10.1,5.88
+SKU-0021,WH-BTM-03,Batam,FMCG Household,C,SUP-012,1.94,3.15,10,2.3,0.3
+SKU-0022,WH-BTM-03,Batam,Industrial Components,B,SUP-040,26.07,46.32,45,9.8,4.01
+SKU-0023,WH-BTM-03,Batam,Apparel & Textiles,C,SUP-019,1.34,3.15,39,12.3,0.21
+SKU-0024,WH-BTM-03,Batam,FMCG Household,C,SUP-022,1.27,1.95,13,2.6,0.2
+SKU-0025,WH-BTM-03,Batam,FMCG Household,B,SUP-031,2.44,5.01,10,2.0,0.38
+SKU-0026,WH-BTM-03,Batam,Consumer Electronics,B,SUP-027,16.01,24.06,27,4.8,2.47
+SKU-0027,WH-BTM-03,Batam,Medical Supplies,C,SUP-007,6.15,12.49,19,4.4,0.95
+SKU-0028,WH-BTM-03,Batam,Consumer Electronics,A,SUP-013,53.0,94.02,22,5.2,8.16
+SKU-0029,WH-BTM-03,Batam,Consumer Electronics,B,SUP-015,61.4,87.45,26,6.9,9.46
+SKU-0030,WH-BTM-03,Batam,Automotive Parts,C,SUP-038,31.13,49.34,44,9.1,4.79
+SKU-0031,WH-BTM-03,Batam,FMCG Household,B,SUP-029,3.6,5.41,11,1.7,0.55
+SKU-0032,WH-BTM-03,Batam,Apparel & Textiles,C,SUP-015,13.88,18.46,34,10.8,2.14
+SKU-0033,WH-BTM-03,Batam,Industrial Components,A,SUP-030,8.1,10.53,33,6.2,1.25
+SKU-0034,WH-BTM-03,Batam,Industrial Components,A,SUP-030,19.14,29.21,34,11.2,2.95
+SKU-0035,WH-BTM-03,Batam,Medical Supplies,B,SUP-016,11.81,15.28,26,3.9,1.82
+SKU-0036,WH-BTM-03,Batam,Consumer Electronics,C,SUP-017,11.4,15.82,34,8.2,1.76
+SKU-0037,WH-BTM-03,Batam,Consumer Electronics,B,SUP-036,48.54,93.54,25,5.9,7.48
+SKU-0038,WH-BTM-03,Batam,Medical Supplies,A,SUP-023,12.84,24.45,24,7.4,1.98
+SKU-0039,WH-BTM-03,Batam,Industrial Components,B,SUP-006,19.9,38.71,33,4.4,3.06
+SKU-0040,WH-BTM-03,Batam,Automotive Parts,B,SUP-029,12.08,18.14,32,10.5,1.86
+SKU-0041,WH-BTM-03,Batam,Medical Supplies,C,SUP-024,6.52,14.19,26,6.1,1.0
+SKU-0042,WH-BTM-03,Batam,FMCG Household,B,SUP-021,3.86,6.82,10,2.5,0.59
+SKU-0043,WH-BTM-03,Batam,Automotive Parts,C,SUP-030,7.1,9.66,41,9.3,1.09
+SKU-0044,WH-BTM-03,Batam,Industrial Components,C,SUP-037,11.38,15.63,37,4.0,1.75
+SKU-0045,WH-BTM-03,Batam,FMCG Household,C,SUP-014,1.58,2.98,10,2.2,0.24
+SKU-0046,WH-BTM-03,Batam,FMCG Household,C,SUP-017,2.31,3.22,9,1.5,0.36
+SKU-0047,WH-BTM-03,Batam,Industrial Components,B,SUP-008,24.11,40.36,34,6.3,3.71
+SKU-0048,WH-BTM-03,Batam,Industrial Components,B,SUP-026,20.76,49.08,46,12.1,3.2
+SKU-0049,WH-BTM-03,Batam,Automotive Parts,C,SUP-017,8.95,11.5,45,10.1,1.38
+SKU-0050,WH-BTM-03,Batam,Consumer Electronics,B,SUP-014,20.4,26.36,26,3.2,3.14
+SKU-0051,WH-BTM-03,Batam,Consumer Electronics,A,SUP-028,53.4,126.39,21,2.5,8.22
+SKU-0052,WH-BTM-03,Batam,Consumer Electronics,A,SUP-017,42.07,73.87,29,4.2,6.48
+SKU-0053,WH-BTM-03,Batam,FMCG Household,C,SUP-019,2.9,3.95,9,1.3,0.45
+SKU-0054,WH-BTM-03,Batam,Automotive Parts,B,SUP-018,36.5,79.87,44,11.1,5.62
+SKU-0055,WH-BTM-03,Batam,Automotive Parts,B,SUP-011,40.86,88.24,48,6.9,6.29
+SKU-0056,WH-BTM-03,Batam,FMCG Household,C,SUP-006,0.72,1.23,12,3.8,0.15
+SKU-0057,WH-BTM-03,Batam,Medical Supplies,C,SUP-034,11.17,20.08,20,3.0,1.72
+SKU-0058,WH-BTM-03,Batam,Automotive Parts,C,SUP-004,30.36,44.54,32,3.9,4.68
+SKU-0059,WH-BTM-03,Batam,Consumer Electronics,B,SUP-013,25.62,33.63,21,6.7,3.95
+SKU-0060,WH-BTM-03,Batam,Consumer Electronics,A,SUP-027,53.45,94.44,27,4.7,8.23
+SKU-0061,WH-BTM-03,Batam,Automotive Parts,C,SUP-006,27.68,41.08,51,10.5,4.26
+SKU-0062,WH-BTM-03,Batam,Medical Supplies,A,SUP-027,21.22,39.22,20,6.8,3.27
+SKU-0063,WH-BTM-03,Batam,Automotive Parts,B,SUP-030,45.04,94.04,44,14.8,6.94
+SKU-0064,WH-BTM-03,Batam,FMCG Household,C,SUP-027,2.37,3.06,13,3.6,0.36
+SKU-0065,WH-BTM-03,Batam,Automotive Parts,C,SUP-013,47.75,84.43,33,3.9,7.35
+SKU-0066,WH-BTM-03,Batam,Medical Supplies,B,SUP-001,16.68,23.94,18,4.5,2.57
+SKU-0067,WH-BTM-03,Batam,Medical Supplies,A,SUP-036,23.26,49.98,21,7.3,3.58
+SKU-0068,WH-BTM-03,Batam,Industrial Components,C,SUP-014,15.26,22.16,41,13.8,2.35
+SKU-0069,WH-BTM-03,Batam,Consumer Electronics,A,SUP-033,34.43,61.47,27,3.4,5.3
+SKU-0070,WH-BTM-03,Batam,Medical Supplies,A,SUP-008,15.29,26.33,25,5.0,2.35
+SKU-0071,WH-BTM-03,Batam,Consumer Electronics,B,SUP-007,12.77,20.04,34,6.1,1.97
+SKU-0072,WH-BTM-03,Batam,Industrial Components,A,SUP-032,17.35,32.37,42,5.6,2.67
+SKU-0073,WH-BTM-03,Batam,FMCG Household,B,SUP-038,3.89,7.5,15,4.1,0.6
+SKU-0074,WH-BTM-03,Batam,Industrial Components,B,SUP-035,25.71,44.64,42,7.1,3.96
+SKU-0075,WH-BTM-03,Batam,Consumer Electronics,B,SUP-031,16.76,33.06,33,6.1,2.58
+SKU-0076,WH-BTM-03,Batam,Industrial Components,C,SUP-010,15.2,35.68,44,5.4,2.34
+SKU-0077,WH-BTM-03,Batam,Industrial Components,C,SUP-037,9.9,15.74,42,9.4,1.52
+SKU-0078,WH-BTM-03,Batam,Automotive Parts,C,SUP-027,6.17,10.37,50,7.0,0.95
+SKU-0079,WH-BTM-03,Batam,Medical Supplies,C,SUP-007,25.19,32.48,28,5.8,3.88
+SKU-0080,WH-BTM-03,Batam,FMCG Household,B,SUP-006,2.16,4.38,12,1.6,0.33
+SKU-0081,WH-BTM-03,Batam,Automotive Parts,C,SUP-035,19.45,32.81,46,15.6,3.0
+SKU-0082,WH-BTM-03,Batam,Industrial Components,B,SUP-012,24.55,38.78,38,5.2,3.78
+SKU-0083,WH-BTM-03,Batam,FMCG Household,C,SUP-031,0.53,0.71,14,3.2,0.15
+SKU-0084,WH-BTM-03,Batam,Consumer Electronics,A,SUP-006,22.29,48.49,27,4.0,3.43
+SKU-0085,WH-BTM-03,Batam,Consumer Electronics,A,SUP-012,45.67,71.61,33,3.9,7.03
+SKU-0086,WH-BTM-03,Batam,Consumer Electronics,C,SUP-012,41.86,78.35,32,4.8,6.45
+SKU-0087,WH-BTM-03,Batam,FMCG Household,C,SUP-012,4.13,5.69,15,1.7,0.64
+SKU-0088,WH-BTM-03,Batam,Medical Supplies,C,SUP-027,17.51,40.36,20,2.7,2.7
+SKU-0089,WH-BTM-03,Batam,Consumer Electronics,B,SUP-037,33.26,46.47,31,6.9,5.12
+SKU-0090,WH-BTM-03,Batam,Medical Supplies,A,SUP-037,21.04,29.71,26,6.8,3.24
+SKU-0091,WH-BTM-03,Batam,Consumer Electronics,A,SUP-030,56.68,120.4,35,4.3,8.73
+SKU-0092,WH-BTM-03,Batam,Automotive Parts,C,SUP-009,38.87,86.1,52,10.9,5.99
+SKU-0093,WH-BTM-03,Batam,Medical Supplies,C,SUP-039,26.08,37.07,24,5.9,4.02
+SKU-0094,WH-BTM-03,Batam,Industrial Components,B,SUP-022,31.15,50.99,39,6.2,4.8
+SKU-0095,WH-BTM-03,Batam,Industrial Components,C,SUP-022,34.2,66.29,31,6.0,5.27
+SKU-0096,WH-BTM-03,Batam,Automotive Parts,C,SUP-029,10.36,22.34,54,6.4,1.6
+SKU-0097,WH-BTM-03,Batam,Industrial Components,B,SUP-031,29.37,45.64,32,5.0,4.52
+SKU-0098,WH-BTM-03,Batam,Consumer Electronics,A,SUP-039,31.2,52.54,31,6.7,4.8
+SKU-0099,WH-BTM-03,Batam,Consumer Electronics,A,SUP-024,37.42,72.95,32,11.1,5.76
+SKU-0100,WH-BTM-03,Batam,Apparel & Textiles,C,SUP-025,9.57,18.52,31,10.8,1.47
+SKU-0101,WH-BTM-03,Batam,Apparel & Textiles,B,SUP-030,13.61,27.32,27,9.3,2.1
+SKU-0102,WH-BTM-03,Batam,Automotive Parts,B,SUP-011,51.28,89.21,36,7.4,7.9
+SKU-0103,WH-BTM-03,Batam,Industrial Components,C,SUP-013,13.38,18.02,44,5.3,2.06
+SKU-0104,WH-BTM-03,Batam,Apparel & Textiles,A,SUP-026,10.59,23.3,32,5.8,1.63
+SKU-0105,WH-BTM-03,Batam,FMCG Household,C,SUP-003,3.27,6.98,9,1.4,0.5
+SKU-0106,WH-BTM-03,Batam,Automotive Parts,C,SUP-013,21.29,43.21,48,5.0,3.28
+SKU-0107,WH-BTM-03,Batam,Medical Supplies,C,SUP-029,5.1,6.85,20,2.5,0.79
+SKU-0108,WH-BTM-03,Batam,Industrial Components,C,SUP-040,4.47,6.33,45,9.6,0.69
+SKU-0109,WH-BTM-03,Batam,Consumer Electronics,A,SUP-021,49.75,97.11,25,4.6,7.66
+SKU-0110,WH-BTM-03,Batam,Apparel & Textiles,C,SUP-016,7.47,9.68,27,3.9,1.15
+SKU-0111,WH-BTM-03,Batam,Medical Supplies,A,SUP-018,26.64,62.32,18,5.0,4.1
+SKU-0112,WH-BTM-03,Batam,Consumer Electronics,B,SUP-028,32.57,50.56,28,5.3,5.02
+SKU-0113,WH-BTM-03,Batam,Industrial Components,A,SUP-022,38.21,73.33,36,11.3,5.88
+SKU-0114,WH-BTM-03,Batam,Automotive Parts,B,SUP-001,24.34,52.86,48,7.7,3.75
+SKU-0115,WH-BTM-03,Batam,Consumer Electronics,A,SUP-022,50.65,79.4,27,6.3,7.8
+SKU-0116,WH-BTM-03,Batam,FMCG Household,C,SUP-017,0.81,1.22,11,1.6,0.15
+SKU-0117,WH-BTM-03,Batam,FMCG Household,C,SUP-029,2.56,4.56,10,2.2,0.39
+SKU-0118,WH-BTM-03,Batam,Automotive Parts,C,SUP-036,42.7,74.8,38,5.2,6.58
+SKU-0119,WH-BTM-03,Batam,Medical Supplies,B,SUP-039,25.12,39.7,28,3.9,3.87
+SKU-0120,WH-BTM-03,Batam,Automotive Parts,B,SUP-025,43.66,77.5,35,8.9,6.72
+SKU-0121,WH-BTM-03,Batam,Automotive Parts,C,SUP-015,6.74,15.21,54,9.0,1.04
+SKU-0122,WH-BTM-03,Batam,Automotive Parts,B,SUP-018,22.52,36.82,39,5.6,3.47
+SKU-0123,WH-BTM-03,Batam,Consumer Electronics,C,SUP-008,9.68,13.65,22,7.3,1.49
+SKU-0124,WH-BTM-03,Batam,Industrial Components,C,SUP-038,6.93,10.76,32,3.5,1.07
+SKU-0125,WH-BTM-03,Batam,Consumer Electronics,A,SUP-034,44.14,69.17,21,5.1,6.8
+SKU-0126,WH-BTM-03,Batam,Medical Supplies,C,SUP-035,19.83,27.06,26,6.2,3.05
+SKU-0127,WH-BTM-03,Batam,Industrial Components,C,SUP-014,30.85,42.77,38,6.2,4.75
+SKU-0128,WH-BTM-03,Batam,Consumer Electronics,A,SUP-013,54.6,102.33,26,5.5,8.41
+SKU-0129,WH-BTM-03,Batam,Consumer Electronics,A,SUP-035,47.67,72.47,30,3.7,7.34
+SKU-0130,WH-BTM-03,Batam,Automotive Parts,B,SUP-022,42.64,97.75,46,12.9,6.57
+SKU-0131,WH-BTM-03,Batam,Consumer Electronics,B,SUP-029,9.69,14.0,35,5.4,1.49
+SKU-0132,WH-BTM-03,Batam,Apparel & Textiles,C,SUP-020,4.2,5.64,40,5.9,0.65
+SKU-0133,WH-BTM-03,Batam,Automotive Parts,A,SUP-018,34.23,67.28,47,8.4,5.27
+SKU-0134,WH-BTM-03,Batam,Industrial Components,B,SUP-026,33.89,73.22,44,14.3,5.22
+SKU-0135,WH-BTM-03,Batam,Automotive Parts,B,SUP-033,5.21,7.66,49,14.7,0.8
+SKU-0136,WH-BTM-03,Batam,Consumer Electronics,B,SUP-014,35.3,49.91,28,9.4,5.44
+SKU-0137,WH-BTM-03,Batam,Apparel & Textiles,C,SUP-033,9.87,13.84,35,9.2,1.52
+SKU-0138,WH-BTM-03,Batam,Medical Supplies,B,SUP-010,2.74,4.63,18,4.8,0.42
+SKU-0139,WH-BTM-03,Batam,FMCG Household,C,SUP-017,1.99,3.25,14,3.1,0.31
+SKU-0140,WH-BTM-03,Batam,Consumer Electronics,A,SUP-037,56.26,81.94,35,11.4,8.66
+SKU-0141,WH-BTM-03,Batam,Medical Supplies,B,SUP-039,18.79,24.6,18,4.1,2.89
+SKU-0142,WH-BTM-03,Batam,Medical Supplies,C,SUP-037,7.94,13.09,27,5.1,1.22
+SKU-0143,WH-BTM-03,Batam,Apparel & Textiles,C,SUP-013,12.12,27.89,39,10.1,1.87
+SKU-0144,WH-BTM-03,Batam,Automotive Parts,C,SUP-034,21.36,39.19,36,8.5,3.29
+SKU-0145,WH-BTM-03,Batam,Medical Supplies,C,SUP-038,23.33,38.78,23,3.0,3.59
+SKU-0146,WH-BTM-03,Batam,Industrial Components,C,SUP-040,13.76,18.59,46,9.1,2.12
+SKU-0147,WH-BTM-03,Batam,Industrial Components,B,SUP-001,24.25,35.19,47,8.4,3.73
+SKU-0148,WH-BTM-03,Batam,Medical Supplies,B,SUP-030,11.92,17.69,18,5.6,1.84
+SKU-0149,WH-BTM-03,Batam,Medical Supplies,C,SUP-040,8.87,17.58,21,4.1,1.37
+SKU-0150,WH-BTM-03,Batam,Consumer Electronics,C,SUP-031,55.76,120.07,31,9.5,8.59
+SKU-0151,WH-BTM-03,Batam,FMCG Household,C,SUP-010,1.19,2.61,10,2.1,0.18
+SKU-0152,WH-BTM-03,Batam,FMCG Household,C,SUP-031,0.81,1.9,11,3.2,0.15
+SKU-0153,WH-BTM-03,Batam,Consumer Electronics,A,SUP-005,25.81,60.54,21,2.8,3.97
+SKU-0154,WH-BTM-03,Batam,Medical Supplies,A,SUP-020,19.94,45.64,18,6.0,3.07
+SKU-0155,WH-BTM-03,Batam,Consumer Electronics,A,SUP-026,51.41,68.17,29,6.4,7.92
+SKU-0156,WH-BTM-03,Batam,Automotive Parts,A,SUP-019,51.94,71.11,46,7.6,8.0
+SKU-0157,WH-BTM-03,Batam,Industrial Components,C,SUP-028,13.67,20.39,40,6.4,2.11
+SKU-0158,WH-BTM-03,Batam,Automotive Parts,B,SUP-010,24.17,41.6,49,8.1,3.72
+SKU-0159,WH-BTM-03,Batam,FMCG Household,C,SUP-025,1.01,1.36,11,2.1,0.16
+SKU-0160,WH-BTM-03,Batam,FMCG Household,C,SUP-026,2.63,5.53,11,3.1,0.41
+SKU-0161,WH-BTM-03,Batam,Consumer Electronics,A,SUP-026,61.87,110.88,21,7.1,9.53
+SKU-0162,WH-BTM-03,Batam,Apparel & Textiles,B,SUP-012,10.17,17.39,27,7.2,1.57
+SKU-0163,WH-BTM-03,Batam,Industrial Components,C,SUP-013,24.43,33.91,34,8.1,3.76
+SKU-0164,WH-BTM-03,Batam,Consumer Electronics,A,SUP-011,28.58,41.49,23,4.9,4.4
+SKU-0165,WH-BTM-03,Batam,Medical Supplies,C,SUP-019,24.88,34.45,17,5.2,3.83
+SKU-0166,WH-BTM-03,Batam,Industrial Components,C,SUP-024,20.89,44.14,30,9.4,3.22
+SKU-0167,WH-BTM-03,Batam,FMCG Household,C,SUP-015,1.0,1.76,13,2.3,0.15
+SKU-0168,WH-BTM-03,Batam,FMCG Household,C,SUP-017,1.85,3.59,13,4.4,0.28
+SKU-0169,WH-BTM-03,Batam,Industrial Components,C,SUP-012,5.42,8.05,46,9.1,0.83
+SKU-0170,WH-BTM-03,Batam,Apparel & Textiles,C,SUP-009,3.79,5.86,37,11.1,0.58
+SKU-0171,WH-BTM-03,Batam,Industrial Components,C,SUP-027,3.64,5.74,39,13.3,0.56
+SKU-0172,WH-BTM-03,Batam,Medical Supplies,C,SUP-033,13.33,26.32,18,5.0,2.05
+SKU-0173,WH-BTM-03,Batam,Industrial Components,B,SUP-012,25.84,51.48,39,5.5,3.98
+SKU-0174,WH-BTM-03,Batam,Apparel & Textiles,C,SUP-035,5.59,7.92,24,5.9,0.86
+SKU-0175,WH-BTM-03,Batam,Consumer Electronics,A,SUP-023,30.12,68.29,27,3.5,4.64
+SKU-0176,WH-BTM-03,Batam,Consumer Electronics,A,SUP-007,59.76,81.13,26,7.7,9.2
+SKU-0177,WH-BTM-03,Batam,Medical Supplies,A,SUP-015,20.8,45.47,22,3.7,3.2
+SKU-0178,WH-BTM-03,Batam,Apparel & Textiles,C,SUP-001,8.12,10.92,28,7.7,1.25
+SKU-0179,WH-BTM-03,Batam,FMCG Household,B,SUP-002,1.55,2.26,13,4.3,0.24
+SKU-0180,WH-BTM-03,Batam,FMCG Household,B,SUP-014,3.82,8.04,14,2.0,0.59
+SKU-0181,WH-BTM-03,Batam,FMCG Household,C,SUP-019,1.37,1.92,14,2.8,0.21
+SKU-0182,WH-BTM-03,Batam,FMCG Household,C,SUP-032,1.7,2.69,13,3.4,0.26
+SKU-0183,WH-BTM-03,Batam,Medical Supplies,C,SUP-006,24.73,40.01,23,4.7,3.81
+SKU-0184,WH-BTM-03,Batam,Industrial Components,C,SUP-034,22.06,31.89,28,4.0,3.4
+SKU-0185,WH-BTM-03,Batam,FMCG Household,C,SUP-010,3.25,6.2,13,1.4,0.5
+SKU-0186,WH-BTM-03,Batam,Automotive Parts,B,SUP-006,32.77,69.21,44,8.9,5.05
+SKU-0187,WH-BTM-03,Batam,Industrial Components,A,SUP-028,26.52,57.01,33,8.7,4.08
+SKU-0188,WH-BTM-03,Batam,Consumer Electronics,C,SUP-031,23.47,35.68,25,6.1,3.61
+SKU-0189,WH-BTM-03,Batam,FMCG Household,C,SUP-025,1.39,2.36,15,2.1,0.21
+SKU-0190,WH-BTM-03,Batam,Industrial Components,C,SUP-005,14.61,21.16,40,8.5,2.25
+SKU-0191,WH-BTM-03,Batam,Apparel & Textiles,C,SUP-005,3.19,4.61,32,6.2,0.49
+SKU-0192,WH-BTM-03,Batam,Industrial Components,B,SUP-016,34.48,47.76,40,6.7,5.31
+SKU-0193,WH-BTM-03,Batam,Consumer Electronics,C,SUP-019,22.58,51.13,27,7.6,3.48
+SKU-0194,WH-BTM-03,Batam,FMCG Household,B,SUP-040,2.58,5.6,12,2.1,0.4
+SKU-0195,WH-BTM-03,Batam,Consumer Electronics,A,SUP-012,50.56,101.09,25,5.9,7.79
+SKU-0196,WH-BTM-03,Batam,Consumer Electronics,B,SUP-008,50.11,84.41,27,8.9,7.72
+SKU-0197,WH-BTM-03,Batam,Automotive Parts,C,SUP-038,25.6,42.43,47,11.0,3.94
+SKU-0198,WH-BTM-03,Batam,FMCG Household,C,SUP-007,2.26,3.84,9,2.3,0.35
+SKU-0199,WH-BTM-03,Batam,Consumer Electronics,A,SUP-002,61.71,105.16,32,3.8,9.5
+SKU-0200,WH-BTM-03,Batam,Industrial Components,C,SUP-017,27.29,43.77,33,4.8,4.2
+SKU-0201,WH-BTM-03,Batam,FMCG Household,C,SUP-017,3.51,4.79,13,1.6,0.54
+SKU-0202,WH-BTM-03,Batam,Apparel & Textiles,B,SUP-025,12.75,17.35,34,9.9,1.96
+SKU-0203,WH-BTM-03,Batam,Medical Supplies,A,SUP-036,21.69,49.61,25,7.7,3.34
+SKU-0204,WH-BTM-03,Batam,Consumer Electronics,C,SUP-038,17.18,28.33,30,4.4,2.65
+SKU-0205,WH-BTM-03,Batam,Consumer Electronics,C,SUP-012,37.92,86.8,35,5.4,5.84
+SKU-0206,WH-BTM-03,Batam,Industrial Components,C,SUP-040,6.67,9.25,37,6.7,1.03
+SKU-0207,WH-BTM-03,Batam,Consumer Electronics,A,SUP-026,42.91,73.93,31,7.7,6.61
+SKU-0208,WH-BTM-03,Batam,Automotive Parts,B,SUP-003,49.9,70.76,47,12.0,7.68
+SKU-0209,WH-BTM-03,Batam,Consumer Electronics,A,SUP-038,35.2,51.1,24,6.5,5.42
+SKU-0210,WH-BTM-03,Batam,Medical Supplies,C,SUP-006,12.82,16.67,20,6.5,1.97
+SKU-0211,WH-BTM-03,Batam,Automotive Parts,C,SUP-024,6.68,9.06,41,7.1,1.03
+SKU-0212,WH-BTM-03,Batam,Automotive Parts,A,SUP-032,50.11,111.37,38,10.1,7.72
+SKU-0213,WH-BTM-03,Batam,Consumer Electronics,A,SUP-010,12.67,19.07,26,6.2,1.95
+SKU-0214,WH-BTM-03,Batam,FMCG Household,C,SUP-011,0.65,1.16,11,1.9,0.15
+SKU-0215,WH-BTM-03,Batam,Automotive Parts,B,SUP-020,16.57,27.05,45,14.7,2.55
+SKU-0216,WH-BTM-03,Batam,FMCG Household,C,SUP-036,0.74,1.16,10,1.2,0.15
+SKU-0217,WH-BTM-03,Batam,Consumer Electronics,B,SUP-009,32.03,54.42,33,9.2,4.93
+SKU-0218,WH-BTM-03,Batam,Consumer Electronics,B,SUP-027,35.38,49.65,27,7.6,5.45
+SKU-0219,WH-BTM-03,Batam,Apparel & Textiles,C,SUP-019,5.2,12.26,36,11.8,0.8
+SKU-0220,WH-BTM-03,Batam,Industrial Components,C,SUP-005,4.83,9.95,29,6.7,0.74
+SKU-0221,WH-BTM-03,Batam,Industrial Components,C,SUP-029,7.02,13.68,37,6.7,1.08
+SKU-0222,WH-BTM-03,Batam,Medical Supplies,C,SUP-034,11.61,18.99,17,5.2,1.79
+SKU-0223,WH-BTM-03,Batam,Automotive Parts,C,SUP-024,7.84,10.81,47,13.8,1.21
+SKU-0224,WH-BTM-03,Batam,Apparel & Textiles,C,SUP-008,10.14,22.61,29,6.5,1.56
+SKU-0225,WH-BTM-03,Batam,Industrial Components,C,SUP-007,10.45,15.9,46,13.4,1.61
+SKU-0226,WH-BTM-03,Batam,Apparel & Textiles,C,SUP-017,5.07,6.65,29,4.8,0.78
+SKU-0227,WH-BTM-03,Batam,Consumer Electronics,A,SUP-021,28.68,43.67,29,7.2,4.42
+SKU-0228,WH-BTM-03,Batam,Medical Supplies,B,SUP-023,12.42,25.14,20,6.3,1.91
+SKU-0229,WH-BTM-03,Batam,Automotive Parts,C,SUP-010,5.08,9.14,45,8.1,0.78
+SKU-0230,WH-BTM-03,Batam,Consumer Electronics,B,SUP-021,13.16,25.82,27,6.0,2.03
+SKU-0231,WH-BTM-03,Batam,Consumer Electronics,B,SUP-012,54.45,110.16,26,8.8,8.39
+SKU-0232,WH-BTM-03,Batam,Industrial Components,C,SUP-028,3.04,4.32,31,9.3,0.47
+SKU-0233,WH-BTM-03,Batam,Apparel & Textiles,C,SUP-032,7.7,17.21,25,8.0,1.19
+SKU-0234,WH-BTM-03,Batam,Automotive Parts,B,SUP-027,28.01,45.01,34,6.7,4.31
+SKU-0235,WH-BTM-03,Batam,Apparel & Textiles,C,SUP-001,5.46,9.93,41,14.3,0.84
+SKU-0236,WH-BTM-03,Batam,FMCG Household,B,SUP-040,2.1,2.7,11,1.5,0.32
+SKU-0237,WH-BTM-03,Batam,Medical Supplies,C,SUP-001,21.51,50.92,17,3.9,3.31
+SKU-0238,WH-BTM-03,Batam,FMCG Household,B,SUP-040,3.61,5.32,15,3.3,0.56
+SKU-0239,WH-BTM-03,Batam,Consumer Electronics,A,SUP-002,21.32,28.14,21,6.3,3.28
+SKU-0240,WH-BTM-03,Batam,Consumer Electronics,B,SUP-021,24.74,40.23,27,8.8,3.81
+SKU-0241,WH-BTM-03,Batam,FMCG Household,B,SUP-005,1.4,1.91,13,3.7,0.22
+SKU-0242,WH-BTM-03,Batam,FMCG Household,C,SUP-004,2.28,3.14,15,3.9,0.35
+SKU-0243,WH-BTM-03,Batam,Industrial Components,B,SUP-028,27.6,49.97,42,8.7,4.25
+SKU-0244,WH-BTM-03,Batam,Medical Supplies,C,SUP-030,7.71,12.07,22,5.0,1.19
+SKU-0245,WH-BTM-03,Batam,Automotive Parts,B,SUP-005,20.54,45.83,53,12.0,3.16
+SKU-0246,WH-BTM-03,Batam,FMCG Household,C,SUP-040,3.94,5.92,9,0.9,0.61
+SKU-0247,WH-BTM-03,Batam,Automotive Parts,C,SUP-013,7.28,14.04,54,12.2,1.12
+SKU-0248,WH-BTM-03,Batam,Industrial Components,C,SUP-013,19.59,31.91,44,13.8,3.02
+SKU-0249,WH-BTM-03,Batam,Industrial Components,B,SUP-012,28.62,52.76,46,12.8,4.41
+SKU-0250,WH-BTM-03,Batam,Medical Supplies,B,SUP-019,5.76,10.21,20,6.0,0.89
+SKU-0001,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-003,0.71,0.93,8,1.4,0.15
+SKU-0002,WH-JHR-02,Johor Bahru,Medical Supplies,C,SUP-019,9.02,12.35,23,3.3,1.69
+SKU-0003,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-025,1.74,3.87,10,3.5,0.33
+SKU-0004,WH-JHR-02,Johor Bahru,Automotive Parts,B,SUP-039,13.13,16.91,36,4.2,2.46
+SKU-0005,WH-JHR-02,Johor Bahru,Consumer Electronics,C,SUP-022,24.26,34.06,29,8.9,4.54
+SKU-0006,WH-JHR-02,Johor Bahru,Apparel & Textiles,C,SUP-014,10.71,13.93,20,5.2,2.0
+SKU-0007,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-023,0.55,0.74,12,3.4,0.15
+SKU-0008,WH-JHR-02,Johor Bahru,FMCG Household,A,SUP-008,3.56,6.39,8,2.2,0.67
+SKU-0009,WH-JHR-02,Johor Bahru,Consumer Electronics,B,SUP-004,54.11,78.08,24,7.6,10.12
+SKU-0010,WH-JHR-02,Johor Bahru,Medical Supplies,C,SUP-028,11.31,19.67,18,2.6,2.11
+SKU-0011,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-040,8.53,15.03,28,2.8,1.6
+SKU-0012,WH-JHR-02,Johor Bahru,Apparel & Textiles,A,SUP-034,8.89,18.75,32,8.0,1.66
+SKU-0013,WH-JHR-02,Johor Bahru,Automotive Parts,C,SUP-024,10.62,13.65,28,5.3,1.99
+SKU-0014,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-002,1.85,3.91,12,1.6,0.35
+SKU-0015,WH-JHR-02,Johor Bahru,Medical Supplies,A,SUP-040,25.96,46.6,17,2.5,4.85
+SKU-0016,WH-JHR-02,Johor Bahru,Industrial Components,B,SUP-018,38.84,53.84,33,6.0,7.26
+SKU-0017,WH-JHR-02,Johor Bahru,Medical Supplies,B,SUP-012,21.3,42.45,23,2.7,3.98
+SKU-0018,WH-JHR-02,Johor Bahru,Consumer Electronics,B,SUP-036,24.1,51.06,17,1.9,4.51
+SKU-0019,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-030,3.04,4.42,12,3.9,0.57
+SKU-0020,WH-JHR-02,Johor Bahru,Automotive Parts,B,SUP-030,38.15,84.92,36,6.4,7.13
+SKU-0021,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-012,1.94,3.15,11,3.8,0.36
+SKU-0022,WH-JHR-02,Johor Bahru,Industrial Components,B,SUP-040,26.07,46.32,24,8.2,4.88
+SKU-0023,WH-JHR-02,Johor Bahru,Apparel & Textiles,C,SUP-019,1.34,3.15,26,3.5,0.25
+SKU-0024,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-022,1.27,1.95,11,3.1,0.24
+SKU-0025,WH-JHR-02,Johor Bahru,FMCG Household,B,SUP-031,2.44,5.01,9,2.3,0.46
+SKU-0026,WH-JHR-02,Johor Bahru,Consumer Electronics,B,SUP-027,16.01,24.06,18,4.9,2.99
+SKU-0027,WH-JHR-02,Johor Bahru,Medical Supplies,C,SUP-007,6.15,12.49,16,2.0,1.15
+SKU-0028,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-013,53.0,94.02,27,4.0,9.91
+SKU-0029,WH-JHR-02,Johor Bahru,Consumer Electronics,B,SUP-015,61.4,87.45,17,2.0,11.48
+SKU-0030,WH-JHR-02,Johor Bahru,Automotive Parts,C,SUP-038,31.13,49.34,38,9.5,5.82
+SKU-0031,WH-JHR-02,Johor Bahru,FMCG Household,B,SUP-029,3.6,5.41,12,4.2,0.67
+SKU-0032,WH-JHR-02,Johor Bahru,Apparel & Textiles,C,SUP-015,13.88,18.46,19,5.1,2.6
+SKU-0033,WH-JHR-02,Johor Bahru,Industrial Components,A,SUP-030,8.1,10.53,25,6.9,1.51
+SKU-0034,WH-JHR-02,Johor Bahru,Industrial Components,A,SUP-030,19.14,29.21,33,11.4,3.58
+SKU-0035,WH-JHR-02,Johor Bahru,Medical Supplies,B,SUP-016,11.81,15.28,14,3.8,2.21
+SKU-0036,WH-JHR-02,Johor Bahru,Consumer Electronics,C,SUP-017,11.4,15.82,24,2.6,2.13
+SKU-0037,WH-JHR-02,Johor Bahru,Consumer Electronics,B,SUP-036,48.54,93.54,25,7.9,9.08
+SKU-0038,WH-JHR-02,Johor Bahru,Medical Supplies,A,SUP-023,12.84,24.45,19,3.6,2.4
+SKU-0039,WH-JHR-02,Johor Bahru,Industrial Components,B,SUP-006,19.9,38.71,28,2.8,3.72
+SKU-0040,WH-JHR-02,Johor Bahru,Automotive Parts,B,SUP-029,12.08,18.14,38,8.6,2.26
+SKU-0041,WH-JHR-02,Johor Bahru,Medical Supplies,C,SUP-024,6.52,14.19,19,6.4,1.22
+SKU-0042,WH-JHR-02,Johor Bahru,FMCG Household,B,SUP-021,3.86,6.82,8,1.3,0.72
+SKU-0043,WH-JHR-02,Johor Bahru,Automotive Parts,C,SUP-030,7.1,9.66,36,8.0,1.33
+SKU-0044,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-037,11.38,15.63,36,5.2,2.13
+SKU-0045,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-014,1.58,2.98,11,1.3,0.3
+SKU-0046,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-017,2.31,3.22,10,1.2,0.43
+SKU-0047,WH-JHR-02,Johor Bahru,Industrial Components,B,SUP-008,24.11,40.36,27,7.6,4.51
+SKU-0048,WH-JHR-02,Johor Bahru,Industrial Components,B,SUP-026,20.76,49.08,23,7.3,3.88
+SKU-0049,WH-JHR-02,Johor Bahru,Automotive Parts,C,SUP-017,8.95,11.5,30,4.1,1.67
+SKU-0050,WH-JHR-02,Johor Bahru,Consumer Electronics,B,SUP-014,20.4,26.36,17,2.9,3.81
+SKU-0051,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-028,53.4,126.39,29,4.3,9.99
+SKU-0052,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-017,42.07,73.87,19,2.0,7.87
+SKU-0053,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-019,2.9,3.95,11,2.6,0.54
+SKU-0054,WH-JHR-02,Johor Bahru,Automotive Parts,B,SUP-018,36.5,79.87,28,7.7,6.83
+SKU-0055,WH-JHR-02,Johor Bahru,Automotive Parts,B,SUP-011,40.86,88.24,30,7.9,7.64
+SKU-0056,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-006,0.72,1.23,9,1.8,0.15
+SKU-0057,WH-JHR-02,Johor Bahru,Medical Supplies,C,SUP-034,11.17,20.08,17,4.1,2.09
+SKU-0058,WH-JHR-02,Johor Bahru,Automotive Parts,C,SUP-004,30.36,44.54,40,4.9,5.68
+SKU-0059,WH-JHR-02,Johor Bahru,Consumer Electronics,B,SUP-013,25.62,33.63,28,3.9,4.79
+SKU-0060,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-027,53.45,94.44,27,9.0,10.0
+SKU-0061,WH-JHR-02,Johor Bahru,Automotive Parts,C,SUP-006,27.68,41.08,28,8.1,5.18
+SKU-0062,WH-JHR-02,Johor Bahru,Medical Supplies,A,SUP-027,21.22,39.22,21,6.9,3.97
+SKU-0063,WH-JHR-02,Johor Bahru,Automotive Parts,B,SUP-030,45.04,94.04,28,9.2,8.42
+SKU-0064,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-027,2.37,3.06,12,3.1,0.44
+SKU-0065,WH-JHR-02,Johor Bahru,Automotive Parts,C,SUP-013,47.75,84.43,35,11.6,8.93
+SKU-0066,WH-JHR-02,Johor Bahru,Medical Supplies,B,SUP-001,16.68,23.94,17,3.5,3.12
+SKU-0067,WH-JHR-02,Johor Bahru,Medical Supplies,A,SUP-036,23.26,49.98,15,1.5,4.35
+SKU-0068,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-014,15.26,22.16,22,2.5,2.85
+SKU-0069,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-033,34.43,61.47,20,2.5,6.44
+SKU-0070,WH-JHR-02,Johor Bahru,Medical Supplies,A,SUP-008,15.29,26.33,22,2.7,2.86
+SKU-0071,WH-JHR-02,Johor Bahru,Consumer Electronics,B,SUP-007,12.77,20.04,26,4.9,2.39
+SKU-0072,WH-JHR-02,Johor Bahru,Industrial Components,A,SUP-032,17.35,32.37,38,10.5,3.24
+SKU-0073,WH-JHR-02,Johor Bahru,FMCG Household,B,SUP-038,3.89,7.5,8,2.4,0.73
+SKU-0074,WH-JHR-02,Johor Bahru,Industrial Components,B,SUP-035,25.71,44.64,32,7.9,4.81
+SKU-0075,WH-JHR-02,Johor Bahru,Consumer Electronics,B,SUP-031,16.76,33.06,20,2.7,3.13
+SKU-0076,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-010,15.2,35.68,31,8.9,2.84
+SKU-0077,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-037,9.9,15.74,27,5.1,1.85
+SKU-0078,WH-JHR-02,Johor Bahru,Automotive Parts,C,SUP-027,6.17,10.37,30,3.1,1.15
+SKU-0079,WH-JHR-02,Johor Bahru,Medical Supplies,C,SUP-007,25.19,32.48,19,3.2,4.71
+SKU-0080,WH-JHR-02,Johor Bahru,FMCG Household,B,SUP-006,2.16,4.38,8,1.5,0.4
+SKU-0081,WH-JHR-02,Johor Bahru,Automotive Parts,C,SUP-035,19.45,32.81,34,5.7,3.64
+SKU-0082,WH-JHR-02,Johor Bahru,Industrial Components,B,SUP-012,24.55,38.78,33,10.0,4.59
+SKU-0083,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-031,0.53,0.71,8,2.3,0.15
+SKU-0084,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-006,22.29,48.49,28,7.7,4.17
+SKU-0085,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-012,45.67,71.61,23,3.1,8.54
+SKU-0086,WH-JHR-02,Johor Bahru,Consumer Electronics,C,SUP-012,41.86,78.35,26,7.9,7.83
+SKU-0087,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-012,4.13,5.69,10,2.7,0.77
+SKU-0088,WH-JHR-02,Johor Bahru,Medical Supplies,C,SUP-027,17.51,40.36,20,3.0,3.27
+SKU-0089,WH-JHR-02,Johor Bahru,Consumer Electronics,B,SUP-037,33.26,46.47,25,6.6,6.22
+SKU-0090,WH-JHR-02,Johor Bahru,Medical Supplies,A,SUP-037,21.04,29.71,22,4.9,3.93
+SKU-0091,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-030,56.68,120.4,24,5.0,10.6
+SKU-0092,WH-JHR-02,Johor Bahru,Automotive Parts,C,SUP-009,38.87,86.1,30,3.8,7.27
+SKU-0093,WH-JHR-02,Johor Bahru,Medical Supplies,C,SUP-039,26.08,37.07,14,3.2,4.88
+SKU-0094,WH-JHR-02,Johor Bahru,Industrial Components,B,SUP-022,31.15,50.99,32,4.0,5.83
+SKU-0095,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-022,34.2,66.29,23,3.2,6.4
+SKU-0096,WH-JHR-02,Johor Bahru,Automotive Parts,C,SUP-029,10.36,22.34,30,4.0,1.94
+SKU-0097,WH-JHR-02,Johor Bahru,Industrial Components,B,SUP-031,29.37,45.64,23,7.8,5.49
+SKU-0098,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-039,31.2,52.54,23,3.9,5.83
+SKU-0099,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-024,37.42,72.95,18,3.4,7.0
+SKU-0100,WH-JHR-02,Johor Bahru,Apparel & Textiles,C,SUP-025,9.57,18.52,27,4.9,1.79
+SKU-0101,WH-JHR-02,Johor Bahru,Apparel & Textiles,B,SUP-030,13.61,27.32,30,9.7,2.55
+SKU-0102,WH-JHR-02,Johor Bahru,Automotive Parts,B,SUP-011,51.28,89.21,40,9.6,9.59
+SKU-0103,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-013,13.38,18.02,27,8.9,2.5
+SKU-0104,WH-JHR-02,Johor Bahru,Apparel & Textiles,A,SUP-026,10.59,23.3,27,4.7,1.98
+SKU-0105,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-003,3.27,6.98,10,1.3,0.61
+SKU-0106,WH-JHR-02,Johor Bahru,Automotive Parts,C,SUP-013,21.29,43.21,34,8.1,3.98
+SKU-0107,WH-JHR-02,Johor Bahru,Medical Supplies,C,SUP-029,5.1,6.85,20,3.7,0.95
+SKU-0108,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-040,4.47,6.33,25,7.5,0.84
+SKU-0109,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-021,49.75,97.11,28,9.0,9.3
+SKU-0110,WH-JHR-02,Johor Bahru,Apparel & Textiles,C,SUP-016,7.47,9.68,20,4.4,1.4
+SKU-0111,WH-JHR-02,Johor Bahru,Medical Supplies,A,SUP-018,26.64,62.32,22,7.5,4.98
+SKU-0112,WH-JHR-02,Johor Bahru,Consumer Electronics,B,SUP-028,32.57,50.56,24,5.7,6.09
+SKU-0113,WH-JHR-02,Johor Bahru,Industrial Components,A,SUP-022,38.21,73.33,26,4.4,7.15
+SKU-0114,WH-JHR-02,Johor Bahru,Automotive Parts,B,SUP-001,24.34,52.86,39,8.7,4.55
+SKU-0115,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-022,50.65,79.4,18,2.0,9.47
+SKU-0116,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-017,0.81,1.22,11,3.3,0.15
+SKU-0117,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-029,2.56,4.56,10,1.3,0.48
+SKU-0118,WH-JHR-02,Johor Bahru,Automotive Parts,C,SUP-036,42.7,74.8,27,4.8,7.98
+SKU-0119,WH-JHR-02,Johor Bahru,Medical Supplies,B,SUP-039,25.12,39.7,14,3.4,4.7
+SKU-0120,WH-JHR-02,Johor Bahru,Automotive Parts,B,SUP-025,43.66,77.5,39,4.3,8.16
+SKU-0121,WH-JHR-02,Johor Bahru,Automotive Parts,C,SUP-015,6.74,15.21,31,3.7,1.26
+SKU-0122,WH-JHR-02,Johor Bahru,Automotive Parts,B,SUP-018,22.52,36.82,42,11.5,4.21
+SKU-0123,WH-JHR-02,Johor Bahru,Consumer Electronics,C,SUP-008,9.68,13.65,26,3.1,1.81
+SKU-0124,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-038,6.93,10.76,33,7.2,1.3
+SKU-0125,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-034,44.14,69.17,20,3.7,8.25
+SKU-0126,WH-JHR-02,Johor Bahru,Medical Supplies,C,SUP-035,19.83,27.06,20,3.1,3.71
+SKU-0127,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-014,30.85,42.77,37,5.4,5.77
+SKU-0128,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-013,54.6,102.33,18,5.2,10.21
+SKU-0129,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-035,47.67,72.47,20,6.8,8.91
+SKU-0130,WH-JHR-02,Johor Bahru,Automotive Parts,B,SUP-022,42.64,97.75,30,4.1,7.97
+SKU-0131,WH-JHR-02,Johor Bahru,Consumer Electronics,B,SUP-029,9.69,14.0,21,7.1,1.81
+SKU-0132,WH-JHR-02,Johor Bahru,Apparel & Textiles,C,SUP-020,4.2,5.64,29,7.2,0.79
+SKU-0133,WH-JHR-02,Johor Bahru,Automotive Parts,A,SUP-018,34.23,67.28,34,8.9,6.4
+SKU-0134,WH-JHR-02,Johor Bahru,Industrial Components,B,SUP-026,33.89,73.22,31,8.6,6.34
+SKU-0135,WH-JHR-02,Johor Bahru,Automotive Parts,B,SUP-033,5.21,7.66,31,8.6,0.97
+SKU-0136,WH-JHR-02,Johor Bahru,Consumer Electronics,B,SUP-014,35.3,49.91,18,5.5,6.6
+SKU-0137,WH-JHR-02,Johor Bahru,Apparel & Textiles,C,SUP-033,9.87,13.84,23,5.1,1.85
+SKU-0138,WH-JHR-02,Johor Bahru,Medical Supplies,B,SUP-010,2.74,4.63,22,5.1,0.51
+SKU-0139,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-017,1.99,3.25,10,1.8,0.37
+SKU-0140,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-037,56.26,81.94,21,2.7,10.52
+SKU-0141,WH-JHR-02,Johor Bahru,Medical Supplies,B,SUP-039,18.79,24.6,21,5.6,3.51
+SKU-0142,WH-JHR-02,Johor Bahru,Medical Supplies,C,SUP-037,7.94,13.09,14,1.5,1.48
+SKU-0143,WH-JHR-02,Johor Bahru,Apparel & Textiles,C,SUP-013,12.12,27.89,22,3.7,2.27
+SKU-0144,WH-JHR-02,Johor Bahru,Automotive Parts,C,SUP-034,21.36,39.19,29,3.6,3.99
+SKU-0145,WH-JHR-02,Johor Bahru,Medical Supplies,C,SUP-038,23.33,38.78,23,3.4,4.36
+SKU-0146,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-040,13.76,18.59,33,8.6,2.57
+SKU-0147,WH-JHR-02,Johor Bahru,Industrial Components,B,SUP-001,24.25,35.19,32,8.2,4.53
+SKU-0148,WH-JHR-02,Johor Bahru,Medical Supplies,B,SUP-030,11.92,17.69,13,2.7,2.23
+SKU-0149,WH-JHR-02,Johor Bahru,Medical Supplies,C,SUP-040,8.87,17.58,15,1.8,1.66
+SKU-0150,WH-JHR-02,Johor Bahru,Consumer Electronics,C,SUP-031,55.76,120.07,24,5.0,10.43
+SKU-0151,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-010,1.19,2.61,9,1.7,0.22
+SKU-0152,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-031,0.81,1.9,12,3.4,0.15
+SKU-0153,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-005,25.81,60.54,26,6.4,4.83
+SKU-0154,WH-JHR-02,Johor Bahru,Medical Supplies,A,SUP-020,19.94,45.64,18,4.0,3.73
+SKU-0155,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-026,51.41,68.17,26,5.8,9.61
+SKU-0156,WH-JHR-02,Johor Bahru,Automotive Parts,A,SUP-019,51.94,71.11,43,14.7,9.71
+SKU-0157,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-028,13.67,20.39,30,8.7,2.56
+SKU-0158,WH-JHR-02,Johor Bahru,Automotive Parts,B,SUP-010,24.17,41.6,37,8.3,4.52
+SKU-0159,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-025,1.01,1.36,12,2.6,0.19
+SKU-0160,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-026,2.63,5.53,8,0.9,0.49
+SKU-0161,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-026,61.87,110.88,27,9.1,11.57
+SKU-0162,WH-JHR-02,Johor Bahru,Apparel & Textiles,B,SUP-012,10.17,17.39,20,3.6,1.9
+SKU-0163,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-013,24.43,33.91,33,5.4,4.57
+SKU-0164,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-011,28.58,41.49,26,9.1,5.34
+SKU-0165,WH-JHR-02,Johor Bahru,Medical Supplies,C,SUP-019,24.88,34.45,19,5.3,4.65
+SKU-0166,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-024,20.89,44.14,30,3.4,3.91
+SKU-0167,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-015,1.0,1.76,10,1.2,0.19
+SKU-0168,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-017,1.85,3.59,8,0.9,0.35
+SKU-0169,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-012,5.42,8.05,26,6.5,1.01
+SKU-0170,WH-JHR-02,Johor Bahru,Apparel & Textiles,C,SUP-009,3.79,5.86,23,2.7,0.71
+SKU-0171,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-027,3.64,5.74,32,10.7,0.68
+SKU-0172,WH-JHR-02,Johor Bahru,Medical Supplies,C,SUP-033,13.33,26.32,18,6.0,2.49
+SKU-0173,WH-JHR-02,Johor Bahru,Industrial Components,B,SUP-012,25.84,51.48,26,6.1,4.83
+SKU-0174,WH-JHR-02,Johor Bahru,Apparel & Textiles,C,SUP-035,5.59,7.92,31,7.9,1.05
+SKU-0175,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-023,30.12,68.29,21,3.6,5.63
+SKU-0176,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-007,59.76,81.13,22,2.6,11.18
+SKU-0177,WH-JHR-02,Johor Bahru,Medical Supplies,A,SUP-015,20.8,45.47,17,4.8,3.89
+SKU-0178,WH-JHR-02,Johor Bahru,Apparel & Textiles,C,SUP-001,8.12,10.92,21,2.6,1.52
+SKU-0179,WH-JHR-02,Johor Bahru,FMCG Household,B,SUP-002,1.55,2.26,11,1.3,0.29
+SKU-0180,WH-JHR-02,Johor Bahru,FMCG Household,B,SUP-014,3.82,8.04,9,1.6,0.71
+SKU-0181,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-019,1.37,1.92,7,0.7,0.26
+SKU-0182,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-032,1.7,2.69,12,2.5,0.32
+SKU-0183,WH-JHR-02,Johor Bahru,Medical Supplies,C,SUP-006,24.73,40.01,21,5.8,4.62
+SKU-0184,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-034,22.06,31.89,34,10.2,4.13
+SKU-0185,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-010,3.25,6.2,12,3.0,0.61
+SKU-0186,WH-JHR-02,Johor Bahru,Automotive Parts,B,SUP-006,32.77,69.21,42,13.1,6.13
+SKU-0187,WH-JHR-02,Johor Bahru,Industrial Components,A,SUP-028,26.52,57.01,28,5.6,4.96
+SKU-0188,WH-JHR-02,Johor Bahru,Consumer Electronics,C,SUP-031,23.47,35.68,24,7.5,4.39
+SKU-0189,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-025,1.39,2.36,10,2.3,0.26
+SKU-0190,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-005,14.61,21.16,26,4.0,2.73
+SKU-0191,WH-JHR-02,Johor Bahru,Apparel & Textiles,C,SUP-005,3.19,4.61,22,7.4,0.6
+SKU-0192,WH-JHR-02,Johor Bahru,Industrial Components,B,SUP-016,34.48,47.76,24,4.0,6.45
+SKU-0193,WH-JHR-02,Johor Bahru,Consumer Electronics,C,SUP-019,22.58,51.13,25,2.7,4.22
+SKU-0194,WH-JHR-02,Johor Bahru,FMCG Household,B,SUP-040,2.58,5.6,11,1.8,0.48
+SKU-0195,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-012,50.56,101.09,26,5.0,9.45
+SKU-0196,WH-JHR-02,Johor Bahru,Consumer Electronics,B,SUP-008,50.11,84.41,20,3.8,9.37
+SKU-0197,WH-JHR-02,Johor Bahru,Automotive Parts,C,SUP-038,25.6,42.43,29,6.7,4.79
+SKU-0198,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-007,2.26,3.84,9,2.9,0.42
+SKU-0199,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-002,61.71,105.16,23,4.0,11.54
+SKU-0200,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-017,27.29,43.77,37,8.5,5.1
+SKU-0201,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-017,3.51,4.79,12,2.2,0.66
+SKU-0202,WH-JHR-02,Johor Bahru,Apparel & Textiles,B,SUP-025,12.75,17.35,32,9.8,2.38
+SKU-0203,WH-JHR-02,Johor Bahru,Medical Supplies,A,SUP-036,21.69,49.61,22,3.1,4.06
+SKU-0204,WH-JHR-02,Johor Bahru,Consumer Electronics,C,SUP-038,17.18,28.33,28,3.5,3.21
+SKU-0205,WH-JHR-02,Johor Bahru,Consumer Electronics,C,SUP-012,37.92,86.8,22,5.0,7.09
+SKU-0206,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-040,6.67,9.25,23,6.2,1.25
+SKU-0207,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-026,42.91,73.93,18,5.4,8.02
+SKU-0208,WH-JHR-02,Johor Bahru,Automotive Parts,B,SUP-003,49.9,70.76,32,7.9,9.33
+SKU-0209,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-038,35.2,51.1,20,5.9,6.58
+SKU-0210,WH-JHR-02,Johor Bahru,Medical Supplies,C,SUP-006,12.82,16.67,15,3.0,2.4
+SKU-0211,WH-JHR-02,Johor Bahru,Automotive Parts,C,SUP-024,6.68,9.06,43,4.7,1.25
+SKU-0212,WH-JHR-02,Johor Bahru,Automotive Parts,A,SUP-032,50.11,111.37,29,3.7,9.37
+SKU-0213,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-010,12.67,19.07,28,3.1,2.37
+SKU-0214,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-011,0.65,1.16,11,2.0,0.15
+SKU-0215,WH-JHR-02,Johor Bahru,Automotive Parts,B,SUP-020,16.57,27.05,37,8.3,3.1
+SKU-0216,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-036,0.74,1.16,11,2.1,0.15
+SKU-0217,WH-JHR-02,Johor Bahru,Consumer Electronics,B,SUP-009,32.03,54.42,21,5.0,5.99
+SKU-0218,WH-JHR-02,Johor Bahru,Consumer Electronics,B,SUP-027,35.38,49.65,24,5.3,6.62
+SKU-0219,WH-JHR-02,Johor Bahru,Apparel & Textiles,C,SUP-019,5.2,12.26,21,5.7,0.97
+SKU-0220,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-005,4.83,9.95,37,9.9,0.9
+SKU-0221,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-029,7.02,13.68,27,4.8,1.31
+SKU-0222,WH-JHR-02,Johor Bahru,Medical Supplies,C,SUP-034,11.61,18.99,16,3.0,2.17
+SKU-0223,WH-JHR-02,Johor Bahru,Automotive Parts,C,SUP-024,7.84,10.81,38,9.4,1.47
+SKU-0224,WH-JHR-02,Johor Bahru,Apparel & Textiles,C,SUP-008,10.14,22.61,28,7.0,1.9
+SKU-0225,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-007,10.45,15.9,29,5.2,1.95
+SKU-0226,WH-JHR-02,Johor Bahru,Apparel & Textiles,C,SUP-017,5.07,6.65,28,5.1,0.95
+SKU-0227,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-021,28.68,43.67,18,4.9,5.36
+SKU-0228,WH-JHR-02,Johor Bahru,Medical Supplies,B,SUP-023,12.42,25.14,20,5.2,2.32
+SKU-0229,WH-JHR-02,Johor Bahru,Automotive Parts,C,SUP-010,5.08,9.14,30,4.0,0.95
+SKU-0230,WH-JHR-02,Johor Bahru,Consumer Electronics,B,SUP-021,13.16,25.82,20,4.2,2.46
+SKU-0231,WH-JHR-02,Johor Bahru,Consumer Electronics,B,SUP-012,54.45,110.16,19,6.1,10.18
+SKU-0232,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-028,3.04,4.32,27,2.9,0.57
+SKU-0233,WH-JHR-02,Johor Bahru,Apparel & Textiles,C,SUP-032,7.7,17.21,23,7.2,1.44
+SKU-0234,WH-JHR-02,Johor Bahru,Automotive Parts,B,SUP-027,28.01,45.01,34,4.8,5.24
+SKU-0235,WH-JHR-02,Johor Bahru,Apparel & Textiles,C,SUP-001,5.46,9.93,22,5.0,1.02
+SKU-0236,WH-JHR-02,Johor Bahru,FMCG Household,B,SUP-040,2.1,2.7,8,1.6,0.39
+SKU-0237,WH-JHR-02,Johor Bahru,Medical Supplies,C,SUP-001,21.51,50.92,19,1.9,4.02
+SKU-0238,WH-JHR-02,Johor Bahru,FMCG Household,B,SUP-040,3.61,5.32,8,2.6,0.68
+SKU-0239,WH-JHR-02,Johor Bahru,Consumer Electronics,A,SUP-002,21.32,28.14,25,5.3,3.99
+SKU-0240,WH-JHR-02,Johor Bahru,Consumer Electronics,B,SUP-021,24.74,40.23,28,9.5,4.63
+SKU-0241,WH-JHR-02,Johor Bahru,FMCG Household,B,SUP-005,1.4,1.91,9,1.5,0.26
+SKU-0242,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-004,2.28,3.14,12,3.8,0.43
+SKU-0243,WH-JHR-02,Johor Bahru,Industrial Components,B,SUP-028,27.6,49.97,24,7.9,5.16
+SKU-0244,WH-JHR-02,Johor Bahru,Medical Supplies,C,SUP-030,7.71,12.07,14,3.3,1.44
+SKU-0245,WH-JHR-02,Johor Bahru,Automotive Parts,B,SUP-005,20.54,45.83,39,5.9,3.84
+SKU-0246,WH-JHR-02,Johor Bahru,FMCG Household,C,SUP-040,3.94,5.92,11,3.0,0.74
+SKU-0247,WH-JHR-02,Johor Bahru,Automotive Parts,C,SUP-013,7.28,14.04,41,9.7,1.36
+SKU-0248,WH-JHR-02,Johor Bahru,Industrial Components,C,SUP-013,19.59,31.91,23,7.7,3.66
+SKU-0249,WH-JHR-02,Johor Bahru,Industrial Components,B,SUP-012,28.62,52.76,35,7.3,5.35
+SKU-0250,WH-JHR-02,Johor Bahru,Medical Supplies,B,SUP-019,5.76,10.21,17,2.8,1.08
+SKU-0001,WH-PEN-04,Penang,FMCG Household,C,SUP-003,0.71,0.93,9,1.4,0.15
+SKU-0002,WH-PEN-04,Penang,Medical Supplies,C,SUP-019,9.02,12.35,22,2.2,1.79
+SKU-0003,WH-PEN-04,Penang,FMCG Household,C,SUP-025,1.74,3.87,10,2.2,0.34
+SKU-0004,WH-PEN-04,Penang,Automotive Parts,B,SUP-039,13.13,16.91,39,4.3,2.6
+SKU-0005,WH-PEN-04,Penang,Consumer Electronics,C,SUP-022,24.26,34.06,22,3.7,4.8
+SKU-0006,WH-PEN-04,Penang,Apparel & Textiles,C,SUP-014,10.71,13.93,26,9.1,2.12
+SKU-0007,WH-PEN-04,Penang,FMCG Household,C,SUP-023,0.55,0.74,8,2.6,0.15
+SKU-0008,WH-PEN-04,Penang,FMCG Household,A,SUP-008,3.56,6.39,12,1.8,0.7
+SKU-0009,WH-PEN-04,Penang,Consumer Electronics,B,SUP-004,54.11,78.08,19,3.4,10.71
+SKU-0010,WH-PEN-04,Penang,Medical Supplies,C,SUP-028,11.31,19.67,22,4.8,2.24
+SKU-0011,WH-PEN-04,Penang,Industrial Components,C,SUP-040,8.53,15.03,37,11.5,1.69
+SKU-0012,WH-PEN-04,Penang,Apparel & Textiles,A,SUP-034,8.89,18.75,31,9.3,1.76
+SKU-0013,WH-PEN-04,Penang,Automotive Parts,C,SUP-024,10.62,13.65,27,3.6,2.1
+SKU-0014,WH-PEN-04,Penang,FMCG Household,C,SUP-002,1.85,3.91,9,1.2,0.37
+SKU-0015,WH-PEN-04,Penang,Medical Supplies,A,SUP-040,25.96,46.6,19,3.9,5.14
+SKU-0016,WH-PEN-04,Penang,Industrial Components,B,SUP-018,38.84,53.84,33,10.5,7.69
+SKU-0017,WH-PEN-04,Penang,Medical Supplies,B,SUP-012,21.3,42.45,23,7.4,4.22
+SKU-0018,WH-PEN-04,Penang,Consumer Electronics,B,SUP-036,24.1,51.06,22,2.8,4.77
+SKU-0019,WH-PEN-04,Penang,FMCG Household,C,SUP-030,3.04,4.42,12,2.9,0.6
+SKU-0020,WH-PEN-04,Penang,Automotive Parts,B,SUP-030,38.15,84.92,30,4.2,7.55
+SKU-0021,WH-PEN-04,Penang,FMCG Household,C,SUP-012,1.94,3.15,9,2.4,0.38
+SKU-0022,WH-PEN-04,Penang,Industrial Components,B,SUP-040,26.07,46.32,24,7.9,5.16
+SKU-0023,WH-PEN-04,Penang,Apparel & Textiles,C,SUP-019,1.34,3.15,31,6.6,0.27
+SKU-0024,WH-PEN-04,Penang,FMCG Household,C,SUP-022,1.27,1.95,8,1.0,0.25
+SKU-0025,WH-PEN-04,Penang,FMCG Household,B,SUP-031,2.44,5.01,9,2.2,0.48
+SKU-0026,WH-PEN-04,Penang,Consumer Electronics,B,SUP-027,16.01,24.06,27,5.5,3.17
+SKU-0027,WH-PEN-04,Penang,Medical Supplies,C,SUP-007,6.15,12.49,20,6.1,1.22
+SKU-0028,WH-PEN-04,Penang,Consumer Electronics,A,SUP-013,53.0,94.02,18,3.3,10.49
+SKU-0029,WH-PEN-04,Penang,Consumer Electronics,B,SUP-015,61.4,87.45,17,5.4,12.16
+SKU-0030,WH-PEN-04,Penang,Automotive Parts,C,SUP-038,31.13,49.34,36,6.1,6.16
+SKU-0031,WH-PEN-04,Penang,FMCG Household,B,SUP-029,3.6,5.41,9,1.3,0.71
+SKU-0032,WH-PEN-04,Penang,Apparel & Textiles,C,SUP-015,13.88,18.46,22,3.9,2.75
+SKU-0033,WH-PEN-04,Penang,Industrial Components,A,SUP-030,8.1,10.53,33,3.6,1.6
+SKU-0034,WH-PEN-04,Penang,Industrial Components,A,SUP-030,19.14,29.21,27,4.6,3.79
+SKU-0035,WH-PEN-04,Penang,Medical Supplies,B,SUP-016,11.81,15.28,20,5.3,2.34
+SKU-0036,WH-PEN-04,Penang,Consumer Electronics,C,SUP-017,11.4,15.82,22,3.0,2.26
+SKU-0037,WH-PEN-04,Penang,Consumer Electronics,B,SUP-036,48.54,93.54,20,2.6,9.61
+SKU-0038,WH-PEN-04,Penang,Medical Supplies,A,SUP-023,12.84,24.45,15,2.0,2.54
+SKU-0039,WH-PEN-04,Penang,Industrial Components,B,SUP-006,19.9,38.71,27,3.2,3.94
+SKU-0040,WH-PEN-04,Penang,Automotive Parts,B,SUP-029,12.08,18.14,27,8.6,2.39
+SKU-0041,WH-PEN-04,Penang,Medical Supplies,C,SUP-024,6.52,14.19,17,5.7,1.29
+SKU-0042,WH-PEN-04,Penang,FMCG Household,B,SUP-021,3.86,6.82,12,1.3,0.76
+SKU-0043,WH-PEN-04,Penang,Automotive Parts,C,SUP-030,7.1,9.66,42,12.2,1.41
+SKU-0044,WH-PEN-04,Penang,Industrial Components,C,SUP-037,11.38,15.63,29,8.2,2.25
+SKU-0045,WH-PEN-04,Penang,FMCG Household,C,SUP-014,1.58,2.98,11,3.8,0.31
+SKU-0046,WH-PEN-04,Penang,FMCG Household,C,SUP-017,2.31,3.22,11,2.1,0.46
+SKU-0047,WH-PEN-04,Penang,Industrial Components,B,SUP-008,24.11,40.36,37,6.3,4.77
+SKU-0048,WH-PEN-04,Penang,Industrial Components,B,SUP-026,20.76,49.08,27,5.8,4.11
+SKU-0049,WH-PEN-04,Penang,Automotive Parts,C,SUP-017,8.95,11.5,32,10.1,1.77
+SKU-0050,WH-PEN-04,Penang,Consumer Electronics,B,SUP-014,20.4,26.36,21,5.9,4.04
+SKU-0051,WH-PEN-04,Penang,Consumer Electronics,A,SUP-028,53.4,126.39,18,3.9,10.57
+SKU-0052,WH-PEN-04,Penang,Consumer Electronics,A,SUP-017,42.07,73.87,21,3.4,8.33
+SKU-0053,WH-PEN-04,Penang,FMCG Household,C,SUP-019,2.9,3.95,12,3.4,0.57
+SKU-0054,WH-PEN-04,Penang,Automotive Parts,B,SUP-018,36.5,79.87,44,13.8,7.23
+SKU-0055,WH-PEN-04,Penang,Automotive Parts,B,SUP-011,40.86,88.24,29,5.8,8.09
+SKU-0056,WH-PEN-04,Penang,FMCG Household,C,SUP-006,0.72,1.23,10,2.7,0.15
+SKU-0057,WH-PEN-04,Penang,Medical Supplies,C,SUP-034,11.17,20.08,18,3.6,2.21
+SKU-0058,WH-PEN-04,Penang,Automotive Parts,C,SUP-004,30.36,44.54,36,7.9,6.01
+SKU-0059,WH-PEN-04,Penang,Consumer Electronics,B,SUP-013,25.62,33.63,24,5.5,5.07
+SKU-0060,WH-PEN-04,Penang,Consumer Electronics,A,SUP-027,53.45,94.44,18,5.3,10.58
+SKU-0061,WH-PEN-04,Penang,Automotive Parts,C,SUP-006,27.68,41.08,43,14.8,5.48
+SKU-0062,WH-PEN-04,Penang,Medical Supplies,A,SUP-027,21.22,39.22,24,5.1,4.2
+SKU-0063,WH-PEN-04,Penang,Automotive Parts,B,SUP-030,45.04,94.04,39,7.2,8.92
+SKU-0064,WH-PEN-04,Penang,FMCG Household,C,SUP-027,2.37,3.06,11,2.1,0.47
+SKU-0065,WH-PEN-04,Penang,Automotive Parts,C,SUP-013,47.75,84.43,37,4.9,9.45
+SKU-0066,WH-PEN-04,Penang,Medical Supplies,B,SUP-001,16.68,23.94,17,3.0,3.3
+SKU-0067,WH-PEN-04,Penang,Medical Supplies,A,SUP-036,23.26,49.98,16,1.9,4.61
+SKU-0068,WH-PEN-04,Penang,Industrial Components,C,SUP-014,15.26,22.16,33,6.8,3.02
+SKU-0069,WH-PEN-04,Penang,Consumer Electronics,A,SUP-033,34.43,61.47,18,2.6,6.82
+SKU-0070,WH-PEN-04,Penang,Medical Supplies,A,SUP-008,15.29,26.33,23,4.3,3.03
+SKU-0071,WH-PEN-04,Penang,Consumer Electronics,B,SUP-007,12.77,20.04,23,6.9,2.53
+SKU-0072,WH-PEN-04,Penang,Industrial Components,A,SUP-032,17.35,32.37,30,4.8,3.44
+SKU-0073,WH-PEN-04,Penang,FMCG Household,B,SUP-038,3.89,7.5,9,2.3,0.77
+SKU-0074,WH-PEN-04,Penang,Industrial Components,B,SUP-035,25.71,44.64,40,13.0,5.09
+SKU-0075,WH-PEN-04,Penang,Consumer Electronics,B,SUP-031,16.76,33.06,20,4.8,3.32
+SKU-0076,WH-PEN-04,Penang,Industrial Components,C,SUP-010,15.2,35.68,26,3.9,3.01
+SKU-0077,WH-PEN-04,Penang,Industrial Components,C,SUP-037,9.9,15.74,26,4.8,1.96
+SKU-0078,WH-PEN-04,Penang,Automotive Parts,C,SUP-027,6.17,10.37,39,9.7,1.22
+SKU-0079,WH-PEN-04,Penang,Medical Supplies,C,SUP-007,25.19,32.48,24,5.4,4.99
+SKU-0080,WH-PEN-04,Penang,FMCG Household,B,SUP-006,2.16,4.38,9,1.2,0.43
+SKU-0081,WH-PEN-04,Penang,Automotive Parts,C,SUP-035,19.45,32.81,44,9.3,3.85
+SKU-0082,WH-PEN-04,Penang,Industrial Components,B,SUP-012,24.55,38.78,28,6.6,4.86
+SKU-0083,WH-PEN-04,Penang,FMCG Household,C,SUP-031,0.53,0.71,11,1.8,0.15
+SKU-0084,WH-PEN-04,Penang,Consumer Electronics,A,SUP-006,22.29,48.49,18,4.6,4.41
+SKU-0085,WH-PEN-04,Penang,Consumer Electronics,A,SUP-012,45.67,71.61,24,2.8,9.04
+SKU-0086,WH-PEN-04,Penang,Consumer Electronics,C,SUP-012,41.86,78.35,26,4.8,8.29
+SKU-0087,WH-PEN-04,Penang,FMCG Household,C,SUP-012,4.13,5.69,10,3.0,0.82
+SKU-0088,WH-PEN-04,Penang,Medical Supplies,C,SUP-027,17.51,40.36,16,2.6,3.47
+SKU-0089,WH-PEN-04,Penang,Consumer Electronics,B,SUP-037,33.26,46.47,28,7.0,6.59
+SKU-0090,WH-PEN-04,Penang,Medical Supplies,A,SUP-037,21.04,29.71,24,4.9,4.17
+SKU-0091,WH-PEN-04,Penang,Consumer Electronics,A,SUP-030,56.68,120.4,23,4.1,11.22
+SKU-0092,WH-PEN-04,Penang,Automotive Parts,C,SUP-009,38.87,86.1,39,12.8,7.7
+SKU-0093,WH-PEN-04,Penang,Medical Supplies,C,SUP-039,26.08,37.07,22,4.1,5.16
+SKU-0094,WH-PEN-04,Penang,Industrial Components,B,SUP-022,31.15,50.99,27,4.3,6.17
+SKU-0095,WH-PEN-04,Penang,Industrial Components,C,SUP-022,34.2,66.29,38,12.4,6.77
+SKU-0096,WH-PEN-04,Penang,Automotive Parts,C,SUP-029,10.36,22.34,32,9.2,2.05
+SKU-0097,WH-PEN-04,Penang,Industrial Components,B,SUP-031,29.37,45.64,36,9.7,5.82
+SKU-0098,WH-PEN-04,Penang,Consumer Electronics,A,SUP-039,31.2,52.54,19,2.1,6.18
+SKU-0099,WH-PEN-04,Penang,Consumer Electronics,A,SUP-024,37.42,72.95,21,2.8,7.41
+SKU-0100,WH-PEN-04,Penang,Apparel & Textiles,C,SUP-025,9.57,18.52,28,7.3,1.89
+SKU-0101,WH-PEN-04,Penang,Apparel & Textiles,B,SUP-030,13.61,27.32,27,4.1,2.69
+SKU-0102,WH-PEN-04,Penang,Automotive Parts,B,SUP-011,51.28,89.21,43,6.7,10.15
+SKU-0103,WH-PEN-04,Penang,Industrial Components,C,SUP-013,13.38,18.02,40,11.8,2.65
+SKU-0104,WH-PEN-04,Penang,Apparel & Textiles,A,SUP-026,10.59,23.3,21,3.6,2.1
+SKU-0105,WH-PEN-04,Penang,FMCG Household,C,SUP-003,3.27,6.98,9,1.1,0.65
+SKU-0106,WH-PEN-04,Penang,Automotive Parts,C,SUP-013,21.29,43.21,33,3.6,4.22
+SKU-0107,WH-PEN-04,Penang,Medical Supplies,C,SUP-029,5.1,6.85,19,4.0,1.01
+SKU-0108,WH-PEN-04,Penang,Industrial Components,C,SUP-040,4.47,6.33,31,7.9,0.89
+SKU-0109,WH-PEN-04,Penang,Consumer Electronics,A,SUP-021,49.75,97.11,28,8.9,9.85
+SKU-0110,WH-PEN-04,Penang,Apparel & Textiles,C,SUP-016,7.47,9.68,31,4.0,1.48
+SKU-0111,WH-PEN-04,Penang,Medical Supplies,A,SUP-018,26.64,62.32,14,2.1,5.27
+SKU-0112,WH-PEN-04,Penang,Consumer Electronics,B,SUP-028,32.57,50.56,23,5.3,6.45
+SKU-0113,WH-PEN-04,Penang,Industrial Components,A,SUP-022,38.21,73.33,34,6.5,7.57
+SKU-0114,WH-PEN-04,Penang,Automotive Parts,B,SUP-001,24.34,52.86,35,7.7,4.82
+SKU-0115,WH-PEN-04,Penang,Consumer Electronics,A,SUP-022,50.65,79.4,19,6.3,10.03
+SKU-0116,WH-PEN-04,Penang,FMCG Household,C,SUP-017,0.81,1.22,10,2.4,0.16
+SKU-0117,WH-PEN-04,Penang,FMCG Household,C,SUP-029,2.56,4.56,10,2.0,0.51
+SKU-0118,WH-PEN-04,Penang,Automotive Parts,C,SUP-036,42.7,74.8,30,10.4,8.45
+SKU-0119,WH-PEN-04,Penang,Medical Supplies,B,SUP-039,25.12,39.7,22,2.6,4.97
+SKU-0120,WH-PEN-04,Penang,Automotive Parts,B,SUP-025,43.66,77.5,33,11.0,8.64
+SKU-0121,WH-PEN-04,Penang,Automotive Parts,C,SUP-015,6.74,15.21,38,8.6,1.33
+SKU-0122,WH-PEN-04,Penang,Automotive Parts,B,SUP-018,22.52,36.82,36,8.1,4.46
+SKU-0123,WH-PEN-04,Penang,Consumer Electronics,C,SUP-008,9.68,13.65,28,9.3,1.92
+SKU-0124,WH-PEN-04,Penang,Industrial Components,C,SUP-038,6.93,10.76,25,5.7,1.37
+SKU-0125,WH-PEN-04,Penang,Consumer Electronics,A,SUP-034,44.14,69.17,19,4.0,8.74
+SKU-0126,WH-PEN-04,Penang,Medical Supplies,C,SUP-035,19.83,27.06,17,2.9,3.93
+SKU-0127,WH-PEN-04,Penang,Industrial Components,C,SUP-014,30.85,42.77,30,7.9,6.11
+SKU-0128,WH-PEN-04,Penang,Consumer Electronics,A,SUP-013,54.6,102.33,21,5.1,10.81
+SKU-0129,WH-PEN-04,Penang,Consumer Electronics,A,SUP-035,47.67,72.47,27,4.1,9.44
+SKU-0130,WH-PEN-04,Penang,Automotive Parts,B,SUP-022,42.64,97.75,31,8.6,8.44
+SKU-0131,WH-PEN-04,Penang,Consumer Electronics,B,SUP-029,9.69,14.0,18,4.7,1.92
+SKU-0132,WH-PEN-04,Penang,Apparel & Textiles,C,SUP-020,4.2,5.64,26,5.2,0.83
+SKU-0133,WH-PEN-04,Penang,Automotive Parts,A,SUP-018,34.23,67.28,41,4.1,6.78
+SKU-0134,WH-PEN-04,Penang,Industrial Components,B,SUP-026,33.89,73.22,38,8.0,6.71
+SKU-0135,WH-PEN-04,Penang,Automotive Parts,B,SUP-033,5.21,7.66,41,4.2,1.03
+SKU-0136,WH-PEN-04,Penang,Consumer Electronics,B,SUP-014,35.3,49.91,24,2.8,6.99
+SKU-0137,WH-PEN-04,Penang,Apparel & Textiles,C,SUP-033,9.87,13.84,30,6.2,1.95
+SKU-0138,WH-PEN-04,Penang,Medical Supplies,B,SUP-010,2.74,4.63,21,2.5,0.54
+SKU-0139,WH-PEN-04,Penang,FMCG Household,C,SUP-017,1.99,3.25,9,1.5,0.39
+SKU-0140,WH-PEN-04,Penang,Consumer Electronics,A,SUP-037,56.26,81.94,24,6.3,11.14
+SKU-0141,WH-PEN-04,Penang,Medical Supplies,B,SUP-039,18.79,24.6,22,3.9,3.72
+SKU-0142,WH-PEN-04,Penang,Medical Supplies,C,SUP-037,7.94,13.09,17,5.9,1.57
+SKU-0143,WH-PEN-04,Penang,Apparel & Textiles,C,SUP-013,12.12,27.89,29,9.5,2.4
+SKU-0144,WH-PEN-04,Penang,Automotive Parts,C,SUP-034,21.36,39.19,36,8.9,4.23
+SKU-0145,WH-PEN-04,Penang,Medical Supplies,C,SUP-038,23.33,38.78,19,6.5,4.62
+SKU-0146,WH-PEN-04,Penang,Industrial Components,C,SUP-040,13.76,18.59,25,7.9,2.72
+SKU-0147,WH-PEN-04,Penang,Industrial Components,B,SUP-001,24.25,35.19,34,6.1,4.8
+SKU-0148,WH-PEN-04,Penang,Medical Supplies,B,SUP-030,11.92,17.69,23,6.6,2.36
+SKU-0149,WH-PEN-04,Penang,Medical Supplies,C,SUP-040,8.87,17.58,15,2.0,1.76
+SKU-0150,WH-PEN-04,Penang,Consumer Electronics,C,SUP-031,55.76,120.07,22,6.0,11.04
+SKU-0151,WH-PEN-04,Penang,FMCG Household,C,SUP-010,1.19,2.61,8,1.8,0.24
+SKU-0152,WH-PEN-04,Penang,FMCG Household,C,SUP-031,0.81,1.9,8,0.8,0.16
+SKU-0153,WH-PEN-04,Penang,Consumer Electronics,A,SUP-005,25.81,60.54,30,5.1,5.11
+SKU-0154,WH-PEN-04,Penang,Medical Supplies,A,SUP-020,19.94,45.64,19,6.4,3.95
+SKU-0155,WH-PEN-04,Penang,Consumer Electronics,A,SUP-026,51.41,68.17,22,3.9,10.18
+SKU-0156,WH-PEN-04,Penang,Automotive Parts,A,SUP-019,51.94,71.11,32,4.7,10.28
+SKU-0157,WH-PEN-04,Penang,Industrial Components,C,SUP-028,13.67,20.39,40,5.9,2.71
+SKU-0158,WH-PEN-04,Penang,Automotive Parts,B,SUP-010,24.17,41.6,31,6.8,4.79
+SKU-0159,WH-PEN-04,Penang,FMCG Household,C,SUP-025,1.01,1.36,11,3.4,0.2
+SKU-0160,WH-PEN-04,Penang,FMCG Household,C,SUP-026,2.63,5.53,9,2.6,0.52
+SKU-0161,WH-PEN-04,Penang,Consumer Electronics,A,SUP-026,61.87,110.88,18,3.8,12.25
+SKU-0162,WH-PEN-04,Penang,Apparel & Textiles,B,SUP-012,10.17,17.39,30,4.6,2.01
+SKU-0163,WH-PEN-04,Penang,Industrial Components,C,SUP-013,24.43,33.91,23,2.6,4.84
+SKU-0164,WH-PEN-04,Penang,Consumer Electronics,A,SUP-011,28.58,41.49,26,5.6,5.66
+SKU-0165,WH-PEN-04,Penang,Medical Supplies,C,SUP-019,24.88,34.45,17,5.2,4.93
+SKU-0166,WH-PEN-04,Penang,Industrial Components,C,SUP-024,20.89,44.14,36,10.2,4.14
+SKU-0167,WH-PEN-04,Penang,FMCG Household,C,SUP-015,1.0,1.76,12,2.4,0.2
+SKU-0168,WH-PEN-04,Penang,FMCG Household,C,SUP-017,1.85,3.59,11,2.7,0.37
+SKU-0169,WH-PEN-04,Penang,Industrial Components,C,SUP-012,5.42,8.05,24,5.0,1.07
+SKU-0170,WH-PEN-04,Penang,Apparel & Textiles,C,SUP-009,3.79,5.86,30,7.3,0.75
+SKU-0171,WH-PEN-04,Penang,Industrial Components,C,SUP-027,3.64,5.74,40,9.2,0.72
+SKU-0172,WH-PEN-04,Penang,Medical Supplies,C,SUP-033,13.33,26.32,17,4.6,2.64
+SKU-0173,WH-PEN-04,Penang,Industrial Components,B,SUP-012,25.84,51.48,28,6.4,5.12
+SKU-0174,WH-PEN-04,Penang,Apparel & Textiles,C,SUP-035,5.59,7.92,32,10.7,1.11
+SKU-0175,WH-PEN-04,Penang,Consumer Electronics,A,SUP-023,30.12,68.29,19,3.9,5.96
+SKU-0176,WH-PEN-04,Penang,Consumer Electronics,A,SUP-007,59.76,81.13,26,2.7,11.83
+SKU-0177,WH-PEN-04,Penang,Medical Supplies,A,SUP-015,20.8,45.47,22,3.5,4.12
+SKU-0178,WH-PEN-04,Penang,Apparel & Textiles,C,SUP-001,8.12,10.92,20,4.5,1.61
+SKU-0179,WH-PEN-04,Penang,FMCG Household,B,SUP-002,1.55,2.26,10,2.4,0.31
+SKU-0180,WH-PEN-04,Penang,FMCG Household,B,SUP-014,3.82,8.04,11,2.6,0.76
+SKU-0181,WH-PEN-04,Penang,FMCG Household,C,SUP-019,1.37,1.92,9,2.5,0.27
+SKU-0182,WH-PEN-04,Penang,FMCG Household,C,SUP-032,1.7,2.69,12,2.0,0.34
+SKU-0183,WH-PEN-04,Penang,Medical Supplies,C,SUP-006,24.73,40.01,16,4.3,4.9
+SKU-0184,WH-PEN-04,Penang,Industrial Components,C,SUP-034,22.06,31.89,29,8.0,4.37
+SKU-0185,WH-PEN-04,Penang,FMCG Household,C,SUP-010,3.25,6.2,12,2.4,0.64
+SKU-0186,WH-PEN-04,Penang,Automotive Parts,B,SUP-006,32.77,69.21,30,6.0,6.49
+SKU-0187,WH-PEN-04,Penang,Industrial Components,A,SUP-028,26.52,57.01,37,5.4,5.25
+SKU-0188,WH-PEN-04,Penang,Consumer Electronics,C,SUP-031,23.47,35.68,18,3.7,4.65
+SKU-0189,WH-PEN-04,Penang,FMCG Household,C,SUP-025,1.39,2.36,10,3.0,0.28
+SKU-0190,WH-PEN-04,Penang,Industrial Components,C,SUP-005,14.61,21.16,24,7.9,2.89
+SKU-0191,WH-PEN-04,Penang,Apparel & Textiles,C,SUP-005,3.19,4.61,30,7.5,0.63
+SKU-0192,WH-PEN-04,Penang,Industrial Components,B,SUP-016,34.48,47.76,36,6.3,6.83
+SKU-0193,WH-PEN-04,Penang,Consumer Electronics,C,SUP-019,22.58,51.13,28,7.6,4.47
+SKU-0194,WH-PEN-04,Penang,FMCG Household,B,SUP-040,2.58,5.6,13,3.7,0.51
+SKU-0195,WH-PEN-04,Penang,Consumer Electronics,A,SUP-012,50.56,101.09,26,4.8,10.01
+SKU-0196,WH-PEN-04,Penang,Consumer Electronics,B,SUP-008,50.11,84.41,27,8.3,9.92
+SKU-0197,WH-PEN-04,Penang,Automotive Parts,C,SUP-038,25.6,42.43,36,4.3,5.07
+SKU-0198,WH-PEN-04,Penang,FMCG Household,C,SUP-007,2.26,3.84,12,1.2,0.45
+SKU-0199,WH-PEN-04,Penang,Consumer Electronics,A,SUP-002,61.71,105.16,26,3.4,12.22
+SKU-0200,WH-PEN-04,Penang,Industrial Components,C,SUP-017,27.29,43.77,38,5.3,5.4
+SKU-0201,WH-PEN-04,Penang,FMCG Household,C,SUP-017,3.51,4.79,9,2.9,0.69
+SKU-0202,WH-PEN-04,Penang,Apparel & Textiles,B,SUP-025,12.75,17.35,27,5.6,2.52
+SKU-0203,WH-PEN-04,Penang,Medical Supplies,A,SUP-036,21.69,49.61,22,3.7,4.29
+SKU-0204,WH-PEN-04,Penang,Consumer Electronics,C,SUP-038,17.18,28.33,20,4.1,3.4
+SKU-0205,WH-PEN-04,Penang,Consumer Electronics,C,SUP-012,37.92,86.8,20,4.0,7.51
+SKU-0206,WH-PEN-04,Penang,Industrial Components,C,SUP-040,6.67,9.25,40,7.0,1.32
+SKU-0207,WH-PEN-04,Penang,Consumer Electronics,A,SUP-026,42.91,73.93,23,3.1,8.5
+SKU-0208,WH-PEN-04,Penang,Automotive Parts,B,SUP-003,49.9,70.76,30,7.9,9.88
+SKU-0209,WH-PEN-04,Penang,Consumer Electronics,A,SUP-038,35.2,51.1,22,3.0,6.97
+SKU-0210,WH-PEN-04,Penang,Medical Supplies,C,SUP-006,12.82,16.67,18,5.3,2.54
+SKU-0211,WH-PEN-04,Penang,Automotive Parts,C,SUP-024,6.68,9.06,38,5.7,1.32
+SKU-0212,WH-PEN-04,Penang,Automotive Parts,A,SUP-032,50.11,111.37,44,12.4,9.92
+SKU-0213,WH-PEN-04,Penang,Consumer Electronics,A,SUP-010,12.67,19.07,30,9.0,2.51
+SKU-0214,WH-PEN-04,Penang,FMCG Household,C,SUP-011,0.65,1.16,11,1.4,0.15
+SKU-0215,WH-PEN-04,Penang,Automotive Parts,B,SUP-020,16.57,27.05,40,4.9,3.28
+SKU-0216,WH-PEN-04,Penang,FMCG Household,C,SUP-036,0.74,1.16,9,3.0,0.15
+SKU-0217,WH-PEN-04,Penang,Consumer Electronics,B,SUP-009,32.03,54.42,28,6.0,6.34
+SKU-0218,WH-PEN-04,Penang,Consumer Electronics,B,SUP-027,35.38,49.65,20,5.2,7.01
+SKU-0219,WH-PEN-04,Penang,Apparel & Textiles,C,SUP-019,5.2,12.26,21,2.2,1.03
+SKU-0220,WH-PEN-04,Penang,Industrial Components,C,SUP-005,4.83,9.95,40,6.8,0.96
+SKU-0221,WH-PEN-04,Penang,Industrial Components,C,SUP-029,7.02,13.68,38,8.6,1.39
+SKU-0222,WH-PEN-04,Penang,Medical Supplies,C,SUP-034,11.61,18.99,17,5.5,2.3
+SKU-0223,WH-PEN-04,Penang,Automotive Parts,C,SUP-024,7.84,10.81,39,6.5,1.55
+SKU-0224,WH-PEN-04,Penang,Apparel & Textiles,C,SUP-008,10.14,22.61,27,7.9,2.01
+SKU-0225,WH-PEN-04,Penang,Industrial Components,C,SUP-007,10.45,15.9,29,7.7,2.07
+SKU-0226,WH-PEN-04,Penang,Apparel & Textiles,C,SUP-017,5.07,6.65,24,3.1,1.0
+SKU-0227,WH-PEN-04,Penang,Consumer Electronics,A,SUP-021,28.68,43.67,19,3.3,5.68
+SKU-0228,WH-PEN-04,Penang,Medical Supplies,B,SUP-023,12.42,25.14,20,3.2,2.46
+SKU-0229,WH-PEN-04,Penang,Automotive Parts,C,SUP-010,5.08,9.14,35,7.4,1.01
+SKU-0230,WH-PEN-04,Penang,Consumer Electronics,B,SUP-021,13.16,25.82,24,6.2,2.61
+SKU-0231,WH-PEN-04,Penang,Consumer Electronics,B,SUP-012,54.45,110.16,20,4.2,10.78
+SKU-0232,WH-PEN-04,Penang,Industrial Components,C,SUP-028,3.04,4.32,39,6.3,0.6
+SKU-0233,WH-PEN-04,Penang,Apparel & Textiles,C,SUP-032,7.7,17.21,29,7.9,1.52
+SKU-0234,WH-PEN-04,Penang,Automotive Parts,B,SUP-027,28.01,45.01,44,10.8,5.55
+SKU-0235,WH-PEN-04,Penang,Apparel & Textiles,C,SUP-001,5.46,9.93,21,4.8,1.08
+SKU-0236,WH-PEN-04,Penang,FMCG Household,B,SUP-040,2.1,2.7,11,2.6,0.42
+SKU-0237,WH-PEN-04,Penang,Medical Supplies,C,SUP-001,21.51,50.92,23,3.6,4.26
+SKU-0238,WH-PEN-04,Penang,FMCG Household,B,SUP-040,3.61,5.32,9,2.4,0.71
+SKU-0239,WH-PEN-04,Penang,Consumer Electronics,A,SUP-002,21.32,28.14,20,3.9,4.22
+SKU-0240,WH-PEN-04,Penang,Consumer Electronics,B,SUP-021,24.74,40.23,21,4.0,4.9
+SKU-0241,WH-PEN-04,Penang,FMCG Household,B,SUP-005,1.4,1.91,9,1.2,0.28
+SKU-0242,WH-PEN-04,Penang,FMCG Household,C,SUP-004,2.28,3.14,10,2.5,0.45
+SKU-0243,WH-PEN-04,Penang,Industrial Components,B,SUP-028,27.6,49.97,29,7.3,5.46
+SKU-0244,WH-PEN-04,Penang,Medical Supplies,C,SUP-030,7.71,12.07,17,3.1,1.53
+SKU-0245,WH-PEN-04,Penang,Automotive Parts,B,SUP-005,20.54,45.83,39,12.3,4.07
+SKU-0246,WH-PEN-04,Penang,FMCG Household,C,SUP-040,3.94,5.92,8,2.5,0.78
+SKU-0247,WH-PEN-04,Penang,Automotive Parts,C,SUP-013,7.28,14.04,33,4.2,1.44
+SKU-0248,WH-PEN-04,Penang,Industrial Components,C,SUP-013,19.59,31.91,35,9.6,3.88
+SKU-0249,WH-PEN-04,Penang,Industrial Components,B,SUP-012,28.62,52.76,26,5.2,5.67
+SKU-0250,WH-PEN-04,Penang,Medical Supplies,B,SUP-019,5.76,10.21,16,5.6,1.14
+SKU-0001,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-003,0.71,0.93,10,2.5,0.21
+SKU-0002,WH-SIN-01,Singapore Central,Medical Supplies,C,SUP-019,9.02,12.35,14,4.0,2.68
+SKU-0003,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-025,1.74,3.87,9,1.7,0.52
+SKU-0004,WH-SIN-01,Singapore Central,Automotive Parts,B,SUP-039,13.13,16.91,32,3.3,3.9
+SKU-0005,WH-SIN-01,Singapore Central,Consumer Electronics,C,SUP-022,24.26,34.06,16,4.0,7.21
+SKU-0006,WH-SIN-01,Singapore Central,Apparel & Textiles,C,SUP-014,10.71,13.93,26,9.0,3.18
+SKU-0007,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-023,0.55,0.74,6,1.0,0.16
+SKU-0008,WH-SIN-01,Singapore Central,FMCG Household,A,SUP-008,3.56,6.39,10,1.5,1.06
+SKU-0009,WH-SIN-01,Singapore Central,Consumer Electronics,B,SUP-004,54.11,78.08,21,2.8,16.07
+SKU-0010,WH-SIN-01,Singapore Central,Medical Supplies,C,SUP-028,11.31,19.67,12,2.9,3.36
+SKU-0011,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-040,8.53,15.03,26,6.5,2.53
+SKU-0012,WH-SIN-01,Singapore Central,Apparel & Textiles,A,SUP-034,8.89,18.75,16,4.8,2.64
+SKU-0013,WH-SIN-01,Singapore Central,Automotive Parts,C,SUP-024,10.62,13.65,32,9.2,3.15
+SKU-0014,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-002,1.85,3.91,9,2.9,0.55
+SKU-0015,WH-SIN-01,Singapore Central,Medical Supplies,A,SUP-040,25.96,46.6,16,4.8,7.71
+SKU-0016,WH-SIN-01,Singapore Central,Industrial Components,B,SUP-018,38.84,53.84,29,4.7,11.54
+SKU-0017,WH-SIN-01,Singapore Central,Medical Supplies,B,SUP-012,21.3,42.45,12,2.9,6.33
+SKU-0018,WH-SIN-01,Singapore Central,Consumer Electronics,B,SUP-036,24.1,51.06,16,2.8,7.16
+SKU-0019,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-030,3.04,4.42,7,1.3,0.9
+SKU-0020,WH-SIN-01,Singapore Central,Automotive Parts,B,SUP-030,38.15,84.92,21,7.0,11.33
+SKU-0021,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-012,1.94,3.15,8,2.2,0.58
+SKU-0022,WH-SIN-01,Singapore Central,Industrial Components,B,SUP-040,26.07,46.32,21,7.2,7.74
+SKU-0023,WH-SIN-01,Singapore Central,Apparel & Textiles,C,SUP-019,1.34,3.15,20,4.1,0.4
+SKU-0024,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-022,1.27,1.95,8,1.9,0.38
+SKU-0025,WH-SIN-01,Singapore Central,FMCG Household,B,SUP-031,2.44,5.01,9,2.0,0.72
+SKU-0026,WH-SIN-01,Singapore Central,Consumer Electronics,B,SUP-027,16.01,24.06,16,2.0,4.75
+SKU-0027,WH-SIN-01,Singapore Central,Medical Supplies,C,SUP-007,6.15,12.49,18,2.9,1.83
+SKU-0028,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-013,53.0,94.02,18,4.2,15.74
+SKU-0029,WH-SIN-01,Singapore Central,Consumer Electronics,B,SUP-015,61.4,87.45,17,2.0,18.24
+SKU-0030,WH-SIN-01,Singapore Central,Automotive Parts,C,SUP-038,31.13,49.34,28,9.3,9.25
+SKU-0031,WH-SIN-01,Singapore Central,FMCG Household,B,SUP-029,3.6,5.41,7,0.9,1.07
+SKU-0032,WH-SIN-01,Singapore Central,Apparel & Textiles,C,SUP-015,13.88,18.46,18,2.7,4.12
+SKU-0033,WH-SIN-01,Singapore Central,Industrial Components,A,SUP-030,8.1,10.53,24,7.0,2.41
+SKU-0034,WH-SIN-01,Singapore Central,Industrial Components,A,SUP-030,19.14,29.21,20,2.5,5.68
+SKU-0035,WH-SIN-01,Singapore Central,Medical Supplies,B,SUP-016,11.81,15.28,14,4.6,3.51
+SKU-0036,WH-SIN-01,Singapore Central,Consumer Electronics,C,SUP-017,11.4,15.82,19,5.3,3.39
+SKU-0037,WH-SIN-01,Singapore Central,Consumer Electronics,B,SUP-036,48.54,93.54,17,2.0,14.42
+SKU-0038,WH-SIN-01,Singapore Central,Medical Supplies,A,SUP-023,12.84,24.45,17,4.6,3.81
+SKU-0039,WH-SIN-01,Singapore Central,Industrial Components,B,SUP-006,19.9,38.71,21,5.4,5.91
+SKU-0040,WH-SIN-01,Singapore Central,Automotive Parts,B,SUP-029,12.08,18.14,35,10.1,3.59
+SKU-0041,WH-SIN-01,Singapore Central,Medical Supplies,C,SUP-024,6.52,14.19,17,5.2,1.94
+SKU-0042,WH-SIN-01,Singapore Central,FMCG Household,B,SUP-021,3.86,6.82,10,2.8,1.15
+SKU-0043,WH-SIN-01,Singapore Central,Automotive Parts,C,SUP-030,7.1,9.66,33,8.1,2.11
+SKU-0044,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-037,11.38,15.63,20,3.6,3.38
+SKU-0045,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-014,1.58,2.98,8,2.2,0.47
+SKU-0046,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-017,2.31,3.22,6,2.0,0.69
+SKU-0047,WH-SIN-01,Singapore Central,Industrial Components,B,SUP-008,24.11,40.36,29,7.2,7.16
+SKU-0048,WH-SIN-01,Singapore Central,Industrial Components,B,SUP-026,20.76,49.08,25,6.7,6.17
+SKU-0049,WH-SIN-01,Singapore Central,Automotive Parts,C,SUP-017,8.95,11.5,24,5.0,2.66
+SKU-0050,WH-SIN-01,Singapore Central,Consumer Electronics,B,SUP-014,20.4,26.36,23,6.6,6.06
+SKU-0051,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-028,53.4,126.39,15,5.2,15.86
+SKU-0052,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-017,42.07,73.87,19,2.7,12.49
+SKU-0053,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-019,2.9,3.95,9,1.4,0.86
+SKU-0054,WH-SIN-01,Singapore Central,Automotive Parts,B,SUP-018,36.5,79.87,21,4.9,10.84
+SKU-0055,WH-SIN-01,Singapore Central,Automotive Parts,B,SUP-011,40.86,88.24,29,6.4,12.14
+SKU-0056,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-006,0.72,1.23,9,2.2,0.21
+SKU-0057,WH-SIN-01,Singapore Central,Medical Supplies,C,SUP-034,11.17,20.08,11,1.2,3.32
+SKU-0058,WH-SIN-01,Singapore Central,Automotive Parts,C,SUP-004,30.36,44.54,28,5.6,9.02
+SKU-0059,WH-SIN-01,Singapore Central,Consumer Electronics,B,SUP-013,25.62,33.63,16,3.9,7.61
+SKU-0060,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-027,53.45,94.44,20,4.9,15.87
+SKU-0061,WH-SIN-01,Singapore Central,Automotive Parts,C,SUP-006,27.68,41.08,22,5.8,8.22
+SKU-0062,WH-SIN-01,Singapore Central,Medical Supplies,A,SUP-027,21.22,39.22,18,5.0,6.3
+SKU-0063,WH-SIN-01,Singapore Central,Automotive Parts,B,SUP-030,45.04,94.04,34,8.9,13.38
+SKU-0064,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-027,2.37,3.06,7,2.1,0.7
+SKU-0065,WH-SIN-01,Singapore Central,Automotive Parts,C,SUP-013,47.75,84.43,25,6.4,14.18
+SKU-0066,WH-SIN-01,Singapore Central,Medical Supplies,B,SUP-001,16.68,23.94,16,3.8,4.95
+SKU-0067,WH-SIN-01,Singapore Central,Medical Supplies,A,SUP-036,23.26,49.98,17,4.3,6.91
+SKU-0068,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-014,15.26,22.16,24,3.0,4.53
+SKU-0069,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-033,34.43,61.47,15,2.5,10.23
+SKU-0070,WH-SIN-01,Singapore Central,Medical Supplies,A,SUP-008,15.29,26.33,12,2.8,4.54
+SKU-0071,WH-SIN-01,Singapore Central,Consumer Electronics,B,SUP-007,12.77,20.04,23,7.3,3.79
+SKU-0072,WH-SIN-01,Singapore Central,Industrial Components,A,SUP-032,17.35,32.37,24,6.5,5.15
+SKU-0073,WH-SIN-01,Singapore Central,FMCG Household,B,SUP-038,3.89,7.5,9,1.1,1.16
+SKU-0074,WH-SIN-01,Singapore Central,Industrial Components,B,SUP-035,25.71,44.64,24,6.0,7.64
+SKU-0075,WH-SIN-01,Singapore Central,Consumer Electronics,B,SUP-031,16.76,33.06,22,3.4,4.98
+SKU-0076,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-010,15.2,35.68,19,5.4,4.51
+SKU-0077,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-037,9.9,15.74,19,5.8,2.94
+SKU-0078,WH-SIN-01,Singapore Central,Automotive Parts,C,SUP-027,6.17,10.37,34,8.4,1.83
+SKU-0079,WH-SIN-01,Singapore Central,Medical Supplies,C,SUP-007,25.19,32.48,18,4.5,7.48
+SKU-0080,WH-SIN-01,Singapore Central,FMCG Household,B,SUP-006,2.16,4.38,7,1.3,0.64
+SKU-0081,WH-SIN-01,Singapore Central,Automotive Parts,C,SUP-035,19.45,32.81,26,5.5,5.78
+SKU-0082,WH-SIN-01,Singapore Central,Industrial Components,B,SUP-012,24.55,38.78,24,7.6,7.29
+SKU-0083,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-031,0.53,0.71,7,2.0,0.16
+SKU-0084,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-006,22.29,48.49,15,3.4,6.62
+SKU-0085,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-012,45.67,71.61,22,4.2,13.56
+SKU-0086,WH-SIN-01,Singapore Central,Consumer Electronics,C,SUP-012,41.86,78.35,16,1.8,12.43
+SKU-0087,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-012,4.13,5.69,9,1.2,1.23
+SKU-0088,WH-SIN-01,Singapore Central,Medical Supplies,C,SUP-027,17.51,40.36,11,1.6,5.2
+SKU-0089,WH-SIN-01,Singapore Central,Consumer Electronics,B,SUP-037,33.26,46.47,14,2.7,9.88
+SKU-0090,WH-SIN-01,Singapore Central,Medical Supplies,A,SUP-037,21.04,29.71,16,5.4,6.25
+SKU-0091,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-030,56.68,120.4,17,3.8,16.83
+SKU-0092,WH-SIN-01,Singapore Central,Automotive Parts,C,SUP-009,38.87,86.1,30,4.8,11.54
+SKU-0093,WH-SIN-01,Singapore Central,Medical Supplies,C,SUP-039,26.08,37.07,12,1.5,7.75
+SKU-0094,WH-SIN-01,Singapore Central,Industrial Components,B,SUP-022,31.15,50.99,30,5.5,9.25
+SKU-0095,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-022,34.2,66.29,28,8.5,10.16
+SKU-0096,WH-SIN-01,Singapore Central,Automotive Parts,C,SUP-029,10.36,22.34,34,6.7,3.08
+SKU-0097,WH-SIN-01,Singapore Central,Industrial Components,B,SUP-031,29.37,45.64,20,5.9,8.72
+SKU-0098,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-039,31.2,52.54,17,5.1,9.27
+SKU-0099,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-024,37.42,72.95,17,2.2,11.11
+SKU-0100,WH-SIN-01,Singapore Central,Apparel & Textiles,C,SUP-025,9.57,18.52,21,5.3,2.84
+SKU-0101,WH-SIN-01,Singapore Central,Apparel & Textiles,B,SUP-030,13.61,27.32,19,6.5,4.04
+SKU-0102,WH-SIN-01,Singapore Central,Automotive Parts,B,SUP-011,51.28,89.21,21,4.2,15.23
+SKU-0103,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-013,13.38,18.02,23,2.6,3.97
+SKU-0104,WH-SIN-01,Singapore Central,Apparel & Textiles,A,SUP-026,10.59,23.3,18,6.0,3.15
+SKU-0105,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-003,3.27,6.98,7,2.2,0.97
+SKU-0106,WH-SIN-01,Singapore Central,Automotive Parts,C,SUP-013,21.29,43.21,23,5.3,6.32
+SKU-0107,WH-SIN-01,Singapore Central,Medical Supplies,C,SUP-029,5.1,6.85,13,3.1,1.51
+SKU-0108,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-040,4.47,6.33,26,4.0,1.33
+SKU-0109,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-021,49.75,97.11,17,5.2,14.78
+SKU-0110,WH-SIN-01,Singapore Central,Apparel & Textiles,C,SUP-016,7.47,9.68,19,4.3,2.22
+SKU-0111,WH-SIN-01,Singapore Central,Medical Supplies,A,SUP-018,26.64,62.32,15,1.6,7.91
+SKU-0112,WH-SIN-01,Singapore Central,Consumer Electronics,B,SUP-028,32.57,50.56,21,5.7,9.67
+SKU-0113,WH-SIN-01,Singapore Central,Industrial Components,A,SUP-022,38.21,73.33,23,7.8,11.35
+SKU-0114,WH-SIN-01,Singapore Central,Automotive Parts,B,SUP-001,24.34,52.86,29,8.9,7.23
+SKU-0115,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-022,50.65,79.4,23,3.9,15.04
+SKU-0116,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-017,0.81,1.22,8,0.9,0.24
+SKU-0117,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-029,2.56,4.56,10,3.4,0.76
+SKU-0118,WH-SIN-01,Singapore Central,Automotive Parts,C,SUP-036,42.7,74.8,32,10.7,12.68
+SKU-0119,WH-SIN-01,Singapore Central,Medical Supplies,B,SUP-039,25.12,39.7,11,2.6,7.46
+SKU-0120,WH-SIN-01,Singapore Central,Automotive Parts,B,SUP-025,43.66,77.5,27,7.0,12.97
+SKU-0121,WH-SIN-01,Singapore Central,Automotive Parts,C,SUP-015,6.74,15.21,31,6.7,2.0
+SKU-0122,WH-SIN-01,Singapore Central,Automotive Parts,B,SUP-018,22.52,36.82,35,7.2,6.69
+SKU-0123,WH-SIN-01,Singapore Central,Consumer Electronics,C,SUP-008,9.68,13.65,18,2.3,2.87
+SKU-0124,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-038,6.93,10.76,19,2.4,2.06
+SKU-0125,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-034,44.14,69.17,19,3.0,13.11
+SKU-0126,WH-SIN-01,Singapore Central,Medical Supplies,C,SUP-035,19.83,27.06,12,3.7,5.89
+SKU-0127,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-014,30.85,42.77,28,3.8,9.16
+SKU-0128,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-013,54.6,102.33,18,2.8,16.22
+SKU-0129,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-035,47.67,72.47,20,4.7,14.16
+SKU-0130,WH-SIN-01,Singapore Central,Automotive Parts,B,SUP-022,42.64,97.75,33,5.1,12.66
+SKU-0131,WH-SIN-01,Singapore Central,Consumer Electronics,B,SUP-029,9.69,14.0,20,2.8,2.88
+SKU-0132,WH-SIN-01,Singapore Central,Apparel & Textiles,C,SUP-020,4.2,5.64,22,5.3,1.25
+SKU-0133,WH-SIN-01,Singapore Central,Automotive Parts,A,SUP-018,34.23,67.28,32,6.1,10.17
+SKU-0134,WH-SIN-01,Singapore Central,Industrial Components,B,SUP-026,33.89,73.22,29,7.4,10.07
+SKU-0135,WH-SIN-01,Singapore Central,Automotive Parts,B,SUP-033,5.21,7.66,33,10.8,1.55
+SKU-0136,WH-SIN-01,Singapore Central,Consumer Electronics,B,SUP-014,35.3,49.91,14,1.9,10.48
+SKU-0137,WH-SIN-01,Singapore Central,Apparel & Textiles,C,SUP-033,9.87,13.84,22,7.2,2.93
+SKU-0138,WH-SIN-01,Singapore Central,Medical Supplies,B,SUP-010,2.74,4.63,13,4.2,0.81
+SKU-0139,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-017,1.99,3.25,9,2.8,0.59
+SKU-0140,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-037,56.26,81.94,20,5.2,16.71
+SKU-0141,WH-SIN-01,Singapore Central,Medical Supplies,B,SUP-039,18.79,24.6,14,3.6,5.58
+SKU-0142,WH-SIN-01,Singapore Central,Medical Supplies,C,SUP-037,7.94,13.09,12,3.1,2.36
+SKU-0143,WH-SIN-01,Singapore Central,Apparel & Textiles,C,SUP-013,12.12,27.89,19,5.2,3.6
+SKU-0144,WH-SIN-01,Singapore Central,Automotive Parts,C,SUP-034,21.36,39.19,31,3.2,6.34
+SKU-0145,WH-SIN-01,Singapore Central,Medical Supplies,C,SUP-038,23.33,38.78,12,4.1,6.93
+SKU-0146,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-040,13.76,18.59,19,4.7,4.09
+SKU-0147,WH-SIN-01,Singapore Central,Industrial Components,B,SUP-001,24.25,35.19,29,8.6,7.2
+SKU-0148,WH-SIN-01,Singapore Central,Medical Supplies,B,SUP-030,11.92,17.69,17,3.3,3.54
+SKU-0149,WH-SIN-01,Singapore Central,Medical Supplies,C,SUP-040,8.87,17.58,12,1.2,2.63
+SKU-0150,WH-SIN-01,Singapore Central,Consumer Electronics,C,SUP-031,55.76,120.07,16,3.6,16.56
+SKU-0151,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-010,1.19,2.61,10,2.3,0.35
+SKU-0152,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-031,0.81,1.9,9,1.9,0.24
+SKU-0153,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-005,25.81,60.54,19,3.5,7.67
+SKU-0154,WH-SIN-01,Singapore Central,Medical Supplies,A,SUP-020,19.94,45.64,13,2.1,5.92
+SKU-0155,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-026,51.41,68.17,16,3.7,15.27
+SKU-0156,WH-SIN-01,Singapore Central,Automotive Parts,A,SUP-019,51.94,71.11,21,4.1,15.43
+SKU-0157,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-028,13.67,20.39,27,9.2,4.06
+SKU-0158,WH-SIN-01,Singapore Central,Automotive Parts,B,SUP-010,24.17,41.6,21,3.0,7.18
+SKU-0159,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-025,1.01,1.36,6,1.1,0.3
+SKU-0160,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-026,2.63,5.53,9,1.6,0.78
+SKU-0161,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-026,61.87,110.88,23,5.4,18.38
+SKU-0162,WH-SIN-01,Singapore Central,Apparel & Textiles,B,SUP-012,10.17,17.39,24,5.4,3.02
+SKU-0163,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-013,24.43,33.91,24,6.3,7.26
+SKU-0164,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-011,28.58,41.49,18,6.1,8.49
+SKU-0165,WH-SIN-01,Singapore Central,Medical Supplies,C,SUP-019,24.88,34.45,14,2.4,7.39
+SKU-0166,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-024,20.89,44.14,22,6.0,6.2
+SKU-0167,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-015,1.0,1.76,8,0.9,0.3
+SKU-0168,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-017,1.85,3.59,8,1.3,0.55
+SKU-0169,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-012,5.42,8.05,26,5.6,1.61
+SKU-0170,WH-SIN-01,Singapore Central,Apparel & Textiles,C,SUP-009,3.79,5.86,25,2.7,1.13
+SKU-0171,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-027,3.64,5.74,31,7.9,1.08
+SKU-0172,WH-SIN-01,Singapore Central,Medical Supplies,C,SUP-033,13.33,26.32,11,3.0,3.96
+SKU-0173,WH-SIN-01,Singapore Central,Industrial Components,B,SUP-012,25.84,51.48,23,6.6,7.67
+SKU-0174,WH-SIN-01,Singapore Central,Apparel & Textiles,C,SUP-035,5.59,7.92,17,3.9,1.66
+SKU-0175,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-023,30.12,68.29,17,4.3,8.95
+SKU-0176,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-007,59.76,81.13,16,3.2,17.75
+SKU-0177,WH-SIN-01,Singapore Central,Medical Supplies,A,SUP-015,20.8,45.47,12,1.3,6.18
+SKU-0178,WH-SIN-01,Singapore Central,Apparel & Textiles,C,SUP-001,8.12,10.92,24,3.0,2.41
+SKU-0179,WH-SIN-01,Singapore Central,FMCG Household,B,SUP-002,1.55,2.26,8,2.1,0.46
+SKU-0180,WH-SIN-01,Singapore Central,FMCG Household,B,SUP-014,3.82,8.04,10,3.5,1.13
+SKU-0181,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-019,1.37,1.92,6,0.6,0.41
+SKU-0182,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-032,1.7,2.69,6,1.4,0.5
+SKU-0183,WH-SIN-01,Singapore Central,Medical Supplies,C,SUP-006,24.73,40.01,14,4.0,7.34
+SKU-0184,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-034,22.06,31.89,19,5.8,6.55
+SKU-0185,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-010,3.25,6.2,7,1.7,0.97
+SKU-0186,WH-SIN-01,Singapore Central,Automotive Parts,B,SUP-006,32.77,69.21,35,8.9,9.73
+SKU-0187,WH-SIN-01,Singapore Central,Industrial Components,A,SUP-028,26.52,57.01,21,5.8,7.88
+SKU-0188,WH-SIN-01,Singapore Central,Consumer Electronics,C,SUP-031,23.47,35.68,15,4.7,6.97
+SKU-0189,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-025,1.39,2.36,8,1.0,0.41
+SKU-0190,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-005,14.61,21.16,24,8.0,4.34
+SKU-0191,WH-SIN-01,Singapore Central,Apparel & Textiles,C,SUP-005,3.19,4.61,22,2.3,0.95
+SKU-0192,WH-SIN-01,Singapore Central,Industrial Components,B,SUP-016,34.48,47.76,23,7.1,10.24
+SKU-0193,WH-SIN-01,Singapore Central,Consumer Electronics,C,SUP-019,22.58,51.13,22,2.6,6.71
+SKU-0194,WH-SIN-01,Singapore Central,FMCG Household,B,SUP-040,2.58,5.6,6,0.9,0.77
+SKU-0195,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-012,50.56,101.09,18,1.8,15.02
+SKU-0196,WH-SIN-01,Singapore Central,Consumer Electronics,B,SUP-008,50.11,84.41,20,4.2,14.88
+SKU-0197,WH-SIN-01,Singapore Central,Automotive Parts,C,SUP-038,25.6,42.43,33,6.1,7.6
+SKU-0198,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-007,2.26,3.84,7,1.0,0.67
+SKU-0199,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-002,61.71,105.16,19,4.0,18.33
+SKU-0200,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-017,27.29,43.77,19,3.8,8.11
+SKU-0201,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-017,3.51,4.79,6,1.8,1.04
+SKU-0202,WH-SIN-01,Singapore Central,Apparel & Textiles,B,SUP-025,12.75,17.35,16,5.2,3.79
+SKU-0203,WH-SIN-01,Singapore Central,Medical Supplies,A,SUP-036,21.69,49.61,17,4.5,6.44
+SKU-0204,WH-SIN-01,Singapore Central,Consumer Electronics,C,SUP-038,17.18,28.33,16,2.1,5.1
+SKU-0205,WH-SIN-01,Singapore Central,Consumer Electronics,C,SUP-012,37.92,86.8,20,3.5,11.26
+SKU-0206,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-040,6.67,9.25,19,6.2,1.98
+SKU-0207,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-026,42.91,73.93,22,2.7,12.74
+SKU-0208,WH-SIN-01,Singapore Central,Automotive Parts,B,SUP-003,49.9,70.76,33,6.7,14.82
+SKU-0209,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-038,35.2,51.1,14,4.7,10.45
+SKU-0210,WH-SIN-01,Singapore Central,Medical Supplies,C,SUP-006,12.82,16.67,11,3.7,3.81
+SKU-0211,WH-SIN-01,Singapore Central,Automotive Parts,C,SUP-024,6.68,9.06,21,4.3,1.98
+SKU-0212,WH-SIN-01,Singapore Central,Automotive Parts,A,SUP-032,50.11,111.37,33,8.8,14.88
+SKU-0213,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-010,12.67,19.07,16,3.4,3.76
+SKU-0214,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-011,0.65,1.16,8,2.3,0.19
+SKU-0215,WH-SIN-01,Singapore Central,Automotive Parts,B,SUP-020,16.57,27.05,27,2.9,4.92
+SKU-0216,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-036,0.74,1.16,9,1.2,0.22
+SKU-0217,WH-SIN-01,Singapore Central,Consumer Electronics,B,SUP-009,32.03,54.42,18,4.6,9.51
+SKU-0218,WH-SIN-01,Singapore Central,Consumer Electronics,B,SUP-027,35.38,49.65,18,2.8,10.51
+SKU-0219,WH-SIN-01,Singapore Central,Apparel & Textiles,C,SUP-019,5.2,12.26,26,6.9,1.54
+SKU-0220,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-005,4.83,9.95,20,3.8,1.43
+SKU-0221,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-029,7.02,13.68,29,9.3,2.08
+SKU-0222,WH-SIN-01,Singapore Central,Medical Supplies,C,SUP-034,11.61,18.99,11,3.4,3.45
+SKU-0223,WH-SIN-01,Singapore Central,Automotive Parts,C,SUP-024,7.84,10.81,28,6.2,2.33
+SKU-0224,WH-SIN-01,Singapore Central,Apparel & Textiles,C,SUP-008,10.14,22.61,25,7.3,3.01
+SKU-0225,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-007,10.45,15.9,27,4.5,3.1
+SKU-0226,WH-SIN-01,Singapore Central,Apparel & Textiles,C,SUP-017,5.07,6.65,23,5.1,1.51
+SKU-0227,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-021,28.68,43.67,16,2.4,8.52
+SKU-0228,WH-SIN-01,Singapore Central,Medical Supplies,B,SUP-023,12.42,25.14,14,4.4,3.69
+SKU-0229,WH-SIN-01,Singapore Central,Automotive Parts,C,SUP-010,5.08,9.14,26,7.9,1.51
+SKU-0230,WH-SIN-01,Singapore Central,Consumer Electronics,B,SUP-021,13.16,25.82,19,6.2,3.91
+SKU-0231,WH-SIN-01,Singapore Central,Consumer Electronics,B,SUP-012,54.45,110.16,18,5.7,16.17
+SKU-0232,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-028,3.04,4.32,22,7.5,0.9
+SKU-0233,WH-SIN-01,Singapore Central,Apparel & Textiles,C,SUP-032,7.7,17.21,19,3.0,2.29
+SKU-0234,WH-SIN-01,Singapore Central,Automotive Parts,B,SUP-027,28.01,45.01,24,8.0,8.32
+SKU-0235,WH-SIN-01,Singapore Central,Apparel & Textiles,C,SUP-001,5.46,9.93,19,4.6,1.62
+SKU-0236,WH-SIN-01,Singapore Central,FMCG Household,B,SUP-040,2.1,2.7,6,1.2,0.62
+SKU-0237,WH-SIN-01,Singapore Central,Medical Supplies,C,SUP-001,21.51,50.92,18,4.3,6.39
+SKU-0238,WH-SIN-01,Singapore Central,FMCG Household,B,SUP-040,3.61,5.32,8,1.5,1.07
+SKU-0239,WH-SIN-01,Singapore Central,Consumer Electronics,A,SUP-002,21.32,28.14,15,2.6,6.33
+SKU-0240,WH-SIN-01,Singapore Central,Consumer Electronics,B,SUP-021,24.74,40.23,20,3.2,7.35
+SKU-0241,WH-SIN-01,Singapore Central,FMCG Household,B,SUP-005,1.4,1.91,9,1.1,0.42
+SKU-0242,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-004,2.28,3.14,7,1.6,0.68
+SKU-0243,WH-SIN-01,Singapore Central,Industrial Components,B,SUP-028,27.6,49.97,20,6.4,8.2
+SKU-0244,WH-SIN-01,Singapore Central,Medical Supplies,C,SUP-030,7.71,12.07,11,2.8,2.29
+SKU-0245,WH-SIN-01,Singapore Central,Automotive Parts,B,SUP-005,20.54,45.83,21,4.8,6.1
+SKU-0246,WH-SIN-01,Singapore Central,FMCG Household,C,SUP-040,3.94,5.92,9,1.9,1.17
+SKU-0247,WH-SIN-01,Singapore Central,Automotive Parts,C,SUP-013,7.28,14.04,35,7.6,2.16
+SKU-0248,WH-SIN-01,Singapore Central,Industrial Components,C,SUP-013,19.59,31.91,18,2.7,5.82
+SKU-0249,WH-SIN-01,Singapore Central,Industrial Components,B,SUP-012,28.62,52.76,28,8.6,8.5
+SKU-0250,WH-SIN-01,Singapore Central,Medical Supplies,B,SUP-019,5.76,10.21,11,1.6,1.71

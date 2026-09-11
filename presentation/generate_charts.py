@@ -2,7 +2,7 @@
 Chart Generation for the Executive Dashboard Pack
 =================================================
 
-Project : AI-Powered Inventory Forecasting & Automated Replenishment System
+Project : Demand Forecasting & Automated Replenishment System
 Input   : data/inventory_data.csv
 Output  : presentation/charts/*.png  (a light and a dark variant of each chart)
 
@@ -224,7 +224,7 @@ def chart_carrying_cost(d: pd.DataFrame, theme: dict, mode: str) -> str:
     ax.spines["left"].set_color(theme["axis"])
 
     handles = [plt.Rectangle((0, 0), 1, 1, fc=theme["s1"]), plt.Rectangle((0, 0), 1, 1, fc=theme["s2"])]
-    leg = ax.legend(handles, ["Static reorder points (today)", "AI forecast-driven policy"],
+    leg = ax.legend(handles, ["Static reorder points (today)", "Forecast-driven policy"],
                     loc="lower left", frameon=False, fontsize=9.5, ncol=2,
                     bbox_to_anchor=(0.0, -0.17), handlelength=1.1, handleheight=1.1)
     for t in leg.get_texts():
@@ -252,7 +252,7 @@ def chart_waterfall(d: pd.DataFrame, theme: dict, mode: str) -> str:
         ("Carrying cost\nunder static\nreorder points", 0, static_total, theme["s1"], True),
         ("Safety stock\nreduction", static_total - safety, safety, theme["s2"], False),
         ("Cycle stock\nreduction", ai_total, cycle, theme["s2"], False),
-        ("Carrying cost\nunder AI\npolicy", 0, ai_total, theme["s1"], True),
+        ("Carrying cost\nunder forecast-\ndriven policy", 0, ai_total, theme["s1"], True),
     ]
 
     fig, ax = new_figure(theme, 9.2, 5.0)
@@ -293,7 +293,7 @@ def chart_waterfall(d: pd.DataFrame, theme: dict, mode: str) -> str:
         t.set_color(theme["text"])
 
     titles(ax, theme,
-           "Where the SGD 776k saving actually comes from",
+           f"Where the SGD {sgd(static_total - ai_total)} saving actually comes from",
            "Annual carrying cost, SGD. Two independently auditable components: statistical "
            "safety stock sizing, and smaller order quantities once PO raising is automated.")
     return save(fig, "02-savings-waterfall", mode)
@@ -418,7 +418,7 @@ def chart_turnover(d: pd.DataFrame, theme: dict, mode: str) -> str:
 
     titles(ax, theme,
            "The trapped capital sits in the slow-moving tail",
-           "Each point is one SKU across all four warehouses, under the AI policy. "
+           "Each point is one SKU across all four warehouses, under the forecast-driven policy. "
            "High-revenue A-class items already turn well; C-class items are the problem.")
     return save(fig, "04-inventory-turnover", mode)
 
@@ -480,7 +480,7 @@ def chart_payback(d: pd.DataFrame, theme: dict, mode: str) -> str:
 
 def main() -> None:
     if not os.path.exists(CSV_PATH):
-        raise SystemExit("inventory_data.csv not found. Run data/generate_supply_chain_data.py first.")
+        raise SystemExit("inventory_data.csv not found. Run data/run_pipeline.py first.")
     d = load_positions()
     builders = [chart_carrying_cost, chart_waterfall, chart_pareto, chart_turnover, chart_payback]
     written = []

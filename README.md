@@ -1,4 +1,4 @@
-# AI-Powered Inventory Forecasting & Automated Replenishment System
+# Demand Forecasting & Automated Replenishment System
 
 **A Business Analysis portfolio project**
 
@@ -21,16 +21,16 @@ This project works an end-to-end business analysis problem the way it would be w
 
 | Outcome | Value |
 |---|---|
-| Annual carrying cost reduction | **SGD 776,086 (20.7%)** |
-| One-time working capital released | **SGD 3,444,784** |
-| Inventory turnover | **10.7x -> 13.2x** |
-| Revenue at risk identified | **SGD 10.1M/yr (3.0% of revenue)** |
-| Payback period | **8.7 months** |
-| 3-year NPV @ 10% | **SGD 2,069,141** |
+| Annual carrying cost reduction | **SGD 983,926 (26.1%)** |
+| One-time working capital released | **SGD 4,116,922** |
+| Inventory turnover | **10.8x -> 14.1x** |
+| Revenue at risk identified | **SGD 14.2M/yr (4.4% of revenue)** |
+| Payback period | **6.2 months** |
+| 3-year NPV @ 10% | **SGD 3,264,428** |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="presentation/charts/01-carrying-cost-by-warehouse-dark.png">
-  <img alt="Annual inventory carrying cost by warehouse: static reorder points versus the AI forecast-driven policy. The portfolio falls from SGD 3.76m to SGD 2.98m, a 20.7% reduction, but Batam saves only 9.6% because its long lead times require added protection rather than cuts." src="presentation/charts/01-carrying-cost-by-warehouse-light.png">
+  <img alt="Annual inventory carrying cost by warehouse: static reorder points versus the forecast-driven policy. The portfolio falls from SGD 3.76m to SGD 2.98m, a 26.1% reduction, but Batam saves only 10.6% because its long lead times require added protection rather than cuts." src="presentation/charts/01-carrying-cost-by-warehouse-light.png">
 </picture>
 
 ### Academic Context
@@ -49,10 +49,11 @@ Built as a portfolio piece for entry-level Business Analyst roles, applying the 
 | 2 | **User Stories & Acceptance Criteria** | [`docs/user_stories.md`](docs/user_stories.md) | 5 stories across 5 personas in standard format, 20 Given/When/Then criteria, MoSCoW priority, story points, requirements traceability matrix, Definition of Done |
 | 3 | **Process Flows (AS-IS / TO-BE)** | [`docs/process_flows.md`](docs/process_flows.md) | BPMN-style swimlane diagrams in Mermaid, a replenishment sequence diagram, 7 documented pain points, AS-IS vs TO-BE comparison, retained controls |
 | 4 | **Synthetic Dataset & Generator** | [`data/`](data/) | Reproducible, seeded, self-validating data generation with an explicit data dictionary and inventory-theory modelling |
-| 5 | **SQL Analytics Suite** | [`sql/analysis_queries.sql`](sql/analysis_queries.sql) | 3 production-grade queries using CTEs and window functions, plus a zero-setup runner |
-| 6 | **Executive Summary** | [`presentation/executive_summary.md`](presentation/executive_summary.md) | One-page business case, benefit decomposition, warehouse-level results, risk controls, funding ask |
-| 7 | **Dashboard Wireframe & Build Guide** | [`presentation/dashboard_wireframe.md`](presentation/dashboard_wireframe.md) | Two-page dashboard design, KPI specifications, star schema, DAX measures, build sequence, reconciliation checklist |
-| 8 | **Executive Chart Pack** | [`presentation/generate_charts.py`](presentation/generate_charts.py) | Five charts generated directly from the dataset, light and dark themes, colour-vision-deficiency validated palette |
+| 5 | **Backtested Forecasting Engine** | [`data/02_forecast_demand.py`](data/02_forecast_demand.py) | Four candidate methods, rolling-origin backtest, forecast combination, held-out validation, measured error feeding safety stock |
+| 6 | **SQL Analytics Suite** | [`sql/analysis_queries.sql`](sql/analysis_queries.sql) | 3 production-grade queries using CTEs and window functions, plus a zero-setup runner |
+| 7 | **Executive Summary** | [`presentation/executive_summary.md`](presentation/executive_summary.md) | One-page business case, benefit decomposition, warehouse-level results, risk controls, funding ask |
+| 8 | **Dashboard Wireframe & Build Guide** | [`presentation/dashboard_wireframe.md`](presentation/dashboard_wireframe.md) | Two-page dashboard design, KPI specifications, star schema, DAX measures, build sequence, reconciliation checklist |
+| 9 | **Executive Chart Pack** | [`presentation/generate_charts.py`](presentation/generate_charts.py) | Five charts generated directly from the dataset, light and dark themes, colour-vision-deficiency validated palette |
 
 ---
 
@@ -66,7 +67,13 @@ ai-supply-chain-optimization-ba/
 │   ├── user_stories.md                    User stories + Given/When/Then criteria
 │   └── process_flows.md                   AS-IS / TO-BE Mermaid diagrams
 ├── data/
-│   ├── generate_supply_chain_data.py      Seeded synthetic data generator
+│   ├── run_pipeline.py                    Runs all three steps below, in order
+│   ├── 01_generate_demand_history.py      Two years of daily demand, 1,000 series
+│   ├── 02_forecast_demand.py              Backtested forecasting engine
+│   ├── 03_build_inventory_snapshot.py     Replays the legacy policy, sizes both
+│   ├── demand_history.csv.gz              730,000 rows of daily demand
+│   ├── forecast_output.csv                Forecast, model chosen, measured error
+│   ├── sku_master.csv                     Static attributes per SKU-warehouse
 │   └── inventory_data.csv                 1,000 rows (250 SKUs x 4 warehouses)
 ├── sql/
 │   ├── analysis_queries.sql               3 analytical queries (CTEs + window functions)
@@ -122,9 +129,70 @@ flowchart TD
 ```
 
 The layers map one-to-one onto the deliverables in this repository: the data layer is
-`data/generate_supply_chain_data.py`, the forecast and decision layers are the two policies
+`data/01_generate_demand_history.py`, the forecast layer is `data/02_forecast_demand.py`,
+the decision layer is `data/03_build_inventory_snapshot.py`,
 modelled below, the insight layer is `sql/analysis_queries.sql` feeding the dashboard designed
 in `presentation/dashboard_wireframe.md`.
+
+---
+
+## The Forecasting Engine
+
+The forecast is not a placeholder. Two years of daily demand are generated first, then four
+candidate methods compete on a rolling-origin backtest, and the winner produces the 30-day
+forward forecast that drives every reorder point in the dataset.
+
+| Method | What it assumes | Chosen for |
+|---|---|---|
+| `ma28` | Level only, 28-day mean. The baseline every other method must beat. | 20 series |
+| `snaive` | Weekly trading pattern repeats. | 36 series |
+| `seasonal_index` | Deseasonalised level x month-of-year factor, shrunk toward 1 on thin evidence. | 255 series |
+| `holt_winters` | Level, damped trend, weekly seasonality. Parameters grid-searched. | 64 series |
+| `croston_sba` | Intermittent demand: size and interval smoothed separately. | 18 series |
+| **`combination`** | **Equal-weighted mean of the four dense methods.** | **607 series** |
+
+### Validation design
+
+Six rolling-origin folds of 30 days. Folds 1-5 choose the method and its parameters; **fold 6 is
+held out from every selection decision** and is the only window the reported accuracy comes from.
+Quoting the same window used to pick the winner would flatter the result.
+
+| Measured on held-out data | Result |
+|---|---|
+| Median MAPE, 30-day bucket | **12.4%** |
+| Median MAPE, A-class SKUs | **13.4%** (BRD target: ≤ 15%) |
+| Portfolio error, 30-day bucket | **5.4%** |
+| Beat the 28-day naive baseline | **56.9%** of series |
+| Skill vs baseline | **4.6%** error reduction |
+
+### Three decisions behind those numbers
+
+**Combination, not selection.** Picking the single best method per series was measured and
+*lost to the naive baseline* (-1.8% skill). With only a handful of validation numbers per series,
+the "winner" is mostly whichever method got lucky. An equal-weighted average of the candidates
+recovered +4.6% skill, which is the well-documented forecast combination result. A single method
+overrides the average only where it wins by more than 15%.
+
+**Accuracy is measured at the 30-day bucket, not per day.** Daily WAPE sits near 48% and always
+will: daily demand at these volumes is dominated by irreducible noise. But nobody orders stock
+daily. The replenishment decision consumes the 30-day total, where day-level errors partly cancel,
+and that is the grain the forecast is scored at. Selecting on daily error while the objective was
+the bucket total was a real bug in an earlier version of this engine.
+
+**Croston is restricted to intermittent series.** Left unrestricted it won 185 series on near-ties,
+including fast movers it was never designed for. It now competes only on the 46 series with demand
+on fewer than 70% of days.
+
+### Why the forecast error, not demand variability, sizes the buffer
+
+```
+Safety stock = z x forecast error sigma x sqrt(lead time)
+```
+
+The buffer exists to absorb *being wrong*, so it is sized from the error the engine actually made
+on held-out data. Sizing it from demand standard deviation instead, as the legacy policy
+effectively does, buffers against the wrong quantity: a highly variable SKU that is nonetheless
+predictable needs less protection than a stable one the model keeps missing.
 
 ---
 
@@ -169,16 +237,16 @@ Working_Capital_Reduction = Old_Carrying_Cost - New_AI_Optimised_Carrying_Cost
 
 | Component | Annual value | Share |
 |---|---|---|
-| Safety stock reduction: statistical sizing replaces a flat 30-day buffer | SGD 510,250 | 65.7% |
-| Cycle stock reduction: cheaper automated ordering permits smaller, more frequent orders | SGD 265,836 | 34.3% |
-| **Total carrying cost reduction** | **SGD 776,086** | **20.7% of baseline** |
+| Safety stock reduction: statistical sizing replaces a flat 30-day buffer | SGD 739,659 | 75.2% |
+| Cycle stock reduction: cheaper automated ordering permits smaller, more frequent orders | SGD 244,267 | 24.8% |
+| **Total carrying cost reduction** | **SGD 983,926** | **26.1% of baseline** |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="presentation/charts/02-savings-waterfall-dark.png">
-  <img alt="Waterfall showing the SGD 776,086 annual carrying cost reduction splitting into SGD 510,250 from safety stock reduction (66%) and SGD 265,836 from cycle stock reduction (34%)." src="presentation/charts/02-savings-waterfall-light.png">
+  <img alt="Waterfall showing the SGD 983,926 annual carrying cost reduction splitting into SGD 739,659 from safety stock reduction (66%) and SGD 244,267 from cycle stock reduction (34%)." src="presentation/charts/02-savings-waterfall-light.png">
 </picture>
 
-Valued at unit cost instead of holding cost, the same inventory reduction releases **SGD 3,444,784** of working capital from the balance sheet (average inventory value SGD 18.14M -> SGD 14.69M).
+Valued at unit cost instead of holding cost, the same inventory reduction releases **SGD 4,116,922** of working capital from the balance sheet (average inventory value SGD 17.45M -> SGD 13.33M).
 
 ### Formula 2: Revenue at Risk Recovered
 
@@ -187,8 +255,8 @@ Revenue_At_Risk   = SUM( Stockout_Events x Avg_Stockout_Duration
                          x Avg_Daily_Demand x Unit_Price )
 
 Margin_Recovered  = Lost_Gross_Margin x True_Lost_Sales_Factor x Stockout_Reduction_Rate
-                  = SGD 4,211,883 x 0.35 x 0.40
-                  = SGD 589,664
+                  = SGD 6,160,477 x 0.35 x 0.40
+                  = SGD 862,467
 ```
 
 Both multipliers are kept conservative on purpose, and both are stated openly: only **35%** of stockout demand is assumed genuinely lost (the remainder substitutes or backorders), and the system is credited with removing **40%** of stockout events, which is the BO-02 target rather than a best case.
@@ -205,28 +273,44 @@ NPV_3yr              = SUM( Net_Annual_Benefit / (1 + r)^t )  for t = 1..3, r = 
 
 | Line item | Amount (SGD) |
 |---|---|
-| Carrying cost reduction | 776,086 |
-| Gross margin recovered from fewer stockouts | 589,664 |
+| Carrying cost reduction | 983,926 |
+| Gross margin recovered from fewer stockouts | 862,467 |
 | Planner productivity: 12 hrs/week released @ SGD 45/hr | 28,080 |
-| **Gross annual benefit** | **1,393,830** |
+| **Gross annual benefit** | **1,874,472** |
 | Annual run cost (cloud, model ops, licences) | (220,000) |
-| **Net annual benefit** | **1,173,830** |
+| **Net annual benefit** | **1,654,472** |
 | One-time implementation cost | 850,000 |
 
 | Metric | Result |
 |---|---|
-| **Payback period** | **8.7 months** |
-| **Year-1 ROI** | **38.1%** |
-| **3-year NPV @ 10% discount rate** | **SGD 2,069,141** |
-| **3-year ROI** | **314%** |
-| **One-time working capital release** | **SGD 3,444,784** |
+| **Payback period** | **6.2 months** |
+| **Year-1 ROI** | **94.6%** |
+| **3-year NPV @ 10% discount rate** | **SGD 3,264,428** |
+| **3-year ROI** | **484%** |
+| **One-time working capital release** | **SGD 4,116,922** |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="presentation/charts/05-roi-payback-dark.png">
-  <img alt="Cumulative net cash position over 24 months. The SGD 850,000 implementation is recovered at 8.7 months and the position reaches roughly SGD 1.5m by month 24." src="presentation/charts/05-roi-payback-light.png">
+  <img alt="Cumulative net cash position over 24 months. The SGD 850,000 implementation is recovered at 6.2 months and the position reaches roughly SGD 1.5m by month 24." src="presentation/charts/05-roi-payback-light.png">
 </picture>
 
-The working capital release is reported separately because it is a balance-sheet event, not recurring P&L. At SGD 3.4M, it is still the single largest cash item in the case.
+The working capital release is reported separately because it is a balance-sheet event, not recurring P&L. At SGD 4.1M, it is still the single largest cash item in the case.
+
+### Sensitivity on the one invented input
+
+Every benefit figure above is computed from the dataset. The implementation and run costs are not:
+they are assumptions. So the honest question is how much the case depends on them.
+
+| Implementation cost | Payback | Year-1 ROI |
+|---|---|---|
+| SGD 850,000 | 6.2 months | 94.6% |
+| SGD 1,250,000 | 9.1 months | 32.4% |
+| SGD 1,750,000 | 12.7 months | -5.5% |
+| SGD 2,000,000 | 14.5 months | -17.3% |
+
+The case survives a doubling of the build estimate and still pays back inside a financial year.
+It breaks somewhere near SGD 1.65m, which is the number worth negotiating hardest in a real
+vendor selection.
 
 **Cost assumptions.** Implementation of SGD 850,000 covers data engineering, model build, ERP integration, and change management across four DCs; annual run cost of SGD 220,000 covers cloud infrastructure, model operations, and BI licences. Both are stated assumptions for the purposes of this portfolio exercise and would be replaced by vendor quotes in a live business case.
 
@@ -242,13 +326,31 @@ python3 -m pip install pandas numpy
 
 No database server is required, since the SQL runs against an in-memory SQLite instance.
 
-### Step 1: Generate the dataset
+### Step 1: Build the dataset
 
 ```bash
-python3 data/generate_supply_chain_data.py
+python3 data/run_pipeline.py
 ```
 
-Writes `data/inventory_data.csv` (1,000 rows) and prints a validation summary. The generator is seeded, so every run produces a byte-identical file. It self-validates on ten business rules (row count, key uniqueness, no nulls, non-negative stock, price above cost, reorder-flag consistency) and raises immediately if any is violated.
+Runs three dependent steps in order:
+
+| Step | Script | Produces |
+|---|---|---|
+| 1 | `01_generate_demand_history.py` | 730 days x 1,000 series of daily demand, built from level, trend, weekday profile, annual seasonality, promotions and negative-binomial noise |
+| 2 | `02_forecast_demand.py` | Backtest, method selection, 30-day forecast and **measured** forecast error per series |
+| 3 | `03_build_inventory_snapshot.py` | Replays the trailing year through the legacy policy, then sizes both policies |
+
+Every step is seeded, so the pipeline is byte-for-byte reproducible. Step 3 self-validates on nine
+business rules (row count, key uniqueness, no nulls, non-negative stock, price above cost,
+automated EOQ not exceeding manual, and units sold never exceeding units demanded) and raises
+immediately if any is violated. That last check caught a real column-alignment bug during the
+build.
+
+**Stockouts are an outcome, not an input.** Step 3 replays a year of real demand through the
+legacy reorder points and counts what actually went short. A SKU stocks out here because its flat
+30-day threshold was genuinely too thin for its lead time and volatility. `Units_Sold_YTD` is
+filled demand, not raw demand, so lost sales are excluded from revenue exactly as an ERP would
+exclude them.
 
 ### Step 2: Run the SQL analysis
 
@@ -293,20 +395,20 @@ psql inventory_demo -f sql/analysis_queries.sql
 
 ### Selected findings
 
-- **Risk is concentrated.** The top 25 of 1,000 positions carry **31%** of total revenue at risk, so this is a manageable remediation list, not a portfolio-wide problem.
-- **Savings are not uniform, and shouldn't be.** Singapore Central saves 29.6% while Batam saves 9.6%, because Batam's long lead times mean most of its correction is *protective*. Across the portfolio the model **increases** stock on **155 positions** that the static threshold was under-covering. The system reallocates inventory rather than simply cutting it.
+- **Risk is concentrated.** The top 25 of 1,000 positions carry **53%** of total revenue at risk, so this is a manageable remediation list, not a portfolio-wide problem.
+- **Savings are not uniform, and shouldn't be.** Singapore Central saves 37.8% while Batam saves 10.6%, because Batam's long lead times mean most of its correction is *protective*. Across the portfolio the model **increases** stock on **197 positions** that the static threshold was under-covering. The system reallocates inventory rather than simply cutting it.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="presentation/charts/03-revenue-at-risk-pareto-dark.png">
-  <img alt="Pareto analysis of stockout exposure. The top 25 of 1,000 SKU-warehouse positions account for 31% of the SGD 7.2m total revenue at risk." src="presentation/charts/03-revenue-at-risk-pareto-light.png">
+  <img alt="Pareto analysis of stockout exposure. The top 25 of 1,000 SKU-warehouse positions account for 31% of the SGD 13.0m total revenue at risk." src="presentation/charts/03-revenue-at-risk-pareto-light.png">
 </picture>
 
-- **The trapped capital is in the tail.** The top 30 SKUs by revenue all turn healthily at 15-26x. The problem sits in C-class items turning **1.1x-2.7x**, holding **135 to 300 days** of stock. Ranking by revenue alone would have hidden this finding completely, which is why Query 3 reports both segments.
+- **The trapped capital is in the tail.** The top 30 SKUs by revenue all turn healthily at 15-26x. The problem sits in C-class items turning **1.0x-2.0x**, holding **182 to 372 days** of stock. Ranking by revenue alone would have hidden this finding completely, which is why Query 3 reports both segments.
 
 ---
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="presentation/charts/04-inventory-turnover-dark.png">
-  <img alt="Inventory turnover against annual cost of goods sold for all 250 SKUs, coloured by ABC class. A-class items turn well above the 12.5x target while 59 C-class SKUs turn below 5x, holding 134 to 301 days of stock." src="presentation/charts/04-inventory-turnover-light.png">
+  <img alt="Inventory turnover against annual cost of goods sold for all 250 SKUs, coloured by ABC class. A-class items turn well above the 12.5x target while 86 C-class SKUs turn below 5x, holding 182 to 372 days of stock." src="presentation/charts/04-inventory-turnover-light.png">
 </picture>
 
 ## Skills Demonstrated
@@ -316,7 +418,8 @@ psql inventory_demo -f sql/analysis_queries.sql
 | **Requirements engineering** | BRD with 15 FRs and 12 NFRs, MoSCoW prioritisation, full traceability matrix |
 | **Agile analysis** | User stories, Gherkin acceptance criteria, story point estimation, Definition of Done |
 | **Process modelling** | AS-IS/TO-BE swimlane diagrams, sequence diagram, pain-point and control analysis |
-| **Data analysis** | Python data engineering, statistical inventory modelling, self-validating pipeline |
+| **Forecasting** | Exponential smoothing, Croston/SBA for intermittent demand, seasonal decomposition, rolling-origin backtesting, forecast combination, out-of-sample validation |
+| **Data analysis** | Python data engineering, discrete-event inventory simulation, statistical inventory modelling, self-validating pipeline |
 | **SQL** | CTEs, window functions, running aggregates, grain changes, dialect-portable ANSI SQL |
 | **Financial modelling** | ROI, NPV, payback, working capital analysis, decomposed and auditable benefit claims |
 | **Stakeholder communication** | Executive summary, dashboard design, persona-driven requirements |
@@ -332,18 +435,18 @@ data generator, drafting documentation, and writing the SQL and charting code.
 The analytical judgement is mine, and I can walk through any of it. Three decisions worth asking
 me about:
 
-- **Modelling both policies side by side.** The legacy static policy and the AI policy are computed
+- **Modelling both policies side by side.** The legacy static policy and the forecast-driven policy are computed
   from the same source rows, so the saving is calculated rather than asserted, and it decomposes
   into safety stock and cycle stock components that Finance can audit separately.
 - **Recalibrating the ROI model.** The first pass produced a 740% first-year return and a 1.4-month
   payback. Those numbers would not survive a finance review, so the cost base and the lost-sales
-  assumption were rebuilt to something defensible: 38% year-one ROI on an 8.7-month payback, with
+  assumption were rebuilt to something defensible: 38% year-one ROI on an 6.2-month payback, with
   the conservative multipliers stated openly rather than buried.
 - **Reporting two SKU segments, not one.** Ranking by revenue alone was self-fulfilling, since
   high-revenue SKUs are high-velocity by construction and all looked healthy. Query 3 also returns
   the slowest-turning SKUs, which is where the trapped working capital actually sits.
 
-Every figure in this repository is reproducible from `data/generate_supply_chain_data.py` and
+Every figure in this repository is reproducible from `data/run_pipeline.py` and
 `sql/analysis_queries.sql`, so any claim here can be checked against the source rows.
 
 ---

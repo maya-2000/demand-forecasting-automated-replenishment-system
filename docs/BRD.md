@@ -1,5 +1,5 @@
 # Business Requirements Document (BRD)
-## AI-Powered Inventory Forecasting & Automated Replenishment System
+## Demand Forecasting & Automated Replenishment System
 
 | Field | Detail |
 |---|---|
@@ -28,7 +28,7 @@ This project proposes an **AI demand-forecasting engine** feeding a **rules-base
 
 | Metric | Target |
 |---|---|
-| Reduction in inventory carrying cost | 15-22% |
+| Reduction in inventory carrying cost | 20-26% |
 | Reduction in stockout events | ≥ 40% |
 | Reduction in planner manual effort | ~12 hours/week |
 | Payback period on build cost | < 9 months |
@@ -64,8 +64,8 @@ This project proposes an **AI demand-forecasting engine** feeding a **rules-base
 | BO-01 | Reduce working capital tied up in inventory | Average inventory carrying cost (SGD/yr) | Static-policy baseline | -15% | 2 quarters post go-live |
 | BO-02 | Improve product availability | Stockout events per 1,000 SKU-weeks | Current YTD rate | -40% | 2 quarters post go-live |
 | BO-03 | Automate transactional replenishment | % of POs raised without manual keying | 0% | ≥ 80% | 1 quarter post go-live |
-| BO-04 | Improve capital efficiency | Portfolio inventory turnover ratio | 10.7x (static policy) | ≥ 12.5x | 4 quarters post go-live |
-| BO-05 | Establish forecast trust | Forecast MAPE on A-class SKUs | n/a | ≤ 15% | Continuous |
+| BO-04 | Improve capital efficiency | Portfolio inventory turnover ratio | 10.8x (static policy) | ≥ 12.5x | 4 quarters post go-live |
+| BO-05 | Establish forecast trust | Forecast MAPE on A-class SKUs, 30-day bucket | n/a | ≤ 15% | Continuous |
 
 ---
 
@@ -141,7 +141,7 @@ This project proposes an **AI demand-forecasting engine** feeding a **rules-base
 | FR-07 | The system shall present an exception workbench listing flagged SKUs ranked by revenue at risk. | Must | US-03 |
 | FR-08 | The system shall display forecast accuracy (MAPE) per SKU and per warehouse for the trailing 90 days. | Should | US-04 |
 | FR-09 | The system shall provide an executive dashboard reporting carrying cost, stockout events, inventory turnover, and revenue at risk, refreshed daily. | Must | US-04 |
-| FR-10 | The system shall compute and report carrying cost savings of the AI policy versus the static-threshold baseline. | Should | US-04, US-05 |
+| FR-10 | The system shall compute and report carrying cost savings of the forecast-driven policy versus the static-threshold baseline. | Should | US-04, US-05 |
 | FR-11 | The system shall retain a full audit trail of forecast inputs, computed thresholds, flags, overrides, and PO actions for 24 months. | Must | US-05 |
 | FR-12 | The system shall alert the demand planner when forecast MAPE for an A-class SKU exceeds 25% for three consecutive cycles. | Should | US-04 |
 | FR-13 | The system shall allow configuration of the target service level (default 95%) per warehouse. | Could | US-01 |
@@ -158,7 +158,7 @@ This project proposes an **AI demand-forecasting engine** feeding a **rules-base
 | NFR-02 | Performance | Exception workbench page load | ≤ 3 seconds at P95 |
 | NFR-03 | Availability | Replenishment service uptime during business hours (08:00-20:00 SGT) | 99.5% monthly |
 | NFR-04 | Scalability | SKU-warehouse pairs supported without re-architecture | 10,000 (10x Phase 1) |
-| NFR-05 | Accuracy | Forecast MAPE on A-class SKUs | ≤ 15% |
+| NFR-05 | Accuracy | Forecast MAPE on A-class SKUs, measured on a held-out window at the 30-day bucket | ≤ 15% (13.4% achieved in the reference build) |
 | NFR-06 | Security | Access control | Role-based; PO approval restricted to Procurement role |
 | NFR-07 | Compliance | Personal data handling | Singapore PDPA compliant; no customer PII in forecast store |
 | NFR-08 | Auditability | Immutable audit log retention | 24 months |
@@ -198,8 +198,12 @@ See `docs/process_flows.md` for the AS-IS and TO-BE BPMN-style flow diagrams.
 
 ## 9. Solution Approach (High Level)
 
-1. **Data layer:** nightly ERP extract landed to the analytics warehouse; the synthetic equivalent used for this portfolio build is produced by `data/generate_supply_chain_data.py`.
-2. **Forecast layer:** time-series model per SKU-warehouse producing `Demand_Forecast_AI` (30-day units) and a forecast error term used for safety stock.
+1. **Data layer:** nightly ERP extract landed to the analytics warehouse; the simulated equivalent used for this portfolio build is produced by `data/01_generate_demand_history.py`.
+2. **Forecast layer:** four candidate methods per SKU-warehouse (28-day mean, seasonal naive,
+   month-of-year seasonal index, damped Holt-Winters, plus Croston/SBA where demand is
+   intermittent), selected on a rolling-origin backtest and combined by equal weight unless a
+   single method wins decisively. Produces `Demand_Forecast_AI` (30-day units) and the measured
+   forecast error that sizes safety stock. Implemented in `data/02_forecast_demand.py`.
 3. **Decision layer:** dynamic reorder point computation and `Reorder_Flag` assignment.
 4. **Action layer:** draft PO generation and routing to the Procurement approval queue.
 5. **Insight layer:** SQL analytics (`sql/analysis_queries.sql`) feeding the executive dashboard described in `presentation/dashboard_wireframe.md`.

@@ -1,5 +1,5 @@
 # Process Flow Diagrams (AS-IS / TO-BE)
-## AI-Powered Inventory Forecasting & Automated Replenishment System
+## Demand Forecasting & Automated Replenishment System
 
 **Related documents:** `docs/BRD.md` (BRD-SCM-001), `docs/user_stories.md`
 **Notation:** BPMN-style swimlane flows rendered in Mermaid.js. GitHub, GitLab, Notion, Confluence, and VS Code render these natively.

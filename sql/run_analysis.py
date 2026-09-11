@@ -54,7 +54,7 @@ def main() -> int:
     args = parser.parse_args()
 
     if not os.path.exists(CSV_PATH):
-        print("inventory_data.csv not found. Run: python3 data/generate_supply_chain_data.py")
+        print("inventory_data.csv not found. Run: python3 data/run_pipeline.py")
         return 1
 
     df = pd.read_csv(CSV_PATH)

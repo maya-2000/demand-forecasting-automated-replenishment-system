@@ -1,5 +1,5 @@
 # Executive Summary
-## AI-Powered Inventory Forecasting & Automated Replenishment System
+## Demand Forecasting & Automated Replenishment System
 
 **Prepared for:** Executive Steering Committee
 **Prepared by:** Business Analyst (MSc Management, Singapore Management University)
@@ -16,13 +16,13 @@ Replenishment across our four regional DCs is governed by static reorder points 
 
 | Finding | Value |
 |---|---|
-| Revenue at risk from stockouts (annualised) | **SGD 10.1M** (3.0% of revenue) |
-| SKU-warehouse positions that stocked out YTD | **687 of 1,000** (68.7%) |
-| Stockout events YTD | **1,661** |
+| Revenue at risk from stockouts (annualised) | **SGD 14.2M** (4.4% of revenue) |
+| SKU-warehouse positions that stocked out YTD | **417 of 1,000** (41.7%) |
+| Stockout events YTD | **968** |
 | Annual inventory carrying cost under current policy | **SGD 3.76M** |
-| Working capital tied up in average inventory | **SGD 18.1M** |
-| Portfolio inventory turnover | **10.7x** (target 12.5x) |
-| Slowest-turning C-class SKUs | **135-300 days** of stock on hand |
+| Working capital tied up in average inventory | **SGD 17.45M** |
+| Portfolio inventory turnover | **10.8x** (target 12.5x) |
+| Slowest-turning C-class SKUs | **182-372 days** of stock on hand |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="charts/03-revenue-at-risk-pareto-dark.png">
@@ -52,43 +52,43 @@ Automation stops short of full autonomy by design: **no purchase order reaches a
 
 ## 3. Quantified Benefit
 
-### 3.1 Carrying cost reduction: SGD 776,086 per year (20.7%)
+### 3.1 Carrying cost reduction: SGD 983,926 per year (26.1%)
 
 The saving is decomposable, which is what makes it auditable:
 
 | Component | Annual saving | Share | Why it exists |
 |---|---|---|---|
-| Safety stock reduction | SGD 510,250 | 65.7% | Statistical sizing replaces a flat 30-day buffer |
-| Cycle stock reduction | SGD 265,836 | 34.3% | Cheaper automated ordering permits smaller, more frequent orders |
-| **Total** | **SGD 776,086** | **100%** | |
+| Safety stock reduction | SGD 739,659 | 75.2% | Statistical sizing replaces a flat 30-day buffer |
+| Cycle stock reduction | SGD 244,267 | 24.8% | Cheaper automated ordering permits smaller, more frequent orders |
+| **Total** | **SGD 983,926** | **100%** | |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="charts/02-savings-waterfall-dark.png">
-  <img alt="The SGD 776,086 annual saving splits into SGD 510,250 from safety stock reduction and SGD 265,836 from cycle stock reduction." src="charts/02-savings-waterfall-light.png">
+  <img alt="The SGD 983,926 annual saving splits into SGD 739,659 from safety stock reduction and SGD 244,267 from cycle stock reduction." src="charts/02-savings-waterfall-light.png">
 </picture>
 
-**Working capital released: SGD 3.44M.** Average inventory value falls from SGD 18.1M to SGD 14.7M, lifting portfolio turnover from **10.7x to 13.2x** and clearing the 12.5x internal target.
+**Working capital released: SGD 4.12M.** Average inventory value falls from SGD 17.45M to SGD 13.33M, lifting portfolio turnover from **10.8x to 14.1x** and clearing the 12.5x internal target.
 
 ### 3.2 Savings are not uniform, and that is the point
 
-| Warehouse | Carrying cost (static) | Carrying cost (AI) | Annual saving | % of baseline | SKUs given *more* stock |
+| Warehouse | Carrying cost (legacy) | Carrying cost (forecast-driven) | Annual saving | % of baseline | SKUs given *more* stock |
 |---|---|---|---|---|---|
-| WH-SIN-01 Singapore Central | SGD 1,261,954 | SGD 888,551 | **SGD 373,403** | 29.6% | 19 |
-| WH-JHR-02 Johor Bahru | SGD 901,995 | SGD 717,811 | **SGD 184,184** | 20.4% | 32 |
-| WH-PEN-04 Penang | SGD 878,327 | SGD 728,490 | **SGD 149,837** | 17.1% | 36 |
-| WH-BTM-03 Batam | SGD 713,173 | SGD 644,511 | **SGD 68,662** | 9.6% | 68 |
-| **Portfolio** | **SGD 3,755,450** | **SGD 2,979,363** | **SGD 776,086** | **20.7%** | **155** |
+| WH-SIN-01 Singapore Central | SGD 1,535,619 | SGD 955,022 | **SGD 580,597** | 37.8% | 34 |
+| WH-PEN-04 Penang | SGD 858,595 | SGD 674,779 | **SGD 183,816** | 21.4% | 54 |
+| WH-JHR-02 Johor Bahru | SGD 804,473 | SGD 644,687 | **SGD 159,787** | 19.9% | 47 |
+| WH-BTM-03 Batam | SGD 566,056 | SGD 506,331 | **SGD 59,725** | 10.6% | 62 |
+| **Portfolio** | **SGD 3,764,744** | **SGD 2,780,818** | **SGD 983,926** | **26.1%** | **197** |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="charts/01-carrying-cost-by-warehouse-dark.png">
   <img alt="Carrying cost by warehouse under both policies, with the saving percentage and the number of SKUs given more stock at each site." src="charts/01-carrying-cost-by-warehouse-light.png">
 </picture>
 
-Read the last column carefully. For **155 SKU-warehouse positions the model increases inventory**, because the static threshold was under-covering long-lead-time, volatile items. Batam, our longest-lead-time DC, saves the least, because most of its correction adds protection instead of stripping stock out. That is the system working as designed: it reallocates inventory to where it earns its keep, rather than cutting it everywhere.
+Read the last column carefully. For **197 SKU-warehouse positions the model increases inventory**, because the static threshold was under-covering long-lead-time, volatile items. Batam, our longest-lead-time DC, saves the least, because most of its correction adds protection instead of stripping stock out. That is the system working as designed: it reallocates inventory to where it earns its keep, rather than cutting it everywhere.
 
 ### 3.3 Service level recovery: SGD 590,000 per year
 
-Stockouts cost SGD 4.21M in lost gross margin annually. Two conservative assumptions apply here: only **35%** of stockout demand is genuinely lost rather than substituted or backordered, and the system removes **40%** of stockout events (the BO-02 target). Together they give **SGD 589,664** in recovered margin.
+Stockouts cost SGD 6.16M in lost gross margin annually. Two conservative assumptions apply here: only **35%** of stockout demand is genuinely lost rather than substituted or backordered, and the system removes **40%** of stockout events (the BO-02 target). Together they give **SGD 862,467** in recovered margin.
 
 ---
 
@@ -96,21 +96,21 @@ Stockouts cost SGD 4.21M in lost gross margin annually. Two conservative assumpt
 
 | Line | Year 1 |
 |---|---|
-| Carrying cost reduction | SGD 776,086 |
-| Recovered gross margin from fewer stockouts | SGD 589,664 |
+| Carrying cost reduction | SGD 983,926 |
+| Recovered gross margin from fewer stockouts | SGD 862,467 |
 | Planner productivity (12 hrs/week released) | SGD 28,080 |
-| **Gross annual benefit** | **SGD 1,393,830** |
+| **Gross annual benefit** | **SGD 1,874,472** |
 | Less: annual run cost (cloud, model ops, licences) | (SGD 220,000) |
-| **Net annual benefit** | **SGD 1,173,830** |
+| **Net annual benefit** | **SGD 1,654,472** |
 | One-time implementation | SGD 850,000 |
 
 | Metric | Result |
 |---|---|
-| **Payback period** | **8.7 months** |
-| **Year-1 ROI** | **38.1%** |
-| **3-year NPV @ 10%** | **SGD 2,069,141** |
-| **3-year ROI** | **314%** |
-| **One-time working capital release** | **SGD 3,444,784** |
+| **Payback period** | **6.2 months** |
+| **Year-1 ROI** | **94.6%** |
+| **3-year NPV @ 10%** | **SGD 3,264,428** |
+| **3-year ROI** | **484%** |
+| **One-time working capital release** | **SGD 4,116,922** |
 
 The working capital release is shown separately because it is a balance-sheet event, not recurring P&L. It is nonetheless the single largest cash item in the case.
 
@@ -118,7 +118,7 @@ The working capital release is shown separately because it is a balance-sheet ev
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="charts/05-roi-payback-dark.png">
-  <img alt="Cumulative net position over 24 months, crossing breakeven at 8.7 months." src="charts/05-roi-payback-light.png">
+  <img alt="Cumulative net position over 24 months, crossing breakeven at 6.2 months." src="charts/05-roi-payback-light.png">
 </picture>
 
 ---
@@ -154,7 +154,8 @@ Every figure in this summary is reproducible from the artefacts in this reposito
 | Revenue at risk, stockout concentration | `sql/analysis_queries.sql`, Query 1 |
 | Carrying cost savings by warehouse | `sql/analysis_queries.sql`, Query 2 |
 | Inventory turnover, slow-moving tail | `sql/analysis_queries.sql`, Query 3 |
-| Underlying dataset (1,000 rows) | `data/inventory_data.csv`, generated by `data/generate_supply_chain_data.py` |
+| Underlying dataset (1,000 rows) | `data/inventory_data.csv`, built by `data/run_pipeline.py` |
+| Forecast accuracy, held-out validation | `data/02_forecast_demand.py` |
 | Every chart in this summary | `presentation/generate_charts.py` |
 | Requirements and scope | `docs/BRD.md` |
 | Process change | `docs/process_flows.md` |

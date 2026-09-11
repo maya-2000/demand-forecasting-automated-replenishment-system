@@ -33,8 +33,8 @@
 |  +----------------+----------------+----------------+----------------+----------------+         |
 |  | REVENUE AT RISK| ANNUAL CARRYING| WORKING CAPITAL| INVENTORY      | STOCKOUT       |         |
 |  |                | COST           | RELEASED       | TURNOVER       | EVENTS YTD     |         |
-|  |  SGD 10.1M     |  SGD 2.98M     |  SGD 3.44M     |    13.2x       |     1,661      |         |
-|  |  ^ 3.0% of rev |  v 20.7% vs    |  vs static     |  ^ from 10.7x  |  v target -40% |         |
+|  |  SGD 14.2M     |  SGD 2.98M     |  SGD 4.12M     |    14.1x       |     968      |         |
+|  |  ^ 3.0% of rev |  v 26.1% vs    |  vs static     |  ^ from 10.8x  |  v target -40% |         |
 |  |    [RED]       |    static      |    policy      |  target 12.5x  |    [AMBER]     |         |
 |  |                |    [GREEN]     |    [GREEN]     |    [GREEN]     |                |         |
 |  +----------------+----------------+----------------+----------------+----------------+         |
@@ -45,14 +45,14 @@
 |  | Grouped horizontal bar, by warehouse   |  | Combo: bars = risk SGD, line = cumulative %  |   |
 |  |                                        |  |                                              |   |
 |  | SIN-01 |########## 1.26M               |  |  SGD                                cum %    |   |
-|  |        |#######    0.89M   -29.6%      |  |  |##                              ......100% |   |
+|  |        |#######    0.89M   -37.8%      |  |  |##                              ......100% |   |
 |  | JHR-02 |#######    0.90M               |  |  |####                      ......           |   |
-|  |        |#####      0.72M   -20.4%      |  |  |######            ......                   |   |
+|  |        |#####      0.72M   -19.9%      |  |  |######            ......                   |   |
 |  | PEN-04 |#######    0.88M               |  |  |########   .......                80% ---- |   |
-|  |        |######     0.73M   -17.1%      |  |  |##########.                                |   |
+|  |        |######     0.73M   -21.4%      |  |  |##########.                                |   |
 |  | BTM-03 |######     0.71M               |  |  +------------------------------------------ |   |
-|  |        |#####      0.64M    -9.6%      |  |    Top 25 SKUs by exposure                   |   |
-|  |         [] Static  [] AI-optimised     |  |  Annotation: "Top 25 SKUs = 31% of exposure" |   |
+|  |        |#####      0.64M    -10.6%      |  |    Top 25 SKUs by exposure                   |   |
+|  |         [] Static  [] forecast-optimised     |  |  Annotation: "Top 25 SKUs = 53% of exposure" |   |
 |  +---------------------------------------+  +----------------------------------------------+    |
 |                                                                                                 |
 |  ROW 3                                                                                          |
@@ -63,8 +63,8 @@
 |  |  - Safety stock  -0.51M |    ###   |   |  |   25 |    o o  o   <- A-class, healthy       |   |
 |  |  - Cycle stock   -0.27M |     ##   |   |  |   15 |  o o o o o                             |  |
 |  | AI carrying cost 2.98M  |########  |   |  |    5 | o                                      |  |
-|  |                                        |  |    0 |o o o   <- C-class, 135-300 days [RED]  |  |
-|  | Label: 65.7% safety / 34.3% cycle      |  |      +--------------------------------------- |  |
+|  |                                        |  |    0 |o o o   <- C-class, 182-372 days [RED]  |  |
+|  | Label: 75.2% safety / 24.8% cycle      |  |      +--------------------------------------- |  |
 |  +---------------------------------------+  |        0    100   200   300  Days on hand     |   |
 |                                              |  Bubble size = inventory value SGD           |   |
 |                                              +----------------------------------------------+   |
@@ -230,9 +230,9 @@ SKUs Given More  = CALCULATE( COUNTROWS(fact), [AI Avg Inventory] > [Static Avg 
 Before sign-off, every dashboard figure must reconcile to the SQL suite:
 
 - [ ] Page 1 carrying cost by warehouse **=** Query 2 `ai_carrying_cost_sgd`
-- [ ] Page 1 saving % **=** Query 2 `saving_pct_of_baseline` (portfolio: 20.67%)
+- [ ] Page 1 saving % **=** Query 2 `saving_pct_of_baseline` (portfolio: 26.14%)
 - [ ] Pareto top-25 exposure **=** Query 1 `cumulative_pct_of_risk` at rank 25
-- [ ] Turnover KPI **=** Query 3 portfolio-weighted `turnover_ai` (13.2x)
+- [ ] Turnover KPI **=** Query 3 portfolio-weighted `turnover_ai` (14.1x)
 - [ ] Flagged SKU count **=** `SUM(Reorder_Flag)` (91)
-- [ ] "SKUs given more stock" **=** Query 2 `skus_now_better_protected` (155)
+- [ ] "SKUs given more stock" **=** Query 2 `skus_now_better_protected` (197)
 - [ ] Every KPI card shows a "data as of" timestamp within the last 24 hours (AC-04.1)
