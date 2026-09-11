@@ -28,6 +28,11 @@ This project works an end-to-end business analysis problem the way it would be w
 | Payback period | **8.7 months** |
 | 3-year NPV @ 10% | **SGD 2,069,141** |
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="presentation/charts/01-carrying-cost-by-warehouse-dark.png">
+  <img alt="Annual inventory carrying cost by warehouse: static reorder points versus the AI forecast-driven policy. The portfolio falls from SGD 3.76m to SGD 2.98m, a 20.7% reduction, but Batam saves only 9.6% because its long lead times require added protection rather than cuts." src="presentation/charts/01-carrying-cost-by-warehouse-light.png">
+</picture>
+
 ### Academic Context
 
 Built as a capstone-style portfolio piece for entry-level Business Analyst roles, applying the MSc Management toolkit (requirements engineering, process modelling, quantitative analysis, and financial justification) to a single coherent supply chain problem. The emphasis throughout is on **traceability**: every requirement maps to a user story, every user story to acceptance criteria, and every number in the executive summary back to a SQL query and a source row.
@@ -47,6 +52,7 @@ Built as a capstone-style portfolio piece for entry-level Business Analyst roles
 | 5 | **SQL Analytics Suite** | [`sql/analysis_queries.sql`](sql/analysis_queries.sql) | 3 production-grade queries using CTEs and window functions, plus a zero-setup runner |
 | 6 | **Executive Summary** | [`presentation/executive_summary.md`](presentation/executive_summary.md) | One-page business case, benefit decomposition, warehouse-level results, risk controls, funding ask |
 | 7 | **Dashboard Wireframe & Build Guide** | [`presentation/dashboard_wireframe.md`](presentation/dashboard_wireframe.md) | Two-page dashboard design, KPI specifications, star schema, DAX measures, build sequence, reconciliation checklist |
+| 8 | **Executive Chart Pack** | [`presentation/generate_charts.py`](presentation/generate_charts.py) | Five charts generated directly from the dataset, light and dark themes, colour-vision-deficiency validated palette |
 
 ---
 
@@ -68,8 +74,57 @@ ai-supply-chain-optimization-ba/
 │   └── output/                            Query result sets as CSV
 └── presentation/
     ├── executive_summary.md               Business case for the steering committee
-    └── dashboard_wireframe.md             BI build guide and wireframes
+    ├── dashboard_wireframe.md             BI build guide and wireframes
+    ├── generate_charts.py                 Chart generation from the source dataset
+    └── charts/                            10 PNGs: 5 charts x light and dark themes
 ```
+
+---
+
+## How the System Works
+
+```mermaid
+flowchart TD
+    subgraph L1["1. Data layer &nbsp;&nbsp;(automated)"]
+        A["ERP nightly extract<br/>stock, sales, lead times"] --> B["Validate and load<br/>quality gate at 98%"]
+    end
+    subgraph L2["2. Forecast layer &nbsp;&nbsp;(automated)"]
+        C["30-day demand forecast<br/>per SKU per warehouse"] --> D["Dynamic reorder point<br/>lead-time demand + safety stock"]
+    end
+    subgraph L3["3. Decision layer &nbsp;&nbsp;(automated)"]
+        E{"Stock at or below<br/>reorder point?"} -- "Yes" --> F["Raise Reorder_Flag,<br/>net off open POs"]
+        E -- "No" --> K["Re-evaluate tomorrow"]
+    end
+    subgraph L4["4. Action layer &nbsp;&nbsp;(human control gate)"]
+        G["Auto-generate draft PO"] --> H["Procurement approval<br/>required before despatch"]
+    end
+    subgraph L5["5. Insight layer"]
+        I["SQL analytics suite"] --> J["Executive dashboard"]
+    end
+
+    B --> C
+    D --> E
+    F --> G
+    H --> I
+    J -. "actual demand retrains the model" .-> C
+
+    classDef node fill:#e8f1fc,stroke:#2a78d6,stroke-width:1.5px,color:#16325c
+    classDef gate fill:#fdece4,stroke:#eb6834,stroke-width:1.5px,color:#7a2f10
+    classDef quiet fill:#f2f2f0,stroke:#b6b5b0,color:#52514e
+    class A,B,C,D,F,G,I,J node
+    class H gate
+    class E,K quiet
+    style L1 fill:#fbfbfa,stroke:#dcdbd6
+    style L2 fill:#fbfbfa,stroke:#dcdbd6
+    style L3 fill:#fbfbfa,stroke:#dcdbd6
+    style L4 fill:#fbfbfa,stroke:#dcdbd6
+    style L5 fill:#fbfbfa,stroke:#dcdbd6
+```
+
+The layers map one-to-one onto the deliverables in this repository: the data layer is
+`data/generate_supply_chain_data.py`, the forecast and decision layers are the two policies
+modelled below, the insight layer is `sql/analysis_queries.sql` feeding the dashboard designed
+in `presentation/dashboard_wireframe.md`.
 
 ---
 
@@ -118,6 +173,11 @@ Working_Capital_Reduction = Old_Carrying_Cost - New_AI_Optimised_Carrying_Cost
 | Cycle stock reduction: cheaper automated ordering permits smaller, more frequent orders | SGD 265,836 | 34.3% |
 | **Total carrying cost reduction** | **SGD 776,086** | **20.7% of baseline** |
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="presentation/charts/02-savings-waterfall-dark.png">
+  <img alt="Waterfall showing the SGD 776,086 annual carrying cost reduction splitting into SGD 510,250 from safety stock reduction (66%) and SGD 265,836 from cycle stock reduction (34%)." src="presentation/charts/02-savings-waterfall-light.png">
+</picture>
+
 Valued at unit cost instead of holding cost, the same inventory reduction releases **SGD 3,444,784** of working capital from the balance sheet (average inventory value SGD 18.14M -> SGD 14.69M).
 
 ### Formula 2: Revenue at Risk Recovered
@@ -161,6 +221,11 @@ NPV_3yr              = SUM( Net_Annual_Benefit / (1 + r)^t )  for t = 1..3, r = 
 | **3-year ROI** | **314%** |
 | **One-time working capital release** | **SGD 3,444,784** |
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="presentation/charts/05-roi-payback-dark.png">
+  <img alt="Cumulative net cash position over 24 months. The SGD 850,000 implementation is recovered at 8.7 months and the position reaches roughly SGD 1.5m by month 24." src="presentation/charts/05-roi-payback-light.png">
+</picture>
+
 The working capital release is reported separately because it is a balance-sheet event, not recurring P&L. At SGD 3.4M, it is still the single largest cash item in the case.
 
 **Cost assumptions.** Implementation of SGD 850,000 covers data engineering, model build, ERP integration, and change management across four DCs; annual run cost of SGD 220,000 covers cloud infrastructure, model operations, and BI licences. Both are stated assumptions for the purposes of this portfolio exercise and would be replaced by vendor quotes in a live business case.
@@ -193,7 +258,19 @@ python3 sql/run_analysis.py --csv          # also write result sets to sql/outpu
 python3 sql/run_analysis.py --rows 30      # show more rows per query
 ```
 
-### Step 3: Run the queries against your own database
+### Step 3: Regenerate the charts
+
+```bash
+python3 -m pip install matplotlib
+python3 presentation/generate_charts.py
+```
+
+Writes ten PNGs to `presentation/charts/` (five charts, each in a light and a dark theme so they
+stay legible whichever way GitHub is being viewed). Every value plotted is recomputed from
+`inventory_data.csv` using the same definitions as the SQL, so the charts cannot drift away from
+the queries.
+
+### Step 4: Run the queries against your own database
 
 `sql/analysis_queries.sql` is written in ANSI SQL and validated on SQLite 3.45. It runs unmodified on PostgreSQL 12+, Snowflake, BigQuery, and Redshift. No vendor-specific functions are used, and `GREATEST`/`LEAST` are written as portable `CASE` expressions. The commented `CREATE TABLE` DDL at the top of the file loads the CSV into a fresh database.
 
@@ -218,9 +295,19 @@ psql inventory_demo -f sql/analysis_queries.sql
 
 - **Risk is concentrated.** The top 25 of 1,000 positions carry **31%** of total revenue at risk, so this is a manageable remediation list, not a portfolio-wide problem.
 - **Savings are not uniform, and shouldn't be.** Singapore Central saves 29.6% while Batam saves 9.6%, because Batam's long lead times mean most of its correction is *protective*. Across the portfolio the model **increases** stock on **155 positions** that the static threshold was under-covering. The system reallocates inventory rather than simply cutting it.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="presentation/charts/03-revenue-at-risk-pareto-dark.png">
+  <img alt="Pareto analysis of stockout exposure. The top 25 of 1,000 SKU-warehouse positions account for 31% of the SGD 7.2m total revenue at risk." src="presentation/charts/03-revenue-at-risk-pareto-light.png">
+</picture>
+
 - **The trapped capital is in the tail.** The top 30 SKUs by revenue all turn healthily at 15-26x. The problem sits in C-class items turning **1.1x-2.7x**, holding **135 to 300 days** of stock. Ranking by revenue alone would have hidden this finding completely, which is why Query 3 reports both segments.
 
 ---
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="presentation/charts/04-inventory-turnover-dark.png">
+  <img alt="Inventory turnover against annual cost of goods sold for all 250 SKUs, coloured by ABC class. A-class items turn well above the 12.5x target while 59 C-class SKUs turn below 5x, holding 134 to 301 days of stock." src="presentation/charts/04-inventory-turnover-light.png">
+</picture>
 
 ## Skills Demonstrated
 

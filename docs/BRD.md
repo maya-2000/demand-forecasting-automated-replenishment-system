@@ -204,6 +204,34 @@ See `docs/process_flows.md` for the AS-IS and TO-BE BPMN-style flow diagrams.
 4. **Action layer:** draft PO generation and routing to the Procurement approval queue.
 5. **Insight layer:** SQL analytics (`sql/analysis_queries.sql`) feeding the executive dashboard described in `presentation/dashboard_wireframe.md`.
 
+### 9.1 Implementation Roadmap
+
+```mermaid
+gantt
+    title Phase 1 delivery - four distribution centres
+    dateFormat YYYY-MM-DD
+    axisFormat %b
+    section Foundation
+    Lead-time master data remediation   :done,    d1, 2026-10-01, 45d
+    ERP extract and analytics warehouse :active,  d2, 2026-10-15, 60d
+    section Model
+    Forecast model build and backtest   :         m1, 2026-12-01, 75d
+    Shadow run against live demand      :crit,    m2, 2027-02-15, 30d
+    section Build
+    Replenishment engine and PO drafting:         b1, 2027-01-05, 70d
+    Planner exception workbench         :         b2, 2027-02-01, 60d
+    Executive dashboard                 :         b3, 2027-03-01, 45d
+    section Adoption
+    UAT with each named persona         :         a1, 2027-04-01, 30d
+    Training and cutover                :         a2, 2027-04-20, 25d
+    Benefits tracking begins            :milestone, a3, 2027-05-15, 0d
+    Phase 2 decision gate               :milestone, a4, 2027-08-01, 0d
+```
+
+The shadow run is marked critical deliberately. It is the control that answers R-01: planners see
+the forecast run alongside their own thresholds for four weeks before a single automated order is
+raised, so trust is established against real demand rather than asserted in a training session.
+
 ---
 
 ## 10. Acceptance & Sign-Off
